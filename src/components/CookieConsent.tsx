@@ -1,12 +1,38 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
+
+const COOKIE_CONSENT_KEY = "cookie-consent";
+
+function getConsent() {
+  return localStorage.getItem(COOKIE_CONSENT_KEY);
+}
+
+function getServerConsent() {
+  return null;
+}
+
+function subscribeToConsent(callback: () => void) {
+  window.addEventListener("storage", callback);
+  return () => window.removeEventListener("storage", callback);
+}
 
 export default function CookieConsent() {
-  const [visible, setVisible] = useState(true);
+  const storedConsent = useSyncExternalStore(subscribeToConsent, getConsent, getServerConsent);
+  const [dismissed, setDismissed] = useState(false);
+  const visible = !dismissed && storedConsent !== "accepted";
+  const router = useRouter();
 
-  if (!visible) return null;
+  function handleAccept() {
+    localStorage.setItem(COOKIE_CONSENT_KEY, "accepted");
+    setDismissed(true);
+  }
+
+  function handleLearnMore() {
+    router.push("/cookie-policy");
+  }
 
   return (
     <AnimatePresence>
@@ -24,12 +50,15 @@ export default function CookieConsent() {
             </p>
             <div className="flex gap-3 flex-shrink-0">
               <button
-                onClick={() => setVisible(false)}
+                onClick={handleAccept}
                 className="bg-crimson text-paper-white px-5 py-2 font-heading text-label-bold hover:brightness-110 transition-all duration-200"
               >
                 Accept
               </button>
-              <button className="border border-paper-white/30 text-paper-white/80 px-5 py-2 font-heading text-label-bold hover:bg-paper-white/10 transition-all duration-200">
+              <button
+                onClick={handleLearnMore}
+                className="border border-paper-white/30 text-paper-white/80 px-5 py-2 font-heading text-label-bold hover:bg-paper-white/10 transition-all duration-200"
+              >
                 Learn More
               </button>
             </div>

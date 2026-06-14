@@ -753,6 +753,7 @@ export const siteConfig = {
   ],
   footerSupport: [
     { label: "Privacy Policy", href: "/" },
+    { label: "Cookie Policy", href: "/cookie-policy" },
     { label: "Terms of Service", href: "/" },
     { label: "Contact Support", href: "/contact" },
   ],
