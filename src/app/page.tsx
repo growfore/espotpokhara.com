@@ -33,6 +33,8 @@ export default function HomePage() {
         </Container>
       </section>
 
+      <Destinations />
+
       <section className="px-4 xl:px-10">
         <Container className="py-16 md:py-28 border-x border-dashed">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -78,8 +80,6 @@ export default function HomePage() {
       </section>
 
       <ServicesSection />
-
-      <Destinations />
 
       <section className="px-4 xl:px-10 pattern-bg border-y border-dashed">
         <Container className="py-16 md:py-28 border-x border-dashed">
