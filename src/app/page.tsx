@@ -10,7 +10,7 @@ import ScrollReelTestimonials from "@/components/ScrollReelTestimonials";
 import Container from "@/components/global/Container";
 import StatsCounter from "@/components/StatsCounter";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, CheckCircle, Users, Star, Building2, Globe, type LucideIcon } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, CheckCircle, Users, Star, Building2, Globe, Check, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const statIconMap: Record<string, LucideIcon> = {
@@ -85,7 +85,9 @@ export default function HomePage() {
                   "Comprehensive support from application to arrival",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-body-md text-on-surface-variant">
-                    <span className="w-5 h-5 flex items-center justify-center rounded-full bg-crimson/10 text-crimson text-xs font-bold flex-shrink-0 mt-0.5">&bull;</span>
+                    <span className="w-5 h-5 flex items-center justify-center rounded-full bg-crimson/10 text-crimson flex-shrink-0 mt-0.5">
+                      <Check size={12} strokeWidth={3} />
+                    </span>
                     {item}
                   </li>
                 ))}
