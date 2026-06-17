@@ -47,7 +47,7 @@ function NavLink({
         className={`relative group ${
           isMobile
             ? "block text-on-surface font-heading text-headline-sm py-4 border-b border-outline-variant"
-            : "text-on-surface-variant hover:text-navy font-body text-sm transition-colors duration-200"
+            : "text-on-surface-variant hover:text-navy font-body text-sm font-semibold transition-colors duration-200"
         }`}
       >
         {item.label}
