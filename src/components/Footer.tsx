@@ -14,7 +14,7 @@ export default function Footer() {
                 className="h-12 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="text-sm text-paper-white/60 leading-relaxed mb-6 max-w-xs">
+            <p className="text-base text-paper-white/80 leading-relaxed mb-6 max-w-xs">
               {siteConfig.footerAbout}
             </p>
             <div className="flex gap-3">
@@ -40,22 +40,22 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold text-paper-white/40 uppercase tracking-wider mb-4">Pages</p>
+            <p className="text-sm font-semibold text-paper-white/60 uppercase tracking-wider mb-4">Pages</p>
             <ul className="space-y-2.5">
               {siteConfig.footerPages.map((p) => (
                 <li key={p.label}>
-                  <Link href={p.href} className="text-sm text-paper-white/70 hover:text-paper-white transition-colors">
+                  <Link href={p.href} className="text-base text-paper-white/85 hover:text-paper-white transition-colors">
                     {p.label}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/blogs" className="text-sm text-paper-white/70 hover:text-paper-white transition-colors">
+                <Link href="/blogs" className="text-base text-paper-white/85 hover:text-paper-white transition-colors">
                   Blogs
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-paper-white/70 hover:text-paper-white transition-colors">
+                <Link href="/contact" className="text-base text-paper-white/85 hover:text-paper-white transition-colors">
                   Contact
                 </Link>
               </li>
@@ -63,11 +63,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold text-paper-white/40 uppercase tracking-wider mb-4">Countries</p>
+            <p className="text-sm font-semibold text-paper-white/60 uppercase tracking-wider mb-4">Countries</p>
             <ul className="space-y-2.5">
               {siteConfig.footerCountries.map((c) => (
                 <li key={c.label}>
-                  <Link href={c.href} className="text-sm text-paper-white/70 hover:text-paper-white transition-colors">
+                  <Link href={c.href} className="text-base text-paper-white/85 hover:text-paper-white transition-colors">
                     {c.label}
                   </Link>
                 </li>
@@ -76,33 +76,33 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold text-paper-white/40 uppercase tracking-wider mb-4">Schedule</p>
+            <p className="text-sm font-semibold text-paper-white/60 uppercase tracking-wider mb-4">Schedule</p>
             <div className="space-y-4">
               <div>
-                <p className="text-xs font-semibold text-paper-white/60 mb-2">Language Classes</p>
+                <p className="text-sm font-semibold text-paper-white/70 mb-2">Language Classes</p>
                 <div className="space-y-1.5">
-                  <div className="flex justify-between gap-4 text-xs text-paper-white/50">
+                  <div className="flex justify-between gap-4 text-sm text-paper-white/75">
                     <span>Morning</span>
                     <span>{siteConfig.languageSchedule.morning}</span>
                   </div>
-                  <div className="flex justify-between gap-4 text-xs text-paper-white/50">
+                  <div className="flex justify-between gap-4 text-sm text-paper-white/75">
                     <span>Day</span>
                     <span>{siteConfig.languageSchedule.day}</span>
                   </div>
-                  <div className="flex justify-between gap-4 text-xs text-paper-white/50">
+                  <div className="flex justify-between gap-4 text-sm text-paper-white/75">
                     <span>Evening</span>
                     <span>{siteConfig.languageSchedule.evening}</span>
                   </div>
                 </div>
               </div>
               <div>
-                <p className="text-xs font-semibold text-paper-white/60 mb-2">Working Hours</p>
+                <p className="text-sm font-semibold text-paper-white/70 mb-2">Working Hours</p>
                 <div className="space-y-1.5">
-                  <div className="flex justify-between gap-4 text-xs text-paper-white/50">
+                  <div className="flex justify-between gap-4 text-sm text-paper-white/75">
                     <span>Sun - Fri</span>
                     <span>10AM - 6PM</span>
                   </div>
-                  <div className="flex justify-between gap-4 text-xs text-paper-white/50">
+                  <div className="flex justify-between gap-4 text-sm text-paper-white/75">
                     <span>Saturday</span>
                     <span className="text-crimson">Closed</span>
                   </div>
@@ -112,24 +112,24 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold text-paper-white/40 uppercase tracking-wider mb-4">Support</p>
+            <p className="text-sm font-semibold text-paper-white/60 uppercase tracking-wider mb-4">Support</p>
             <ul className="space-y-2.5">
               {siteConfig.footerSupport.map((s) => (
                 <li key={s.label}>
-                  <Link href={s.href} className="text-sm text-paper-white/70 hover:text-paper-white transition-colors">
+                  <Link href={s.href} className="text-base text-paper-white/85 hover:text-paper-white transition-colors">
                     {s.label}
                   </Link>
                 </li>
               ))}
             </ul>
             <div className="mt-6 space-y-2">
-              <p className="text-xs text-paper-white/40">{siteConfig.contact.phone}</p>
-              <p className="text-xs text-paper-white/40">{siteConfig.contact.email}</p>
+              <p className="text-sm text-paper-white/75">{siteConfig.contact.phone}</p>
+              <p className="text-sm text-paper-white/75">{siteConfig.contact.email}</p>
             </div>
           </div>
         </div>
 
-        <div className="py-6 border-t border-paper-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-paper-white/40">
+        <div className="py-6 border-t border-paper-white/20 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-paper-white/60">
           <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
         </div>
       </div>
