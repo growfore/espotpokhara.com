@@ -32,6 +32,9 @@ export default function ServicesSection() {
       <Container>
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-xl">
+            <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson mb-3">
+              Services
+            </span>
             <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-4">
               Our Inclusive Student Support
             </h2>

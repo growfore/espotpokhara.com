@@ -68,6 +68,9 @@ export default function HomePage() {
               </div>
             </Reveal>
             <Reveal direction="right">
+              <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson mb-3">
+                About Us
+              </span>
               <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">
                 Expert Immigration Services
               </h2>
@@ -103,6 +106,9 @@ export default function HomePage() {
         <Container className="py-16 md:py-28">
           <Reveal>
             <div className="text-center mb-16">
+              <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson mb-3">
+                Testimonials
+              </span>
               <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-4">
                 What Our Students Say
               </h2>
@@ -123,6 +129,9 @@ export default function HomePage() {
         <Container className="py-16 md:py-28">
           <div className="grid md:grid-cols-2 gap-16">
             <Reveal direction="left">
+              <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson mb-3">
+                Contact
+              </span>
               <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-8">
                 Get In Touch
               </h2>
@@ -204,6 +213,9 @@ export default function HomePage() {
         <Container className="py-16 md:py-28">
           <Reveal>
             <div className="text-center mb-12">
+              <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson mb-3">
+                Schedule
+              </span>
               <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-4">Class Schedule & Working Hours</h2>
             </div>
           </Reveal>
