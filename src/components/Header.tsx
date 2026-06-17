@@ -46,7 +46,7 @@ function NavLink({
         onClick={onMobileClose}
         className={`relative group ${
           isMobile
-            ? "block text-on-surface font-heading text-headline-sm py-4 border-b border-dashed border-outline-variant"
+            ? "block text-on-surface font-heading text-headline-sm py-4 border-b border-outline-variant"
             : "text-on-surface-variant hover:text-navy font-body text-body-md transition-colors duration-200"
         }`}
       >
@@ -65,7 +65,7 @@ function NavLink({
         <>
           <button
             onClick={() => setOpen(!open)}
-            className="w-full flex items-center justify-between text-on-surface font-heading text-headline-sm py-4 border-b border-dashed border-outline-variant"
+            className="w-full flex items-center justify-between text-on-surface font-heading text-headline-sm py-4 border-b border-outline-variant"
           >
             {item.label}
             <ChevronDown
@@ -88,7 +88,7 @@ function NavLink({
                       key={child.href}
                       href={child.href}
                       onClick={onMobileClose}
-                      className="block text-on-surface-variant hover:text-crimson text-body-md py-3 border-b border-dashed border-outline-variant/50"
+                      className="block text-on-surface-variant hover:text-crimson text-body-md py-3 border-b border-outline-variant/50"
                     >
                       {child.label}
                     </Link>
@@ -119,7 +119,7 @@ function NavLink({
                 exit={{ opacity: 0, y: -8, scale: 0.96 }}
                 transition={{ duration: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
                 onMouseLeave={() => setOpen(false)}
-                className="absolute top-full left-0 mt-2 w-56 bg-paper-white shadow-xl border border-dashed border-outline-variant z-50 rounded-3xl"
+                className="absolute top-full left-0 mt-2 w-56 bg-paper-white shadow-xl border border-outline-variant z-50 rounded-3xl"
               >
                 <div className="p-2">
                   {item.children.map((child) => (
@@ -170,7 +170,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 border-b border-dashed border-outline-variant transition-transform duration-300 ${hidden ? "-translate-y-full" : "translate-y-0"} bg-paper-white shadow-sm`}
+      className={`fixed top-0 left-0 w-full z-50 border-b border-outline-variant transition-transform duration-300 ${hidden ? "-translate-y-full" : "translate-y-0"} bg-paper-white shadow-sm`}
     >
       <div className="max-w-8xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20">
         <Link href="/" className="flex items-center group">

@@ -93,13 +93,13 @@ export default function CTASection() {
   return (
     <section
       ref={sectionRef}
-      className="relative px-4 xl:px-10 pattern-bg--2 border-t border-dashed border-outline-variant overflow-hidden"
+      className="relative px-4 xl:px-10 overflow-hidden"
     >
       <canvas
         ref={canvasRef}
         className="absolute inset-0 pointer-events-none z-10"
       />
-      <Container className="py-16 md:py-28 border-x border-dashed relative z-20">
+      <Container className="py-16 md:py-28 relative z-20">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-x-16">
           <div>
             <Heading tag="h2" size="xxxl" className="max-w-[40rem] text-balance leading-tight text-navy">

@@ -38,8 +38,8 @@ export default function ServicesSection() {
   const services = siteConfig.services;
 
   return (
-    <section className="px-4 xl:px-10 pattern-bg border-y border-dashed">
-      <Container className="py-16 md:py-28 border-x border-dashed">
+    <section className="px-4 xl:px-10 bg-linen-bg">
+      <Container className="py-16 md:py-28">
         <Reveal>
           <div className="text-center mb-16">
             <div className="academic-rule mx-auto mb-4" />
@@ -67,7 +67,7 @@ export default function ServicesSection() {
                   whileHover={{ y: -6 }}
                   transition={{ type: "spring", stiffness: 200, damping: 15 }}
                   className={cn(
-                    "border border-dashed border-outline-variant rounded-3xl bg-paper-white p-8 h-full group cursor-default",
+                    "border border-outline-variant rounded-3xl bg-paper-white p-8 h-full group cursor-default shadow-sm hover:shadow-xl transition-shadow duration-300",
                     isFeatured && "lg:col-span-2"
                   )}
                 >

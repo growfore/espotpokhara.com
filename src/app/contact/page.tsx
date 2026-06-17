@@ -27,8 +27,8 @@ export default function ContactPage() {
         bgImage="/images/counter-banner.webp"
       />
 
-      <section className="px-4 xl:px-10 pattern-bg border-y border-dashed">
-        <Container className="py-16 md:py-28 border-x border-dashed">
+      <section className="px-4 xl:px-10">
+        <Container className="py-16 md:py-28">
           <div className="grid md:grid-cols-2 gap-12">
             <Reveal direction="left">
               <div className="academic-rule mb-4" />
@@ -81,7 +81,7 @@ export default function ContactPage() {
             </Reveal>
 
             <Reveal direction="right">
-              <div className="border border-dashed border-outline-variant rounded-3xl bg-paper-white p-8">
+              <div className="border border-outline-variant rounded-3xl bg-paper-white p-8 shadow-sm">
                 <Heading tag="h3" size="lg" className="text-on-surface mb-6">Send Us a Message</Heading>
                 <form className="space-y-4">
                   <div className="grid sm:grid-cols-2 gap-4">
@@ -108,7 +108,7 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      <section className="h-[400px] border-t border-dashed border-outline-variant">
+      <section className="h-[400px] border-t border-outline-variant">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3515.449687168874!2d83.9787!3d28.2099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDEyJzM1LjYiTiA4M0KwNTgnNDMuMyJF!5e0!3m2!1sen!2snp!4v1"
           width="100%"

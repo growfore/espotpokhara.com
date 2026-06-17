@@ -28,11 +28,11 @@ export default function AboutPage() {
         bgImage="/images/counter-banner.webp"
       />
 
-      <section className="px-4 xl:px-10 pattern-bg border-y border-dashed">
-        <Container className="py-16 md:py-28 border-x border-dashed">
+      <section className="px-4 xl:px-10">
+        <Container className="py-16 md:py-28">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <Reveal direction="left">
-              <div className="border border-dashed border-outline-variant rounded-3xl overflow-hidden">
+              <div className="border border-outline-variant rounded-3xl overflow-hidden shadow-lg">
                 <div className="h-[400px] bg-cover bg-center grayscale-hover"                     style={{ backgroundImage: "url('/images/who-we-are.webp')" }} />
               </div>
             </Reveal>
@@ -47,8 +47,8 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="px-4 xl:px-10">
-        <Container className="py-16 md:py-28 border-x border-dashed">
+      <section className="px-4 xl:px-10 bg-linen-bg">
+        <Container className="py-16 md:py-28">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <Reveal direction="left">
               <div className="academic-rule mb-4" />
@@ -64,7 +64,7 @@ export default function AboutPage() {
               </ul>
             </Reveal>
             <Reveal direction="right">
-              <div className="border border-dashed border-outline-variant rounded-3xl overflow-hidden">
+              <div className="border border-outline-variant rounded-3xl overflow-hidden shadow-lg">
                 <div className="h-[400px] bg-cover bg-center grayscale-hover"                     style={{ backgroundImage: "url('/images/why-choose-us-about-page.webp')" }} />
               </div>
             </Reveal>
@@ -72,8 +72,8 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section id="Message-From-Director" className="px-4 xl:px-10 pattern-bg border-y border-dashed">
-        <Container className="py-16 md:py-28 border-x border-dashed">
+      <section id="Message-From-Director" className="px-4 xl:px-10">
+        <Container className="py-16 md:py-28">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <Reveal direction="left">
               <div className="academic-rule mb-4" />
@@ -86,7 +86,7 @@ export default function AboutPage() {
               </p>
             </Reveal>
             <Reveal direction="right">
-              <div className="border border-dashed border-outline-variant rounded-3xl overflow-hidden">
+              <div className="border border-outline-variant rounded-3xl overflow-hidden shadow-lg">
                 <div className="h-[400px] bg-cover bg-center grayscale-hover" style={{ backgroundImage: "url('/images/uploads/2023/06/Banner_img.jpeg')" }} />
               </div>
             </Reveal>
@@ -94,8 +94,8 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="px-4 xl:px-10">
-        <Container className="py-16 md:py-28 border-x border-dashed">
+      <section className="px-4 xl:px-10 bg-linen-bg">
+        <Container className="py-16 md:py-28">
           <Reveal>
             <div className="text-center mb-12">
               <div className="academic-rule mx-auto mb-4" />
@@ -105,7 +105,7 @@ export default function AboutPage() {
           <div className="grid sm:grid-cols-3 gap-6">
             {siteConfig.values.map((value, i) => (
               <Reveal key={value.title} direction="up" delay={i * 0.1}>
-                <div className="border border-dashed border-outline-variant rounded-3xl bg-paper-white text-center p-8 h-full">
+                <div className="border border-outline-variant rounded-3xl bg-paper-white text-center p-8 h-full shadow-sm">
                   <div className="w-16 h-16 flex items-center justify-center bg-crimson text-paper-white rounded-2xl mx-auto mb-6">
                     <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />

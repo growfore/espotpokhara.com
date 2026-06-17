@@ -18,8 +18,8 @@ export default function HomePage() {
     <>
       <HeroSection />
 
-      <section className="px-4 xl:px-10 pattern-bg border-y border-dashed">
-        <Container className="py-16 md:py-28 border-x border-dashed">
+      <section className="px-4 xl:px-10 bg-linen-bg">
+        <Container className="py-16 md:py-28">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {siteConfig.stats.map((stat) => (
               <StatsCounter
@@ -36,12 +36,12 @@ export default function HomePage() {
       <Destinations />
 
       <section className="px-4 xl:px-10">
-        <Container className="py-16 md:py-28 border-x border-dashed">
+        <Container className="py-16 md:py-28">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <Reveal direction="left">
               <div className="relative">
-                <div className="absolute -top-4 -left-4 w-24 h-24 border border-dashed border-outline-variant rounded-3xl -z-0" />
-                <div className="relative z-10 border border-dashed border-outline-variant rounded-3xl overflow-hidden">
+                <div className="absolute -top-4 -left-4 w-24 h-24 border border-outline-variant rounded-3xl -z-0" />
+                <div className="relative z-10 border border-outline-variant rounded-3xl overflow-hidden shadow-lg">
                   <div
                     className="h-[420px] bg-cover bg-center grayscale-hover"
                     style={{ backgroundImage: "url('/images/who-we-are.webp')" }}
@@ -81,8 +81,8 @@ export default function HomePage() {
 
       <ServicesSection />
 
-      <section className="px-4 xl:px-10 pattern-bg border-y border-dashed">
-        <Container className="py-16 md:py-28 border-x border-dashed">
+      <section className="px-4 xl:px-10 bg-linen-bg">
+        <Container className="py-16 md:py-28">
           <Reveal>
             <div className="text-center mb-16">
               <div className="academic-rule mx-auto mb-4" />
@@ -104,7 +104,7 @@ export default function HomePage() {
       </section>
 
       <section className="px-4 xl:px-10">
-        <Container className="py-16 md:py-28 border-x border-dashed">
+        <Container className="py-16 md:py-28">
           <div className="grid md:grid-cols-2 gap-16">
             <Reveal direction="left">
               <div className="academic-rule mb-4" />
@@ -154,7 +154,7 @@ export default function HomePage() {
             </Reveal>
 
             <Reveal direction="right">
-              <div className="border border-dashed border-outline-variant rounded-3xl p-10 bg-paper-white">
+              <div className="border border-outline-variant rounded-3xl p-10 bg-paper-white shadow-sm">
                 <Heading tag="h3" size="lg" className="text-on-surface mb-8">Send Us a Message</Heading>
                 <form className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
@@ -186,8 +186,8 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="px-4 xl:px-10 pattern-bg border-y border-dashed">
-        <Container className="py-16 md:py-28 border-x border-dashed">
+      <section className="px-4 xl:px-10 bg-linen-bg">
+        <Container className="py-16 md:py-28">
           <Reveal>
             <div className="text-center mb-12">
               <div className="academic-rule mx-auto mb-4" />
@@ -197,18 +197,18 @@ export default function HomePage() {
           </Reveal>
           <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             <Reveal direction="left">
-              <div className="border border-dashed border-outline-variant rounded-3xl bg-paper-white p-8">
+              <div className="border border-outline-variant rounded-3xl bg-paper-white p-8 shadow-sm">
                 <Heading tag="h3" size="lg" className="text-navy mb-6">Language Classes</Heading>
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center border-b border-dashed border-outline-variant pb-3">
+                  <div className="flex justify-between items-center border-b border-outline-variant pb-3">
                     <span className="font-heading text-label-bold text-on-surface">MORNING</span>
                     <span className="text-body-md text-on-surface-variant">7AM - 8AM</span>
                   </div>
-                  <div className="flex justify-between items-center border-b border-dashed border-outline-variant pb-3">
+                  <div className="flex justify-between items-center border-b border-outline-variant pb-3">
                     <span className="font-heading text-label-bold text-on-surface">DAY</span>
                     <span className="text-body-md text-on-surface-variant">10AM - 11AM</span>
                   </div>
-                  <div className="flex justify-between items-center border-b border-dashed border-outline-variant pb-3">
+                  <div className="flex justify-between items-center border-b border-outline-variant pb-3">
                     <span className="font-heading text-label-bold text-on-surface">EVENING</span>
                     <span className="text-body-md text-on-surface-variant">5PM - 6PM</span>
                   </div>
@@ -216,10 +216,10 @@ export default function HomePage() {
               </div>
             </Reveal>
             <Reveal direction="right">
-              <div className="border border-dashed border-outline-variant rounded-3xl bg-paper-white p-8">
+              <div className="border border-outline-variant rounded-3xl bg-paper-white p-8 shadow-sm">
                 <Heading tag="h3" size="lg" className="text-navy mb-6">Working Hours</Heading>
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center border-b border-dashed border-outline-variant pb-3">
+                  <div className="flex justify-between items-center border-b border-outline-variant pb-3">
                     <span className="font-heading text-label-bold text-on-surface">SUN - FRI</span>
                     <span className="text-body-md text-on-surface-variant">10AM - 6PM</span>
                   </div>

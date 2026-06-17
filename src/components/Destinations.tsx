@@ -8,8 +8,8 @@ import { siteConfig } from "@/lib/site-config";
 
 export default function Destinations() {
   return (
-    <section className="px-4 xl:px-10 pattern-bg border-y border-dashed">
-      <Container className="py-16 md:py-28 border-x border-dashed">
+    <section className="px-4 xl:px-10">
+      <Container className="py-16 md:py-28">
         <Reveal>
           <div className="text-center mb-16">
             <div className="academic-rule mx-auto mb-4" />
@@ -29,12 +29,12 @@ export default function Destinations() {
               <Link href={dest.href} className="group block perspective-[1000px]">
                 <div className="relative [transform-style:preserve-3d] transition-transform duration-700 ease-out group-hover:[transform:rotateY(180deg)] h-[380px]">
                   {/* Front */}
-                  <div className="absolute inset-0 [backface-visibility:hidden] border border-dashed border-outline-variant rounded-3xl overflow-hidden bg-paper-white">
+                  <div className="absolute inset-0 [backface-visibility:hidden] border border-outline-variant rounded-3xl overflow-hidden bg-paper-white shadow-sm group-hover:shadow-xl transition-shadow duration-500">
                     <div
                       className="w-full h-full bg-cover bg-center grayscale-hover"
                       style={{ backgroundImage: `url(${dest.image})` }}
                     />
-                    <div className="absolute inset-0 bg-navy/30" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent" />
                     <div className="absolute bottom-6 left-6 right-6">
                       <span className="inline-block bg-crimson text-paper-white px-5 py-2 font-heading text-label-bold rounded-full">
                         {dest.country}
@@ -43,7 +43,7 @@ export default function Destinations() {
                   </div>
 
                   {/* Back */}
-                  <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] border border-dashed border-outline-variant rounded-3xl bg-paper-white p-8 flex flex-col justify-center">
+                  <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] border border-outline-variant rounded-3xl bg-paper-white p-8 flex flex-col justify-center shadow-sm">
                     <span className="text-label-bold text-crimson tracking-wider block mb-2">Study in</span>
                     <Heading tag="h3" size="lg" className="text-navy mb-4">
                       {dest.country}
@@ -55,7 +55,7 @@ export default function Destinations() {
                       {dest.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-label-sm px-3 py-1.5 border border-dashed border-outline-variant text-on-surface-variant rounded-full"
+                          className="text-label-sm px-3 py-1.5 border border-outline-variant text-on-surface-variant rounded-full"
                         >
                           {tag}
                         </span>
