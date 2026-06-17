@@ -30,7 +30,7 @@ export default function Destinations() {
       <Container>
         <div className="mb-10 flex items-end justify-between">
           <div className="flex flex-col gap-4">
-            <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson w-fit">
+            <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson font-mono w-fit">
               Destinations
             </span>
             <h2 className="font-heading tracking-tighter text-heading-xl text-navy">
