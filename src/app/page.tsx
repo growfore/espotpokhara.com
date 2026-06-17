@@ -7,6 +7,7 @@ import Destinations from "@/components/Destinations";
 import CTASection from "@/components/CTASection";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
+import ScrollReelTestimonials from "@/components/ScrollReelTestimonials";
 import Container from "@/components/global/Container";
 import Heading from "@/components/shared/Heading";
 import { motion } from "framer-motion";
@@ -82,50 +83,23 @@ export default function HomePage() {
 
       <section className="px-4 xl:px-10 pattern-bg border-y border-dashed">
         <Container className="py-16 md:py-28 border-x border-dashed">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <Reveal direction="left">
-              <div className="relative">
-                <div className="absolute -bottom-4 -right-4 w-32 h-32 border border-dashed border-outline-variant rounded-3xl -z-0" />
-                <div className="relative z-10 border border-dashed border-outline-variant rounded-3xl overflow-hidden">
-                  <div
-                    className="h-[380px] bg-cover bg-center grayscale-hover"
-                    style={{ backgroundImage: "url('/images/testimonials/review-img.webp')" }}
-                  />
-                </div>
-              </div>
-            </Reveal>
-            <Reveal direction="right">
-              <div className="academic-rule mb-4" />
+          <Reveal>
+            <div className="text-center mb-16">
+              <div className="academic-rule mx-auto mb-4" />
               <span className="text-label-bold text-crimson tracking-wider block">Testimonials</span>
-              <Heading tag="h2" size="xxl" className="text-navy mb-6">
+              <Heading tag="h2" size="xxl" className="text-navy mb-4">
                 What Our Students Say
               </Heading>
-              <blockquote className="text-body-lg text-on-surface-variant italic mb-8 border-l-4 border-crimson pl-6">
-                &ldquo;{siteConfig.testimonials[0].quote}&rdquo;
-              </blockquote>
-              <div className="flex items-center gap-4 mb-10">
-                <div className="w-14 h-14 rounded-full bg-cover bg-center border-2 border-crimson/30" style={{ backgroundImage: "url('/images/testimonials/review-img.webp')" }} />
-                <div>
-                  <p className="font-heading text-headline-sm text-on-surface">
-                    {siteConfig.testimonials[0].name}
-                  </p>
-                  <p className="text-label-sm text-on-surface-variant">
-                    {siteConfig.testimonials[0].role}
-                  </p>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-8 pt-10 border-t border-dashed border-outline-variant">
-                <div>
-                  <p className="text-headline-md font-heading font-bold text-crimson">100+</p>
-                  <p className="text-body-md text-on-surface-variant mt-1">Satisfied Students</p>
-                </div>
-                <div>
-                  <p className="text-headline-md font-heading font-bold text-crimson">98%</p>
-                  <p className="text-body-md text-on-surface-variant mt-1">Visa Success Rate</p>
-                </div>
-              </div>
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
+          <ScrollReelTestimonials
+            testimonials={siteConfig.testimonials.map((t) => ({
+              quote: t.quote,
+              author: `${t.name} — ${t.role}`,
+              image: t.image,
+            }))}
+            className="mx-auto"
+          />
         </Container>
       </section>
 
