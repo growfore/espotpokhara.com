@@ -1,11 +1,10 @@
 import Link from "next/link";
 import * as React from "react";
-import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-xs md:text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 group",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-xs md:text-sm font-label-sm transition-all disabled:pointer-events-none disabled:opacity-50 group btn-squish",
   {
     variants: {
       variant: {
@@ -47,7 +46,11 @@ const Button = React.forwardRef<HTMLAnchorElement, ButtonProps>(
     const content = (
       <>
         {children}
-        {!disableIcon && <ArrowRight size={16} className="transition duration-300 group-hover:translate-x-0.5" />}
+        {!disableIcon && (
+          <span className="material-symbols-outlined text-base transition duration-300 group-hover:translate-x-0.5">
+            arrow_forward
+          </span>
+        )}
       </>
     );
 

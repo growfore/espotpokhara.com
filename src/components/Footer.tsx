@@ -1,23 +1,20 @@
 import Link from "next/link";
-import { ExternalLink } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
-import Container from "@/components/global/Container";
-import AnimatedUnderline from "@/components/shared/AnimatedUnderline";
 
 export default function Footer() {
   return (
-    <footer>
-      <Container className="border-t border-dashed">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0  pattern-bg--2">
-          <div className="py-10  bg-paper-white">
-            <Link href="/" className="flex items-center group mb-4">
+    <footer className="bg-navy text-paper-white">
+      <div className="max-w-8xl mx-auto px-6 md:px-10">
+        <div className="grid md:grid-cols-4 gap-12 py-16">
+          <div className="md:col-span-1">
+            <Link href="/" className="inline-block mb-4">
               <img
                 src="/espot_logo.webp"
                 alt={siteConfig.shortName}
-                className="h-14 md:h-16 w-auto"
+                className="h-12 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="text-on-surface-variant text-body-md mb-6">
+            <p className="text-sm text-paper-white/60 leading-relaxed mb-6 max-w-xs">
               {siteConfig.footerAbout}
             </p>
             <div className="flex gap-3">
@@ -25,88 +22,81 @@ export default function Footer() {
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-full border border-dashed border-outline-variant text-on-surface-variant hover:text-crimson hover:border-crimson transition-all duration-200"
+                className="w-8 h-8 rounded-full border border-paper-white/20 flex items-center justify-center hover:bg-crimson transition-colors"
                 aria-label="Facebook"
               >
-                <ExternalLink size={16} />
+                <span className="material-symbols-outlined text-xs">face_nod</span>
               </a>
               <a
                 href={siteConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-full border border-dashed border-outline-variant text-on-surface-variant hover:text-crimson hover:border-crimson transition-all duration-200"
+                className="w-8 h-8 rounded-full border border-paper-white/20 flex items-center justify-center hover:bg-crimson transition-colors"
                 aria-label="Instagram"
               >
-                <ExternalLink size={16} />
+                <span className="material-symbols-outlined text-xs">photo_camera</span>
               </a>
             </div>
           </div>
 
-          <div className="px-10 py-10  bg-paper-white">
-            <h4 className="font-heading text-label-bold text-crimson mb-4">
-              Pages
-            </h4>
-            <ul className="space-y-3">
+          <div>
+            <p className="text-xs font-semibold text-paper-white/40 uppercase tracking-wider mb-4">Pages</p>
+            <ul className="space-y-2.5">
               {siteConfig.footerPages.map((p) => (
                 <li key={p.label}>
-                  <Link
-                    href={p.href}
-                    className="relative group text-on-surface-variant hover:text-navy text-body-md transition-colors duration-200"
-                  >
+                  <Link href={p.href} className="text-sm text-paper-white/70 hover:text-paper-white transition-colors">
                     {p.label}
-                    <AnimatedUnderline className="bg-crimson" />
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/blogs" className="text-sm text-paper-white/70 hover:text-paper-white transition-colors">
+                  Blogs
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-sm text-paper-white/70 hover:text-paper-white transition-colors">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
-          <div className=" py-10  bg-paper-white">
-            <h4 className="font-heading text-label-bold text-crimson mb-4">
-              Countries
-            </h4>
-            <ul className="space-y-3">
+          <div>
+            <p className="text-xs font-semibold text-paper-white/40 uppercase tracking-wider mb-4">Countries</p>
+            <ul className="space-y-2.5">
               {siteConfig.footerCountries.map((c) => (
                 <li key={c.label}>
-                  <Link
-                    href={c.href}
-                    className="relative group text-on-surface-variant hover:text-navy text-body-md transition-colors duration-200"
-                  >
+                  <Link href={c.href} className="text-sm text-paper-white/70 hover:text-paper-white transition-colors">
                     {c.label}
-                    <AnimatedUnderline className="bg-crimson" />
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="px-10 py-10 border-dashed bg-paper-white">
-            <h4 className="font-heading text-label-bold text-crimson mb-4">
-              Support
-            </h4>
-            <ul className="space-y-3">
+          <div>
+            <p className="text-xs font-semibold text-paper-white/40 uppercase tracking-wider mb-4">Support</p>
+            <ul className="space-y-2.5">
               {siteConfig.footerSupport.map((s) => (
                 <li key={s.label}>
-                  <Link
-                    href={s.href}
-                    className="relative group text-on-surface-variant hover:text-navy text-body-md transition-colors duration-200"
-                  >
+                  <Link href={s.href} className="text-sm text-paper-white/70 hover:text-paper-white transition-colors">
                     {s.label}
-                    <AnimatedUnderline className="bg-crimson" />
                   </Link>
                 </li>
               ))}
             </ul>
+            <div className="mt-6 space-y-2">
+              <p className="text-xs text-paper-white/40">{siteConfig.contact.phone}</p>
+              <p className="text-xs text-paper-white/40">{siteConfig.contact.email}</p>
+            </div>
           </div>
         </div>
 
-        <div className="relative py-6 flex flex-col md:flex-row items-center justify-between gap-1 md:gap-0 border-t border-dashed border-outline-variant pattern-bg--2">
-          <p className="z-20 relative text-label-sm text-on-surface-variant">
-            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
-            reserved.
-          </p>
+        <div className="py-6 border-t border-paper-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-paper-white/40">
+          <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 }

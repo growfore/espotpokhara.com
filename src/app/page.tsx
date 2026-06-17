@@ -49,7 +49,7 @@ export default function HomePage() {
             <Reveal direction="right">
               <div className="academic-rule mb-4" />
               <span className="text-label-bold text-crimson tracking-wider block">About Us</span>
-              <Heading tag="h2" size="xl" className="text-navy mb-6">
+              <Heading tag="h2" size="xxl" className="text-navy mb-6">
                 Expert Immigration Services
               </Heading>
               <p className="text-body-lg text-on-surface-variant mb-8">
@@ -82,7 +82,7 @@ export default function HomePage() {
             <div className="text-center mb-16">
               <div className="academic-rule mx-auto mb-4" />
               <span className="text-label-bold text-crimson tracking-wider block">What We Do</span>
-              <Heading tag="h2" size="xl" className="text-navy mb-4">
+              <Heading tag="h2" size="xxl" className="text-navy mb-4">
                 Our Services
               </Heading>
               <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto">
@@ -103,7 +103,7 @@ export default function HomePage() {
                     <div className="w-14 h-14 flex items-center justify-center bg-crimson text-paper-white rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                       <Plus className="w-7 h-7" />
                     </div>
-                    <Heading tag="h3" size="md" className="text-on-surface mb-4">
+                    <Heading tag="h3" size="lg" className="text-on-surface mb-4">
                       {service.title}
                     </Heading>
                     <p className="text-body-md text-on-surface-variant">
@@ -136,7 +136,7 @@ export default function HomePage() {
             <Reveal direction="right">
               <div className="academic-rule mb-4" />
               <span className="text-label-bold text-crimson tracking-wider block">Testimonials</span>
-              <Heading tag="h2" size="xl" className="text-navy mb-6">
+              <Heading tag="h2" size="xxl" className="text-navy mb-6">
                 What Our Students Say
               </Heading>
               <blockquote className="text-body-lg text-on-surface-variant italic mb-8 border-l-4 border-crimson pl-6">
@@ -174,7 +174,7 @@ export default function HomePage() {
             <Reveal direction="left">
               <div className="academic-rule mb-4" />
               <span className="text-label-bold text-crimson tracking-wider block">Contact</span>
-              <Heading tag="h2" size="xl" className="text-navy mb-8">
+              <Heading tag="h2" size="xxl" className="text-navy mb-8">
                 Get In Touch
               </Heading>
               <div className="space-y-8">
@@ -220,7 +220,7 @@ export default function HomePage() {
 
             <Reveal direction="right">
               <div className="border border-dashed border-outline-variant rounded-3xl p-10 bg-paper-white">
-                <Heading tag="h3" size="md" className="text-on-surface mb-8">Send Us a Message</Heading>
+                <Heading tag="h3" size="lg" className="text-on-surface mb-8">Send Us a Message</Heading>
                 <form className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <input type="text" placeholder="Your Name" className="input-modern rounded-lg" required />
@@ -257,13 +257,13 @@ export default function HomePage() {
             <div className="text-center mb-12">
               <div className="academic-rule mx-auto mb-4" />
               <span className="text-label-bold text-crimson tracking-wider block">Schedule</span>
-              <Heading tag="h2" size="xl" className="text-navy mb-4">Class Schedule & Working Hours</Heading>
+              <Heading tag="h2" size="xxl" className="text-navy mb-4">Class Schedule & Working Hours</Heading>
             </div>
           </Reveal>
           <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             <Reveal direction="left">
               <div className="border border-dashed border-outline-variant rounded-3xl bg-paper-white p-8">
-                <Heading tag="h3" size="md" className="text-navy mb-6">Language Classes</Heading>
+                <Heading tag="h3" size="lg" className="text-navy mb-6">Language Classes</Heading>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center border-b border-dashed border-outline-variant pb-3">
                     <span className="font-heading text-label-bold text-on-surface">MORNING</span>
@@ -282,7 +282,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal direction="right">
               <div className="border border-dashed border-outline-variant rounded-3xl bg-paper-white p-8">
-                <Heading tag="h3" size="md" className="text-navy mb-6">Working Hours</Heading>
+                <Heading tag="h3" size="lg" className="text-navy mb-6">Working Hours</Heading>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center border-b border-dashed border-outline-variant pb-3">
                     <span className="font-heading text-label-bold text-on-surface">SUN - FRI</span>

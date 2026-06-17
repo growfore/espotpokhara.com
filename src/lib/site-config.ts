@@ -50,7 +50,6 @@ export const siteConfig = {
         ],
       },
       { label: "About Us", href: "/about" },
-      { label: "Contact Us", href: "/contact" },
       { label: "Blogs", href: "/blogs" },
     ],
   },
@@ -58,8 +57,9 @@ export const siteConfig = {
   stats: [
     { label: "Successful Cases", value: 100, suffix: "+", icon: "check" },
     { label: "Specialised Consultants", value: 10, suffix: "+", icon: "users" },
-    { label: "Global Universities", value: 10, suffix: "+", icon: "building" },
-    { label: "Core Countries", value: 4, suffix: "+", icon: "globe" },
+    { label: "Satisfied Customers", value: 100, suffix: "+", icon: "star" },
+    { label: "Universities", value: 10, suffix: "+", icon: "building" },
+    { label: "Countries", value: 4, suffix: "+", icon: "globe" },
   ],
 
   services: [
@@ -142,6 +142,20 @@ export const siteConfig = {
       role: "Successful Applicant",
       quote:
         "Their professional expertise and tailored advice turned my dream of reaching the desired destination into a reality. I wholeheartedly endorse their excellent services!",
+      image: "/images/testimonials/review-img.webp",
+    },
+    {
+      name: "Simran Pokhrel",
+      role: "Successful Applicant",
+      quote:
+        "Outstanding assistance provided. The commitment and assistance from their team transformed my visa application into a triumph. Reliable and strongly recommended!",
+      image: "/images/testimonials/review-img.webp",
+    },
+    {
+      name: "Sujal Baniya",
+      role: "Successful Applicant",
+      quote:
+        "The unwavering dedication and assistance from their team played a crucial role in the success of my visa application. Highly trustworthy and definitely recommended!",
       image: "/images/testimonials/review-img.webp",
     },
   ],

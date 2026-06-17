@@ -21,12 +21,11 @@ const headingVariants = cva(
         lg: "text-headline-sm",
         md: "text-headline-xs",
         sm: "text-headline-xxs",
-        xs: "text-headline-xxs",
       },
     },
     defaultVariants: {
       tag: "h1",
-      size: "xl",
+      size: "xxl",
     },
   }
 );

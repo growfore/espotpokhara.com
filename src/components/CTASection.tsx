@@ -11,7 +11,7 @@ export default function CTASection() {
       <Container className="py-16 md:py-28 border-x border-dashed">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-x-16">
           <div>
-            <Heading tag="h2" size="xl" className="max-w-[40rem] text-balance leading-tight text-navy">
+            <Heading tag="h2" size="xxxl" className="max-w-[40rem] text-balance leading-tight text-navy">
               Ready to Start Your Educational Journey?
             </Heading>
             <p className="mt-6 md:mt-8 text-body-md text-balance text-on-surface-variant max-w-xl">

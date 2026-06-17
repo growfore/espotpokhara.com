@@ -14,7 +14,7 @@ export default function TestPrepHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-          className="font-heading text-display-lg text-paper-white mb-4"
+          className="font-headline-xl text-headline-xl text-paper-white mb-4"
         >
           {tp.title}
         </motion.h1>

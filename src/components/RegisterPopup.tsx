@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 export default function RegisterPopup() {
@@ -40,37 +39,37 @@ export default function RegisterPopup() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.92, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative bg-paper-white w-full max-w-md mx-4 p-8 border border-dashed border-outline-variant rounded-3xl"
+              className="relative bg-paper-white w-full max-w-md mx-4 p-8 border border-outline-variant/30 rounded-3xl"
             >
               <button
                 onClick={() => setOpen(false)}
                 className="absolute top-4 right-4 text-on-surface-variant hover:text-crimson transition-colors"
                 aria-label="Close"
               >
-                <X size={20} />
+                <span className="material-symbols-outlined">close</span>
               </button>
 
-              <h3 className="font-heading text-headline-sm text-on-surface mb-6">Register Now</h3>
+              <h3 className="font-headline-xl text-headline-xl text-on-surface mb-6">Register Now</h3>
 
               <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                 <div>
-                  <label className="text-label-bold text-on-surface block mb-1">Your Name</label>
+                  <label className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Name</label>
                   <input type="text" className="input-modern" required />
                 </div>
                 <div>
-                  <label className="text-label-bold text-on-surface block mb-1">Your Email</label>
+                  <label className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Email</label>
                   <input type="email" className="input-modern" required />
                 </div>
                 <div>
-                  <label className="text-label-bold text-on-surface block mb-1">Phone</label>
+                  <label className="font-body-md text-body-md font-medium text-on-surface block mb-1">Phone</label>
                   <input type="tel" className="input-modern" required />
                 </div>
                 <div>
-                  <label className="text-label-bold text-on-surface block mb-1">Address</label>
+                  <label className="font-body-md text-body-md font-medium text-on-surface block mb-1">Address</label>
                   <input type="text" className="input-modern" required />
                 </div>
                 <div>
-                  <label className="text-label-bold text-on-surface block mb-1">Purpose (optional)</label>
+                  <label className="font-body-md text-body-md font-medium text-on-surface block mb-1">Purpose (optional)</label>
                   <textarea rows={3} className="input-modern resize-none" />
                 </div>
                 <Button variant="primary" width="fullWidth" type="submit">

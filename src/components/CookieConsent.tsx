@@ -45,19 +45,19 @@ export default function CookieConsent() {
           className="fixed bottom-0 left-0 right-0 z-50 bg-navy text-paper-white px-6 py-4"
         >
           <div className="max-w-8xl mx-auto px-4 xl:px-10 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-body-md text-paper-white/80 text-center sm:text-left">
+            <p className="font-body-md text-body-md text-paper-white/80 text-center sm:text-left">
               We use cookies to improve your experience. By continuing, you agree to our use of cookies.
             </p>
             <div className="flex gap-3 flex-shrink-0">
               <button
                 onClick={handleAccept}
-                className="bg-crimson text-paper-white px-5 py-2 font-heading text-label-bold hover:brightness-110 transition-all duration-200"
+                className="bg-crimson text-paper-white px-5 py-2 font-body-lg text-body-lg font-medium hover:brightness-110 transition-all duration-200 rounded-full"
               >
                 Accept
               </button>
               <button
                 onClick={handleLearnMore}
-                className="border border-paper-white/30 text-paper-white/80 px-5 py-2 font-heading text-label-bold hover:bg-paper-white/10 transition-all duration-200"
+                className="border border-paper-white/30 text-paper-white/80 px-5 py-2 font-body-lg text-body-lg font-medium hover:bg-paper-white/10 transition-all duration-200 rounded-full"
               >
                 Learn More
               </button>

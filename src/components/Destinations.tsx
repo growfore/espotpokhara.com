@@ -28,7 +28,7 @@ export default function Destinations() {
           <div className="text-center mb-16">
             <div className="academic-rule mx-auto mb-4" />
             <span className="text-label-bold text-crimson tracking-wider block">Destinations</span>
-            <Heading tag="h2" size="xl" className="text-navy mb-4">
+            <Heading tag="h2" size="xxl" className="text-navy mb-4">
               Top Study Destinations
             </Heading>
             <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto">

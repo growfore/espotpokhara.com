@@ -1,73 +1,65 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Reveal from "@/components/Reveal";
-import Container from "@/components/global/Container";
-import Heading from "@/components/shared/Heading";
-import PageHero from "@/components/PageHero";
 import { getPosts, getFeaturedImageUrl } from "@/lib/wordpress";
 
 export const metadata: Metadata = {
-  title: "Blogs",
+  title: "Blog",
   description: "Read blogs from Espot Pokhara Education and Visa Services about studying abroad, university selection, visa guidance, and test preparation tips.",
   alternates: { canonical: "/blogs" },
-  openGraph: { title: "Blogs | Espot Pokhara", description: "Study abroad tips and guides.", url: "/blogs" },
+  openGraph: { title: "Blog | Espot Pokhara", description: "Study abroad tips and guides.", url: "/blogs" },
 };
 
 export default async function BlogsPage() {
   const posts = await getPosts();
 
   return (
-    <>
-      <PageHero
-        title="Blogs"
-        subtitle="Insights and guides to help you navigate your study abroad journey"
-        bgImage="/images/banner-bg.jpg"
-      />
+    <div className="min-h-screen bg-white">
+      <div className="max-w-6xl mx-auto px-6 pt-4 pb-20 md:pb-28">
+        <nav className="text-sm text-gray-400 mb-8 font-headline-xl">
+          Blog
+        </nav>
+        <div className="mb-16">
+          <h1 className="font-headline-xl text-4xl font-bold text-on-surface mb-3">Blog</h1>
+          <p className="font-headline-xl text-lg text-on-surface-variant">
+            Insights and guides to help you navigate your study abroad journey
+          </p>
+        </div>
 
-      <section className="px-4 xl:px-10 pattern-bg border-y border-dashed">
-        <Container className="py-16 md:py-28 border-x border-dashed">
-          <Reveal>
-            <div className="academic-rule mb-4" />
-            <Heading tag="h2" size="xl" className="text-on-surface mb-12">Latest Articles</Heading>
-          </Reveal>
-          {posts.length === 0 ? (
-            <p className="text-center text-body-lg text-on-surface-variant">No articles found.</p>
-          ) : (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {posts.map((post, i) => (
-                <Reveal key={post.slug} direction="up" delay={i * 0.05}>
-                  <Link
-                    href={`/blogs/${post.slug}`}
-                    className="block border border-dashed border-outline-variant rounded-3xl bg-paper-white group hover:border-crimson/30 transition-colors duration-200 h-full overflow-hidden"
-                  >
-                    {getFeaturedImageUrl(post) && (
-                      <div className="aspect-[16/9] overflow-hidden">
-                        <img
-                          src={getFeaturedImageUrl(post)!}
-                          alt=""
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    )}
-                    <div className="p-5">
-                      <Heading tag="h3" size="sm" className="text-on-surface group-hover:text-crimson transition-colors duration-200 line-clamp-2">
-                        {post.title.rendered}
-                      </Heading>
-                      <p
-                        className="text-body-sm text-on-surface-variant mt-2 line-clamp-3"
-                        dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+        {posts.length === 0 ? (
+          <p className="text-gray-500">No articles found.</p>
+        ) : (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
+            {posts.map((post) => {
+              const imageUrl = getFeaturedImageUrl(post);
+              return (
+                <Link key={post.slug} href={`/blogs/${post.slug}`} className="group block">
+                  {imageUrl && (
+                    <div className="aspect-[16/9] overflow-hidden rounded-xl bg-gray-100 mb-4">
+                      <img
+                        src={imageUrl}
+                        alt=""
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
-                      <span className="text-label-sm text-on-surface-variant mt-3 block">
-                        {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-                      </span>
                     </div>
-                  </Link>
-                </Reveal>
-              ))}
-            </div>
-          )}
-        </Container>
-      </section>
-    </>
+                  )}
+                  <div className="space-y-2">
+                    <time className="text-sm text-gray-500">
+                      {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+                    </time>
+                    <h2 className="font-headline-xl text-lg font-bold text-on-surface group-hover:text-crimson transition-colors leading-snug">
+                      {post.title.rendered}
+                    </h2>
+                    <p
+                      className="text-sm text-gray-500 line-clamp-2"
+                      dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+                    />
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </div>
   );
 }

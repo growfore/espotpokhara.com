@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Container from "@/components/global/Container";
 import { getPosts, getPostBySlug, getFeaturedImageUrl } from "@/lib/wordpress";
 
 interface Props {
@@ -32,29 +31,28 @@ export default async function BlogPost({ params }: Props) {
   const featuredImage = getFeaturedImageUrl(post);
 
   return (
-    <>
-      <section className="relative pt-24 md:pt-28 pb-28 md:pb-36 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${featuredImage || "/images/banner-bg.jpg"})` }}
-        />
-        <div className="absolute inset-0 bg-navy/60" />
-        <div className="relative z-10 max-w-8xl mx-auto px-4 xl:px-10">
-          <Link href="/blogs" className="text-paper-white/70 hover:text-paper-white text-body-md mb-4 inline-block transition-colors">
-            &larr; Back to Blogs
-          </Link>
-          <h1 className="font-heading text-display-lg text-paper-white mb-2">{post.title.rendered}</h1>
-          <p className="text-body-md text-paper-white/60">
-            {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-          </p>
-        </div>
-      </section>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-3xl mx-auto px-6 pt-4 pb-20 md:pb-28">
+        <nav className="text-sm text-gray-400 mb-8 font-headline-xl">
+          <Link href="/blogs" className="hover:text-on-surface transition-colors">Blog</Link> / <span className="text-on-surface font-medium">{post.title.rendered}</span>
+        </nav>
 
-      <section className="px-4 xl:px-10 pattern-bg border-y border-dashed">
-        <Container className="py-16 md:py-28 border-x border-dashed">
-          <article className="blog-content max-w-3xl mx-auto" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-        </Container>
-      </section>
-    </>
+        {featuredImage && (
+          <div className="aspect-[16/9] overflow-hidden rounded-xl bg-gray-100 mb-10">
+            <img src={featuredImage} alt="" className="w-full h-full object-cover" />
+          </div>
+        )}
+
+        <h1 className="font-headline-xl text-3xl md:text-4xl font-bold text-on-surface mb-4 leading-tight">
+          {post.title.rendered}
+        </h1>
+
+        <time className="text-sm text-gray-500 block mb-12">
+          {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+        </time>
+
+        <article className="blog-content" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+      </div>
+    </div>
   );
 }

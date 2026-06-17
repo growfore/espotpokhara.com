@@ -44,12 +44,20 @@ export default function StatsCounter({
       initial={{ opacity: 0, y: 16 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
-      className="text-center"
+      className="text-center relative"
     >
-      <div className="counter-value text-display-lg md:text-5xl font-heading font-extrabold text-crimson mb-2">
-        {count}{suffix}
+      <div className="relative inline-block">
+        <div className="counter-value font-headline-xl text-[64px] text-crimson mb-2 relative">
+          {count}{suffix}
+          <svg
+            className="absolute -inset-4 w-24 h-24 stroke-crimson/20 stroke-[3] fill-none -z-10"
+            viewBox="0 0 100 100"
+          >
+            <circle cx="50" cy="50" r="45" strokeDasharray="283" strokeDashoffset="100" />
+          </svg>
+        </div>
       </div>
-      <div className="text-body-md text-on-surface-variant font-medium">
+      <div className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">
         {label}
       </div>
     </motion.div>
