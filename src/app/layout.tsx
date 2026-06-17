@@ -109,7 +109,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700;800&family=Cabinet+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
         />
         <link
           rel="stylesheet"

@@ -28,18 +28,18 @@ export default function Container(props: ContainerProps) {
 
   const paddingTopStyles: Record<string, string> = {
     none: "pt-0",
-    small: "pt-7",
-    medium: "pt-14 md:pt-16",
-    default: "pt-16 md:pt-28",
-    large: "pt-16 lg:pt-36",
+    small: "pt-5",
+    medium: "pt-10 md:pt-12",
+    default: "pt-12 md:pt-20",
+    large: "pt-14 lg:pt-28",
   };
 
   const paddingBottomStyles: Record<string, string> = {
     none: "pb-0",
-    small: "pb-7",
-    medium: "pb-14 md:pb-16",
-    default: "pb-16 md:pb-28",
-    large: "pb-16 lg:pb-36",
+    small: "pb-5",
+    medium: "pb-10 md:pb-12",
+    default: "pb-12 md:pb-20",
+    large: "pb-14 lg:pb-28",
   };
 
   return (
