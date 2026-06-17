@@ -59,7 +59,7 @@ export const siteConfig = {
     { label: "Specialised Consultants", value: 10, suffix: "+", icon: "users" },
     { label: "Satisfied Customers", value: 100, suffix: "+", icon: "star" },
     { label: "Universities", value: 10, suffix: "+", icon: "building" },
-    { label: "Countries", value: 4, suffix: "+", icon: "globe" },
+    { label: "Countries", value: 11, suffix: "+", icon: "globe" },
   ],
 
   services: [
