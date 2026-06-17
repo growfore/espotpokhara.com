@@ -47,17 +47,11 @@ export default function StatsCounter({
       className="text-center relative"
     >
       <div className="relative inline-block">
-        <div className="counter-value font-headline-xl text-[64px] text-crimson mb-2 relative">
+        <div className="counter-value text-[2rem] md:text-[2.5rem] text-crimson font-black leading-none">
           {count}{suffix}
-          <svg
-            className="absolute -inset-4 w-24 h-24 stroke-crimson/20 stroke-[3] fill-none -z-10"
-            viewBox="0 0 100 100"
-          >
-            <circle cx="50" cy="50" r="45" strokeDasharray="283" strokeDashoffset="100" />
-          </svg>
         </div>
       </div>
-      <div className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">
+      <div className="text-[0.65rem] md:text-[0.7rem] text-on-surface-variant uppercase tracking-[0.15em] font-semibold">
         {label}
       </div>
     </motion.div>

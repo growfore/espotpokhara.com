@@ -10,7 +10,7 @@ import ScrollReelTestimonials from "@/components/ScrollReelTestimonials";
 import Container from "@/components/global/Container";
 import StatsCounter from "@/components/StatsCounter";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, CheckCircle, Users, Star, Building2, Globe, PlusIcon, type LucideIcon } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, CheckCircle, Users, Star, Building2, Globe, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const statIconMap: Record<string, LucideIcon> = {
@@ -31,38 +31,25 @@ export default function HomePage() {
       <section className="relative mx-auto max-w-5xl py-12 md:border-x border-outline-variant">
         <div className="-translate-x-1/2 -top-px pointer-events-none absolute left-1/2 w-screen border-t border-outline-variant" />
 
-        <div className="grid grid-cols-2 border-x md:grid-cols-4 border-outline-variant">
+        <div className="grid grid-cols-5 border-outline-variant">
           {siteConfig.stats.map((stat, i) => {
             const Icon = statIconMap[stat.icon] || CheckCircle;
-            const isFirstRow = i < 4;
             const bg =
               i === 0 || i === 3
                 ? "bg-paper-white"
-                : i === 4
-                  ? "bg-linen-bg"
-                  : "bg-linen-bg";
+                : "bg-linen-bg";
 
             return (
               <div
                 key={stat.label}
                 className={cn(
-                  "relative flex flex-col items-center justify-center gap-3 px-4 py-10 md:py-16",
-                  i % 2 === 0 && "border-r border-outline-variant",
-                  isFirstRow && "border-b border-outline-variant",
-                  i < 3 && "md:border-r md:border-outline-variant",
-                  i === 4 && "md:col-span-2 md:col-start-2",
+                  "relative flex flex-col items-center justify-center gap-2 py-8 md:py-10",
+                  i < 4 && "border-r border-outline-variant",
                   bg,
                 )}
               >
-                <Icon className="w-8 h-8 text-crimson" strokeWidth={1.5} />
+                <Icon className="w-6 h-6 md:w-7 md:h-7 text-crimson" strokeWidth={1.5} />
                 <StatsCounter value={stat.value} suffix={stat.suffix} label={stat.label} />
-
-                {(i === 0 || i === 1 || i === 2) && (
-                  <PlusIcon
-                    className="-right-[12.5px] -bottom-[12.5px] absolute z-10 size-6 text-crimson/40"
-                    strokeWidth={1}
-                  />
-                )}
               </div>
             );
           })}
