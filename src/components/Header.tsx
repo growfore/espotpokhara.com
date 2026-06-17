@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
@@ -47,7 +47,7 @@ function NavLink({
         className={`relative group ${
           isMobile
             ? "block text-on-surface font-heading text-headline-sm py-4 border-b border-outline-variant"
-            : "text-on-surface-variant hover:text-navy font-body text-body-md transition-colors duration-200"
+            : "text-on-surface-variant hover:text-navy font-body text-sm transition-colors duration-200"
         }`}
       >
         {item.label}
@@ -88,7 +88,7 @@ function NavLink({
                       key={child.href}
                       href={child.href}
                       onClick={onMobileClose}
-                      className="block text-on-surface-variant hover:text-crimson text-body-md py-3 border-b border-outline-variant/50"
+                      className="block text-on-surface-variant hover:text-crimson text-sm py-3 border-b border-outline-variant/50"
                     >
                       {child.label}
                     </Link>
@@ -103,7 +103,7 @@ function NavLink({
           <button
             onMouseEnter={() => setOpen(true)}
             onClick={() => setOpen(!open)}
-            className="flex items-center gap-1 text-on-surface-variant hover:text-navy font-body text-body-md transition-colors duration-200"
+            className="flex items-center gap-1 text-on-surface-variant hover:text-navy font-body text-sm transition-colors duration-200"
           >
             {item.label}
             <ChevronDown
@@ -127,7 +127,7 @@ function NavLink({
                       key={child.href}
                       href={child.href}
                       onClick={() => setOpen(false)}
-                      className="block px-4 py-3 text-body-md text-on-surface hover:bg-linen-bg hover:text-crimson transition-colors duration-200 rounded-2xl"
+                      className="block px-4 py-3 text-sm text-on-surface hover:bg-linen-bg hover:text-crimson transition-colors duration-200 rounded-2xl"
                     >
                       {child.label}
                     </Link>
@@ -143,21 +143,7 @@ function NavLink({
 }
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    let lastScroll = window.scrollY;
-    const onScroll = () => {
-      const current = window.scrollY;
-      setScrolled(current > 50);
-      setHidden(current > 100 && current > lastScroll);
-      lastScroll = current;
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
@@ -169,8 +155,7 @@ export default function Header() {
   const mainMenu = siteConfig.nav.mainMenu;
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 border-b border-outline-variant transition-transform duration-300 ${hidden ? "-translate-y-full" : "translate-y-0"} bg-paper-white`}
+    <header className="fixed top-0 left-0 w-full z-50 border-b border-outline-variant bg-paper-white">
     >
       <div className="max-w-8xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20">
         <Link href="/" className="flex items-center group">
@@ -181,8 +166,8 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
-          <ul className="flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-5">
+          <ul className="flex items-center gap-5">
             {mainMenu.map((item) => (
               <NavLink key={item.href + item.label} item={item} />
             ))}
