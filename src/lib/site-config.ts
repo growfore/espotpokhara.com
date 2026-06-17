@@ -4,27 +4,27 @@ export const siteConfig = {
   tagline: "Turn Your Educational Dreams Into Reality",
   description:
     "Espot Pokhara Education and Visa Services in Pokhara, Nepal provides expert study abroad services including university selection, visa guidance, IELTS/PTE/JLPT preparation, and scholarship assistance for USA, Japan, Australia, and Canada.",
-  url: "https://tieupone.com.np",
+  url: "https://espotpokhara.com.np",
   ogImage: "/images/hero-bg.webp",
   themeColor: "#001F5B",
 
   contact: {
     address: "Samsung Galli, Newroad, Pokhara-09, Nepal",
     phone: "061-591175",
-    email: "tieupone@gmail.com",
+    email: "espotpokhara@gmail.com",
     workingHours: "Sun - Fri: 10:00 AM - 6:00 PM",
     saturday: "Saturday: Closed",
   },
 
   topBar: {
     left: "10AM - 6PM",
-    center: "tieupone@gmail.com",
+    center: "espotpokhara@gmail.com",
     right: "061-591175",
   },
 
   social: {
-    facebook: "https://facebook.com/tieupone",
-    instagram: "https://instagram.com/tieupone",
+    facebook: "https://facebook.com/espotpokhara",
+    instagram: "https://instagram.com/espotpokhara",
   },
 
   nav: {
@@ -820,6 +820,10 @@ export const siteConfig = {
     { label: "Japan", href: "/study-in-japan" },
     { label: "Canada", href: "/study-in-canada" },
     { label: "Australia", href: "/study-in-australia" },
+    { label: "UK", href: "/study-in-uk" },
+    { label: "New Zealand", href: "/study-in-new-zealand" },
+    { label: "Germany", href: "/study-in-germany" },
+    { label: "France", href: "/study-in-france" },
   ],
   footerSupport: [
     { label: "Privacy Policy", href: "/" },

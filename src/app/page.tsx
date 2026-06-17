@@ -209,55 +209,6 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="px-4 xl:px-10 bg-linen-bg">
-        <Container className="py-16 md:py-28">
-          <Reveal>
-            <div className="text-center mb-12">
-              <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson font-mono mb-3">
-                Schedule
-              </span>
-              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-4">Class Schedule & Working Hours</h2>
-            </div>
-          </Reveal>
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <Reveal direction="left">
-              <div className="border border-outline-variant rounded-3xl bg-paper-white p-8">
-                <h3 className="font-heading tracking-tighter text-heading-lg text-navy mb-6">Language Classes</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center border-b border-outline-variant pb-3">
-                    <span className="font-heading text-label-bold text-on-surface">MORNING</span>
-                    <span className="text-body-md text-on-surface-variant">7AM - 8AM</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-outline-variant pb-3">
-                    <span className="font-heading text-label-bold text-on-surface">DAY</span>
-                    <span className="text-body-md text-on-surface-variant">10AM - 11AM</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-outline-variant pb-3">
-                    <span className="font-heading text-label-bold text-on-surface">EVENING</span>
-                    <span className="text-body-md text-on-surface-variant">5PM - 6PM</span>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-            <Reveal direction="right">
-              <div className="border border-outline-variant rounded-3xl bg-paper-white p-8">
-                <h3 className="font-heading tracking-tighter text-heading-lg text-navy mb-6">Working Hours</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center border-b border-outline-variant pb-3">
-                    <span className="font-heading text-label-bold text-on-surface">SUN - FRI</span>
-                    <span className="text-body-md text-on-surface-variant">10AM - 6PM</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3">
-                    <span className="font-heading text-label-bold text-on-surface">SATURDAY</span>
-                    <span className="text-body-md text-crimson font-bold">CLOSED</span>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </Container>
-      </section>
-
       <CTASection />
     </>
   );

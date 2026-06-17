@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-navy text-paper-white">
       <div className="max-w-8xl mx-auto px-6 md:px-10">
-        <div className="grid md:grid-cols-4 gap-12 py-16">
+        <div className="grid md:grid-cols-5 gap-12 py-16">
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-4">
               <img
@@ -73,6 +73,42 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold text-paper-white/40 uppercase tracking-wider mb-4">Schedule</p>
+            <div className="space-y-4">
+              <div>
+                <p className="text-xs font-semibold text-paper-white/60 mb-2">Language Classes</p>
+                <div className="space-y-1.5">
+                  <div className="flex justify-between gap-4 text-xs text-paper-white/50">
+                    <span>Morning</span>
+                    <span>{siteConfig.languageSchedule.morning}</span>
+                  </div>
+                  <div className="flex justify-between gap-4 text-xs text-paper-white/50">
+                    <span>Day</span>
+                    <span>{siteConfig.languageSchedule.day}</span>
+                  </div>
+                  <div className="flex justify-between gap-4 text-xs text-paper-white/50">
+                    <span>Evening</span>
+                    <span>{siteConfig.languageSchedule.evening}</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p className="text-xs font-semibold text-paper-white/60 mb-2">Working Hours</p>
+                <div className="space-y-1.5">
+                  <div className="flex justify-between gap-4 text-xs text-paper-white/50">
+                    <span>Sun - Fri</span>
+                    <span>10AM - 6PM</span>
+                  </div>
+                  <div className="flex justify-between gap-4 text-xs text-paper-white/50">
+                    <span>Saturday</span>
+                    <span className="text-crimson">Closed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div>
