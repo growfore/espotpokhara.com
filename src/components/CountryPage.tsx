@@ -355,16 +355,16 @@ export default function CountryPage({ country }: { country: Country }) {
         </Section>
       )}
 
-      {country.extendedJlptLevels && (
-        <Section title="Japanese Language Proficiency Levels">
-          {country.extendedJlptLevels.map((level) => (
-            <div key={level.level} className="mb-4">
-              <h3 className="font-semibold text-on-surface">{level.level} — {level.title}</h3>
-              <p className="text-sm text-on-surface-variant">{level.description}</p>
-            </div>
-          ))}
-        </Section>
-      )}
+       {country.extendedJlptLevels && (
+         <Section title="Japanese Language Proficiency Levels">
+           {country.extendedJlptLevels.map((level, i) => (
+             <div key={`${level.level}-${i}`} className="mb-4">
+               <h3 className="font-semibold text-on-surface">{level.level} — {level.title}</h3>
+               <p className="text-sm text-on-surface-variant">{level.description}</p>
+             </div>
+           ))}
+         </Section>
+       )}
 
       {country.whyChooseUs && (
         <Section title="Why Choose Us">

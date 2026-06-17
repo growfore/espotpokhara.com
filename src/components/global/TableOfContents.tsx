@@ -12,7 +12,7 @@ export default function TableOfContents() {
   const [activeId, setActiveId] = useState("");
 
   useEffect(() => {
-    const container = document.querySelector(".prose-custom");
+    const container = document.querySelector(".docs-content");
     if (!container) return;
 
     const els = container.querySelectorAll("h2");
@@ -60,7 +60,7 @@ export default function TableOfContents() {
   return (
     <nav className="hidden xl:block w-56 flex-shrink-0">
       <div className="sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)]">
-        <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-1.5">
+        <p className="text-xs font-bold text-outline uppercase tracking-wider mb-4 flex items-center gap-1.5">
           <span className="material-symbols-outlined text-xs">toc</span>
           On this page
         </p>
@@ -72,7 +72,7 @@ export default function TableOfContents() {
                 className={`block text-left text-sm w-full py-1 transition-colors ${
                   activeId === h.id
                     ? "text-crimson font-medium"
-                    : "text-gray-500 hover:text-on-surface"
+                    : "text-on-surface-variant hover:text-on-surface"
                 }`}
               >
                 {h.text}

@@ -27,7 +27,7 @@ export function Callout({ type = "info", children }: { type?: "info" | "tip" | "
 export function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="mb-12">
-      <h2 className="text-xl font-bold mb-4 text-on-surface">{title}</h2>
+      <h2 className="font-heading tracking-tighter text-heading-lg text-navy mb-6">{title}</h2>
       {children}
     </section>
   );
@@ -62,7 +62,7 @@ export function Card({
   const color = cardColors[colorIndex % cardColors.length];
   return (
     <div className={`rounded-xl border p-5 ${color}`}>
-      {number && <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">{number}</span>}
+      {number && <span className="text-xs font-bold text-outline uppercase tracking-wider">{number}</span>}
       <h3 className="font-semibold text-on-surface mt-1">{title}</h3>
       {children && <div className="text-sm text-on-surface-variant mt-2 leading-relaxed">{children}</div>}
     </div>
@@ -104,12 +104,12 @@ function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
   return (
     <>
       <aside
-        className={`fixed top-0 left-0 z-30 h-full w-64 bg-white border-r border-gray-200 pt-16 lg:pt-4 pb-8 overflow-y-auto transition-transform duration-200 ${open ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 lg:sticky lg:top-20 lg:h-[calc(100vh-5rem)]`}
+        className={`fixed top-0 left-0 z-30 h-full w-64 bg-paper-white border-r border-outline-variant pt-16 lg:pt-4 pb-8 overflow-y-auto transition-transform duration-200 ${open ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 lg:sticky lg:top-20 lg:h-[calc(100vh-5rem)]`}
       >
         <nav className="px-4 space-y-8">
           {navItems.map((group) => (
             <div key={group.label}>
-              <p className="px-3 text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+              <p className="px-3 text-xs font-bold text-outline uppercase tracking-wider mb-2 flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-xs">{group.label === "Study Destinations" ? "public" : group.label === "Site" ? "language" : "description"}</span>
                 {group.label}
               </p>
@@ -121,7 +121,7 @@ function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
                       <Link
                         href={item.href}
                         onClick={onClose}
-                        className={`block px-3 py-2 rounded-lg text-sm transition-colors ${active ? "bg-crimson/10 text-crimson font-medium" : "text-gray-600 hover:bg-gray-50 hover:text-on-surface"}`}
+                        className={`block px-3 py-2 rounded-lg text-sm transition-colors ${active ? "bg-crimson/10 text-crimson font-medium" : "text-on-surface-variant hover:bg-linen-bg hover:text-on-surface"}`}
                       >
                         {item.label}
                       </Link>
@@ -148,12 +148,12 @@ function Breadcrumbs({ onMenuToggle }: { onMenuToggle: () => void }) {
         <div className="flex items-center gap-3 mb-6">
           <button
             onClick={onMenuToggle}
-            className="lg:hidden w-8 h-8 flex items-center justify-center bg-white border border-gray-200 rounded-lg flex-shrink-0"
+            className="lg:hidden w-8 h-8 flex items-center justify-center bg-paper-white border border-outline-variant rounded-lg flex-shrink-0"
             aria-label="Toggle sidebar"
           >
-            <span className="material-symbols-outlined text-base text-gray-600">menu</span>
+            <span className="material-symbols-outlined text-base text-on-surface-variant">menu</span>
           </button>
-          <nav className="text-sm text-gray-400 font-headline-xl">
+          <nav className="text-sm text-outline font-heading">
             {group.label} / <span className="text-on-surface font-medium">{item.label}</span>
           </nav>
         </div>
@@ -178,15 +178,15 @@ export default function DocsLayout({
   const pathname = usePathname();
   useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-paper-white">
       <div className="max-w-8xl mx-auto flex">
         <Sidebar open={menuOpen} onClose={() => setMenuOpen(false)} />
         <main className="flex-1 min-w-0 px-6 pt-4 pb-16 md:pb-20 lg:pl-12">
           <Breadcrumbs onMenuToggle={() => setMenuOpen(!menuOpen)} />
           <div className="flex gap-12">
             <div className="max-w-3xl flex-1 min-w-0">
-              <h1 className="font-headline-xl text-3xl font-bold mb-2 text-on-surface">{title}</h1>
-              {subtitle && <p className="font-headline-xl text-base text-on-surface-variant mb-8">{subtitle}</p>}
+              <h1 className="font-heading tracking-tighter text-heading-xl text-navy mb-2">{title}</h1>
+              {subtitle && <p className="font-heading text-body-lg text-on-surface-variant mb-8">{subtitle}</p>}
               {headerImage && (
                 <img
                   src={headerImage}
@@ -194,7 +194,7 @@ export default function DocsLayout({
                   className="w-full aspect-[3/1] object-cover rounded-xl mb-10"
                 />
               )}
-              <div className="font-headline-xl prose-custom">{children}</div>
+              <div className="docs-content">{children}</div>
             </div>
             <TableOfContents />
           </div>
