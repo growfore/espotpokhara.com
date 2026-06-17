@@ -3,7 +3,6 @@ import { siteConfig } from "@/lib/site-config";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import Container from "@/components/global/Container";
-import Heading from "@/components/shared/Heading";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
@@ -31,8 +30,7 @@ export default function ContactPage() {
         <Container className="py-16 md:py-28">
           <div className="grid md:grid-cols-2 gap-12">
             <Reveal direction="left">
-              <div className="academic-rule mb-4" />
-              <Heading tag="h2" size="xxl" className="text-navy mb-4">Get In Touch</Heading>
+              <h2 className="font-heading tracking-tighter text-2xl md:text-4xl text-navy mb-4">Get In Touch</h2>
               <p className="text-body-lg text-on-surface-variant mb-8">
                 Have questions about studying abroad? We are here to provide you
                 with the guidance and support you need. Reach out to us through
@@ -82,7 +80,7 @@ export default function ContactPage() {
 
             <Reveal direction="right">
               <div className="border border-outline-variant rounded-3xl bg-paper-white p-8 shadow-sm">
-                <Heading tag="h3" size="lg" className="text-on-surface mb-6">Send Us a Message</Heading>
+                <h3 className="font-heading tracking-tighter text-xl text-on-surface mb-6">Send Us a Message</h3>
                 <form className="space-y-4">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <input type="text" placeholder="Your Name" className="input-modern rounded-lg" required />

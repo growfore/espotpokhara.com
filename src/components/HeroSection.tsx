@@ -8,7 +8,7 @@ import InfiniteGrid from "@/components/InfiniteGrid";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-paper-white">
+    <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-paper-white">
       <InfiniteGrid />
       <img
         src="https://www.idp.com/_next/image/?url=https%3A%2F%2Fimages.ctfassets.net%2F8bbwomjfix8m%2F2KGayO7y8ZmUB3CUSvwg9U%2Fc2a6ff713890862c88c04f9a8fe1c2a9%2FEnquiry_form_banner_nepal.png%3Ffit%3Dfill%26w%3D500%26h%3D1024%26q%3D80%26fm%3Dwebp&w=640&q=75"
@@ -30,7 +30,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-              className="font-headline-xl text-headline-xl text-navy mb-6"
+              className="font-heading tracking-tighter text-4xl md:text-6xl font-bold text-navy mb-6"
             >
               Turn Your{" "}
               <span className="text-crimson paint-stroke-underline">

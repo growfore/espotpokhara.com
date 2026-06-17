@@ -9,7 +9,6 @@ import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import ScrollReelTestimonials from "@/components/ScrollReelTestimonials";
 import Container from "@/components/global/Container";
-import Heading from "@/components/shared/Heading";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
@@ -18,7 +17,9 @@ export default function HomePage() {
     <>
       <HeroSection />
 
-      <section className="px-4 xl:px-10 bg-linen-bg">
+      <Destinations />
+
+      <section className="px-4 xl:px-10">
         <Container className="py-16 md:py-28">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {siteConfig.stats.map((stat) => (
@@ -33,9 +34,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <Destinations />
-
-      <section className="px-4 xl:px-10">
+      <section className="px-4 xl:px-10 bg-linen-bg">
         <Container className="py-16 md:py-28">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <Reveal direction="left">
@@ -50,11 +49,9 @@ export default function HomePage() {
               </div>
             </Reveal>
             <Reveal direction="right">
-              <div className="academic-rule mb-4" />
-              <span className="text-label-bold text-crimson tracking-wider block">About Us</span>
-              <Heading tag="h2" size="xxl" className="text-navy mb-6">
+              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">
                 Expert Immigration Services
-              </Heading>
+              </h2>
               <p className="text-body-lg text-on-surface-variant mb-8">
                 Espot Pokhara Education and Visa Services is an emerging consultancy
                 based in Pokhara, Nepal. We are dedicated to helping students
@@ -85,11 +82,9 @@ export default function HomePage() {
         <Container className="py-16 md:py-28">
           <Reveal>
             <div className="text-center mb-16">
-              <div className="academic-rule mx-auto mb-4" />
-              <span className="text-label-bold text-crimson tracking-wider block">Testimonials</span>
-              <Heading tag="h2" size="xxl" className="text-navy mb-4">
+              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-4">
                 What Our Students Say
-              </Heading>
+              </h2>
             </div>
           </Reveal>
           <ScrollReelTestimonials
@@ -107,11 +102,9 @@ export default function HomePage() {
         <Container className="py-16 md:py-28">
           <div className="grid md:grid-cols-2 gap-16">
             <Reveal direction="left">
-              <div className="academic-rule mb-4" />
-              <span className="text-label-bold text-crimson tracking-wider block">Contact</span>
-              <Heading tag="h2" size="xxl" className="text-navy mb-8">
+              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-8">
                 Get In Touch
-              </Heading>
+              </h2>
               <div className="space-y-8">
                 <div className="flex items-start gap-5">
                   <div className="w-12 h-12 flex items-center justify-center bg-crimson text-paper-white rounded-2xl flex-shrink-0">
@@ -155,7 +148,7 @@ export default function HomePage() {
 
             <Reveal direction="right">
               <div className="border border-outline-variant rounded-3xl p-10 bg-paper-white shadow-sm">
-                <Heading tag="h3" size="lg" className="text-on-surface mb-8">Send Us a Message</Heading>
+                <h3 className="font-heading tracking-tighter text-heading-lg text-on-surface mb-8">Send Us a Message</h3>
                 <form className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <input type="text" placeholder="Your Name" className="input-modern rounded-lg" required />
@@ -190,15 +183,13 @@ export default function HomePage() {
         <Container className="py-16 md:py-28">
           <Reveal>
             <div className="text-center mb-12">
-              <div className="academic-rule mx-auto mb-4" />
-              <span className="text-label-bold text-crimson tracking-wider block">Schedule</span>
-              <Heading tag="h2" size="xxl" className="text-navy mb-4">Class Schedule & Working Hours</Heading>
+              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-4">Class Schedule & Working Hours</h2>
             </div>
           </Reveal>
           <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             <Reveal direction="left">
               <div className="border border-outline-variant rounded-3xl bg-paper-white p-8 shadow-sm">
-                <Heading tag="h3" size="lg" className="text-navy mb-6">Language Classes</Heading>
+                <h3 className="font-heading tracking-tighter text-heading-lg text-navy mb-6">Language Classes</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center border-b border-outline-variant pb-3">
                     <span className="font-heading text-label-bold text-on-surface">MORNING</span>
@@ -217,7 +208,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal direction="right">
               <div className="border border-outline-variant rounded-3xl bg-paper-white p-8 shadow-sm">
-                <Heading tag="h3" size="lg" className="text-navy mb-6">Working Hours</Heading>
+                <h3 className="font-heading tracking-tighter text-heading-lg text-navy mb-6">Working Hours</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center border-b border-outline-variant pb-3">
                     <span className="font-heading text-label-bold text-on-surface">SUN - FRI</span>

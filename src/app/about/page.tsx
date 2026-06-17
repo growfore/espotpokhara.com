@@ -3,7 +3,6 @@ import { siteConfig } from "@/lib/site-config";
 import { Check } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import Container from "@/components/global/Container";
-import Heading from "@/components/shared/Heading";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 
@@ -37,8 +36,7 @@ export default function AboutPage() {
               </div>
             </Reveal>
             <Reveal direction="right">
-              <div className="academic-rule mb-4" />
-              <Heading tag="h2" size="xxl" className="text-navy mb-6">Who We Are</Heading>
+              <h2 className="font-heading tracking-tighter text-2xl md:text-4xl text-navy mb-6">Who We Are</h2>
               <p className="text-body-lg text-on-surface-variant">
                 {siteConfig.aboutPage.whoWeAre}
               </p>
@@ -51,8 +49,7 @@ export default function AboutPage() {
         <Container className="py-16 md:py-28">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <Reveal direction="left">
-              <div className="academic-rule mb-4" />
-              <Heading tag="h2" size="xxl" className="text-navy mb-6">Why Choose Us</Heading>
+              <h2 className="font-heading tracking-tighter text-2xl md:text-4xl text-navy mb-6">Why Choose Us</h2>
               <p className="text-body-lg text-on-surface-variant mb-6">{siteConfig.aboutPage.whyChooseUs}</p>
               <ul className="space-y-4">
                 {siteConfig.whyChooseUs.map((reason) => (
@@ -76,8 +73,7 @@ export default function AboutPage() {
         <Container className="py-16 md:py-28">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <Reveal direction="left">
-              <div className="academic-rule mb-4" />
-              <Heading tag="h2" size="xxl" className="text-navy mb-6">Message From Director</Heading>
+              <h2 className="font-heading tracking-tighter text-2xl md:text-4xl text-navy mb-6">Message From Director</h2>
               <p className="text-body-lg text-on-surface-variant mb-6">
                 Welcome to Espot Pokhara Education and Visa Services! We are established with the motto of fulfilling our student&apos;s requirements and needs for a better future and an excellent journey. Our goal is to understand and fulfill your unique requirements. We strive to provide our students with ongoing service to make sure they are comfortable in a completely different country and new environment. Our motto is to establish strong relationships with every student, ensuring their academic excellence and bright future. We believe that by fostering these relationships, we can create a solid foundation for success and provide comprehensive assistance throughout your time abroad.
               </p>
@@ -98,8 +94,7 @@ export default function AboutPage() {
         <Container className="py-16 md:py-28">
           <Reveal>
             <div className="text-center mb-12">
-              <div className="academic-rule mx-auto mb-4" />
-              <Heading tag="h2" size="xxl" className="text-navy mb-4">Our Core Values</Heading>
+              <h2 className="font-heading tracking-tighter text-2xl md:text-4xl text-navy mb-4">Our Core Values</h2>
             </div>
           </Reveal>
           <div className="grid sm:grid-cols-3 gap-6">
@@ -111,7 +106,7 @@ export default function AboutPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
                     </svg>
                   </div>
-                  <Heading tag="h3" size="lg" className="text-on-surface mb-3">{value.title}</Heading>
+                  <h3 className="font-heading tracking-tighter text-xl text-on-surface mb-3">{value.title}</h3>
                   <p className="text-body-md text-on-surface-variant">{value.description}</p>
                 </div>
               </Reveal>
