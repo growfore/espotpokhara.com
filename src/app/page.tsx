@@ -2,15 +2,25 @@
 
 import { siteConfig } from "@/lib/site-config";
 import Reveal from "@/components/Reveal";
-import StatsCounter from "@/components/StatsCounter";
 import Destinations from "@/components/Destinations";
 import CTASection from "@/components/CTASection";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import ScrollReelTestimonials from "@/components/ScrollReelTestimonials";
 import Container from "@/components/global/Container";
+import StatsCounter from "@/components/StatsCounter";
+import { InfiniteSlider } from "@/components/ui/infinite-slider";
+import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, CheckCircle, Users, Star, Building2, Globe, type LucideIcon } from "lucide-react";
+
+const statIconMap: Record<string, LucideIcon> = {
+  check: CheckCircle,
+  users: Users,
+  star: Star,
+  building: Building2,
+  globe: Globe,
+};
 
 export default function HomePage() {
   return (
@@ -19,19 +29,33 @@ export default function HomePage() {
 
       <Destinations />
 
-      <section className="px-4 xl:px-10">
-        <Container className="py-16 md:py-28">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {siteConfig.stats.map((stat) => (
-              <StatsCounter
-                key={stat.label}
-                value={stat.value}
-                suffix={stat.suffix}
-                label={stat.label}
-              />
-            ))}
-          </div>
-        </Container>
+      <section className="relative mx-auto max-w-5xl py-12 md:border-x border-outline-variant">
+        <div className="-translate-x-1/2 -top-px pointer-events-none absolute left-1/2 w-screen border-t border-outline-variant" />
+
+        <InfiniteSlider gap={64} reverse speed={60} speedOnHover={20}>
+          {siteConfig.stats.map((stat) => {
+            const Icon = statIconMap[stat.icon] || CheckCircle;
+            return (
+              <div key={stat.label} className="flex flex-col items-center gap-3 min-w-[180px]">
+                <Icon className="w-8 h-8 text-crimson" strokeWidth={1.5} />
+                <StatsCounter value={stat.value} suffix={stat.suffix} label={stat.label} />
+              </div>
+            );
+          })}
+        </InfiniteSlider>
+
+        <ProgressiveBlur
+          blurIntensity={1}
+          className="pointer-events-none absolute top-0 left-0 h-full w-[160px]"
+          direction="left"
+        />
+        <ProgressiveBlur
+          blurIntensity={1}
+          className="pointer-events-none absolute top-0 right-0 h-full w-[160px]"
+          direction="right"
+        />
+
+        <div className="-translate-x-1/2 -bottom-px pointer-events-none absolute left-1/2 w-screen border-b border-outline-variant" />
       </section>
 
       <section className="px-4 xl:px-10 bg-linen-bg">
