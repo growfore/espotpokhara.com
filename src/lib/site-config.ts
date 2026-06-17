@@ -134,6 +134,62 @@ export const siteConfig = {
       tags: ["Research", "PR Pathway"],
       href: "/study-in-canada",
     },
+    {
+      country: "UK",
+      image: "/images/destinations/uk.webp",
+      description:
+        "The UK is home to some of the world's oldest and most prestigious universities with rich academic traditions.",
+      tags: ["Top Universities", "Shorter Courses"],
+      href: "/study-in-uk",
+    },
+    {
+      country: "New Zealand",
+      image: "/images/destinations/new-zealand.webp",
+      description:
+        "New Zealand offers a safe, welcoming environment with high-quality education and stunning natural beauty.",
+      tags: ["Safe Environment", "Work Rights"],
+      href: "/study-in-new-zealand",
+    },
+    {
+      country: "Malta",
+      image: "/images/destinations/malta.webp",
+      description:
+        "Malta combines quality European education with a unique Mediterranean lifestyle and English-speaking environment.",
+      tags: ["English Taught", "EU Campus"],
+      href: "/study-in-malta",
+    },
+    {
+      country: "Cyprus",
+      image: "/images/destinations/cyprus.webp",
+      description:
+        "Cyprus provides affordable European education with a warm climate and growing international student community.",
+      tags: ["Affordable", "EU Member"],
+      href: "/study-in-cyprus",
+    },
+    {
+      country: "Dubai",
+      image: "/images/destinations/dubai.webp",
+      description:
+        "Dubai is a global hub offering world-class university campuses and unparalleled career opportunities.",
+      tags: ["Global Hub", "Tax Free"],
+      href: "/study-in-dubai",
+    },
+    {
+      country: "Germany",
+      image: "/images/destinations/germany.webp",
+      description:
+        "Germany offers tuition-free or low-cost education at globally respected universities with strong industry links.",
+      tags: ["Tuition Free", "Engineering Hub"],
+      href: "/study-in-germany",
+    },
+    {
+      country: "France",
+      image: "/images/destinations/france.webp",
+      description:
+        "France combines prestigious Grandes Écoles with rich cultural heritage and affordable public university education.",
+      tags: ["Art & Culture", "Research"],
+      href: "/study-in-france",
+    },
   ],
 
   testimonials: [
