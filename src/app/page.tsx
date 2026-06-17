@@ -2,15 +2,15 @@
 
 import { siteConfig } from "@/lib/site-config";
 import Reveal from "@/components/Reveal";
-import StaggerContainer from "@/components/StaggerContainer";
 import StatsCounter from "@/components/StatsCounter";
 import Destinations from "@/components/Destinations";
 import CTASection from "@/components/CTASection";
 import HeroSection from "@/components/HeroSection";
+import ServicesSection from "@/components/ServicesSection";
 import Container from "@/components/global/Container";
 import Heading from "@/components/shared/Heading";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Plus } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -76,46 +76,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="px-4 xl:px-10 pattern-bg border-y border-dashed">
-        <Container className="py-16 md:py-28 border-x border-dashed">
-          <Reveal>
-            <div className="text-center mb-16">
-              <div className="academic-rule mx-auto mb-4" />
-              <span className="text-label-bold text-crimson tracking-wider block">What We Do</span>
-              <Heading tag="h2" size="xxl" className="text-navy mb-4">
-                Our Services
-              </Heading>
-              <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                Comprehensive study abroad services tailored to your needs
-              </p>
-            </div>
-          </Reveal>
-
-          <StaggerContainer staggerDelay={0.06}>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {siteConfig.services.map((service, i) => (
-                <Reveal key={service.title} direction="up" delay={i * 0.06}>
-                  <motion.div
-                    whileHover={{ y: -6 }}
-                    transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                    className="border border-dashed border-outline-variant rounded-3xl bg-paper-white p-8 h-full group cursor-default"
-                  >
-                    <div className="w-14 h-14 flex items-center justify-center bg-crimson text-paper-white rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <Plus className="w-7 h-7" />
-                    </div>
-                    <Heading tag="h3" size="lg" className="text-on-surface mb-4">
-                      {service.title}
-                    </Heading>
-                    <p className="text-body-md text-on-surface-variant">
-                      {service.description}
-                    </p>
-                  </motion.div>
-                </Reveal>
-              ))}
-            </div>
-          </StaggerContainer>
-        </Container>
-      </section>
+      <ServicesSection />
 
       <Destinations />
 
