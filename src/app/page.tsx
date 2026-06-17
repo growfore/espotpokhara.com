@@ -34,10 +34,6 @@ export default function HomePage() {
         <div className="grid grid-cols-5 border-outline-variant">
           {siteConfig.stats.map((stat, i) => {
             const Icon = statIconMap[stat.icon] || CheckCircle;
-            const bg =
-              i === 0 || i === 3
-                ? "bg-paper-white"
-                : "bg-linen-bg";
 
             return (
               <div
@@ -45,7 +41,6 @@ export default function HomePage() {
                 className={cn(
                   "relative flex flex-col items-center justify-center gap-2 py-8 md:py-10",
                   i < 4 && "border-r border-outline-variant",
-                  bg,
                 )}
               >
                 <Icon className="w-6 h-6 md:w-7 md:h-7 text-crimson" strokeWidth={1.5} />
@@ -64,7 +59,7 @@ export default function HomePage() {
             <Reveal direction="left">
               <div className="relative">
                 <div className="absolute -top-4 -left-4 w-24 h-24 border border-outline-variant rounded-3xl -z-0" />
-                <div className="relative z-10 border border-outline-variant rounded-3xl overflow-hidden shadow-lg">
+                <div className="relative z-10 border border-outline-variant rounded-3xl overflow-hidden">
                   <div
                     className="h-[420px] bg-cover bg-center grayscale-hover"
                     style={{ backgroundImage: "url('/images/who-we-are.webp')" }}
@@ -171,7 +166,7 @@ export default function HomePage() {
             </Reveal>
 
             <Reveal direction="right">
-              <div className="border border-outline-variant rounded-3xl p-10 bg-paper-white shadow-sm">
+              <div className="border border-outline-variant rounded-3xl p-10 bg-paper-white">
                 <h3 className="font-heading tracking-tighter text-heading-lg text-on-surface mb-8">Send Us a Message</h3>
                 <form className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
@@ -192,7 +187,7 @@ export default function HomePage() {
                     type="submit"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full bg-crimson text-paper-white rounded-full px-8 py-3.5 font-heading text-label-bold shadow-md hover:shadow-lg transition-all duration-200"
+                    className="w-full bg-crimson text-paper-white rounded-full px-8 py-3.5 font-heading text-label-bold"
                   >
                     Send Message
                   </motion.button>
@@ -212,7 +207,7 @@ export default function HomePage() {
           </Reveal>
           <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             <Reveal direction="left">
-              <div className="border border-outline-variant rounded-3xl bg-paper-white p-8 shadow-sm">
+              <div className="border border-outline-variant rounded-3xl bg-paper-white p-8">
                 <h3 className="font-heading tracking-tighter text-heading-lg text-navy mb-6">Language Classes</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center border-b border-outline-variant pb-3">
@@ -231,7 +226,7 @@ export default function HomePage() {
               </div>
             </Reveal>
             <Reveal direction="right">
-              <div className="border border-outline-variant rounded-3xl bg-paper-white p-8 shadow-sm">
+              <div className="border border-outline-variant rounded-3xl bg-paper-white p-8">
                 <h3 className="font-heading tracking-tighter text-heading-lg text-navy mb-6">Working Hours</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center border-b border-outline-variant pb-3">

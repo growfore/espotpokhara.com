@@ -13,7 +13,7 @@ export default function RegisterPopup() {
         onClick={() => setOpen(true)}
         variant="primary"
         size="sm"
-        className="fixed bottom-6 right-6 z-40 shadow-lg"
+        className="fixed bottom-6 right-6 z-40"
       >
         Register Now
       </Button>

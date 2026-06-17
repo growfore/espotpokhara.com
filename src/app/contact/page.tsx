@@ -79,7 +79,7 @@ export default function ContactPage() {
             </Reveal>
 
             <Reveal direction="right">
-              <div className="border border-outline-variant rounded-3xl bg-paper-white p-8 shadow-sm">
+              <div className="border border-outline-variant rounded-3xl bg-paper-white p-8">
                 <h3 className="font-heading tracking-tighter text-xl text-on-surface mb-6">Send Us a Message</h3>
                 <form className="space-y-4">
                   <div className="grid sm:grid-cols-2 gap-4">
