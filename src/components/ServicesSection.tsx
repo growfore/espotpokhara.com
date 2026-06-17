@@ -61,20 +61,6 @@ export default function ServicesSection() {
               </Reveal>
             );
           })}
-
-          <Reveal direction="up" delay={0.48}>
-            <div className="rounded-3xl p-6 flex flex-col items-center justify-center text-center h-full bg-paper-white border border-outline-variant">
-              <p className="font-heading text-heading-lg text-on-surface-variant mb-4">
-                More Services
-              </p>
-              <p className="text-body-md text-on-surface-variant mb-6">
-                View our full range of student support services.
-              </p>
-              <Button href="/services" variant="outline" size="sm">
-                Explore All
-              </Button>
-            </div>
-          </Reveal>
         </div>
       </Container>
     </section>
