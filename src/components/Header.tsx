@@ -156,7 +156,6 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 border-b border-outline-variant bg-paper-white">
-    >
       <div className="max-w-8xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20">
         <Link href="/" className="flex items-center group">
           <img
