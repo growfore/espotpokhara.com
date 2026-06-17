@@ -31,23 +31,23 @@ export default async function BlogPost({ params }: Props) {
   const featuredImage = getFeaturedImageUrl(post);
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-3xl mx-auto px-6 pt-4 pb-20 md:pb-28">
-        <nav className="text-sm text-gray-400 mb-8 font-headline-xl">
+    <div className="min-h-screen bg-paper-white">
+      <div className="max-w-4xl mx-auto px-6 pt-4 pb-20 md:pb-28">
+        <nav className="text-sm text-outline mb-8 font-heading">
           <Link href="/blogs" className="hover:text-on-surface transition-colors">Blog</Link> / <span className="text-on-surface font-medium">{post.title.rendered}</span>
         </nav>
 
         {featuredImage && (
-          <div className="aspect-[16/9] overflow-hidden rounded-xl bg-gray-100 mb-10">
+          <div className="aspect-[16/9] overflow-hidden rounded-xl bg-linen-bg mb-10">
             <img src={featuredImage} alt="" className="w-full h-full object-cover" />
           </div>
         )}
 
-        <h1 className="font-headline-xl text-3xl md:text-4xl font-bold text-on-surface mb-4 leading-tight">
+        <h1 className="font-heading text-4xl md:text-5xl font-bold text-navy mb-4 leading-tight">
           {post.title.rendered}
         </h1>
 
-        <time className="text-sm text-gray-500 block mb-12">
+        <time className="text-sm text-on-surface-variant block mb-12">
           {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
         </time>
 
