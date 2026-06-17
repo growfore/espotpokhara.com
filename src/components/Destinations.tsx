@@ -1,26 +1,12 @@
 "use client";
 
-import { useRef } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import Container from "@/components/global/Container";
 import Heading from "@/components/shared/Heading";
 import Reveal from "./Reveal";
 import { siteConfig } from "@/lib/site-config";
 
 export default function Destinations() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (dir: "left" | "right") => {
-    if (!scrollRef.current) return;
-    const amount = 320;
-    scrollRef.current.scrollBy({
-      left: dir === "left" ? -amount : amount,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <section className="px-4 xl:px-10 pattern-bg border-y border-dashed">
       <Container className="py-16 md:py-28 border-x border-dashed">
@@ -37,66 +23,52 @@ export default function Destinations() {
           </div>
         </Reveal>
 
-        <div className="relative group">
-          <button
-            onClick={() => scroll("left")}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 bg-paper-white rounded-full shadow-md flex items-center justify-center hover:bg-crimson hover:text-paper-white transition-all duration-200 opacity-0 group-hover:opacity-100 border border-dashed border-outline-variant"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft size={20} />
-          </button>
-          <button
-            onClick={() => scroll("right")}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 bg-paper-white rounded-full shadow-md flex items-center justify-center hover:bg-crimson hover:text-paper-white transition-all duration-200 opacity-0 group-hover:opacity-100 border border-dashed border-outline-variant"
-            aria-label="Scroll right"
-          >
-            <ChevronRight size={20} />
-          </button>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {siteConfig.destinations.map((dest, i) => (
+            <Reveal key={dest.country} direction="up" delay={i * 0.08}>
+              <Link href={dest.href} className="group block perspective-[1000px]">
+                <div className="relative [transform-style:preserve-3d] transition-transform duration-700 ease-out group-hover:[transform:rotateY(180deg)] h-[380px]">
+                  {/* Front */}
+                  <div className="absolute inset-0 [backface-visibility:hidden] border border-dashed border-outline-variant rounded-3xl overflow-hidden bg-paper-white">
+                    <div
+                      className="w-full h-full bg-cover bg-center grayscale-hover"
+                      style={{ backgroundImage: `url(${dest.image})` }}
+                    />
+                    <div className="absolute inset-0 bg-navy/30" />
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <span className="inline-block bg-crimson text-paper-white px-5 py-2 font-heading text-label-bold rounded-full">
+                        {dest.country}
+                      </span>
+                    </div>
+                  </div>
 
-          <div
-            ref={scrollRef}
-            className="destination-scroll flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4"
-          >
-            {siteConfig.destinations.map((dest, i) => (
-              <Reveal key={dest.country} direction="up" delay={i * 0.08}>
-                <div className="snap-start flex-shrink-0 w-[320px] cursor-pointer">
-                  <Link href={dest.href}>
-                    <motion.div
-                      whileHover={{ y: -8 }}
-                      transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                      className="border border-dashed border-outline-variant rounded-3xl overflow-hidden bg-paper-white"
-                    >
-                      <div className="relative h-56 overflow-hidden m-3 rounded-2xl">
-                        <div
-                          className="w-full h-full bg-cover bg-center grayscale-hover"
-                          style={{ backgroundImage: `url(${dest.image})` }}
-                        />
-                        <div className="absolute inset-0 bg-navy/20 transition-all duration-500" />
-                        <div className="absolute top-4 left-4 bg-crimson text-white px-4 py-1.5 font-heading text-label-bold rounded-full">
-                          {dest.country}
-                        </div>
-                      </div>
-                      <div className="px-6 pb-6">
-                        <p className="text-body-md text-on-surface-variant mb-4 line-clamp-2">
-                          {dest.description}
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                          {dest.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="text-label-sm px-3 py-1.5 border border-dashed border-outline-variant text-on-surface-variant rounded-full"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </motion.div>
-                  </Link>
+                  {/* Back */}
+                  <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] border border-dashed border-outline-variant rounded-3xl bg-paper-white p-8 flex flex-col justify-center">
+                    <span className="text-label-bold text-crimson tracking-wider block mb-2">Study in</span>
+                    <Heading tag="h3" size="lg" className="text-navy mb-4">
+                      {dest.country}
+                    </Heading>
+                    <p className="text-body-md text-on-surface-variant mb-6">
+                      {dest.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {dest.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-label-sm px-3 py-1.5 border border-dashed border-outline-variant text-on-surface-variant rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="text-label-bold text-crimson hover:underline">
+                      Explore Programs &rarr;
+                    </span>
+                  </div>
                 </div>
-              </Reveal>
-            ))}
-          </div>
+              </Link>
+            </Reveal>
+          ))}
         </div>
       </Container>
     </section>
