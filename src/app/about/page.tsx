@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site-config";
-import { Check } from "lucide-react";
+import { Check, Shield, Star, Heart } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import Container from "@/components/global/Container";
 import PageHero from "@/components/PageHero";
@@ -36,7 +36,10 @@ export default function AboutPage() {
               </div>
             </Reveal>
             <Reveal direction="right">
-              <h2 className="font-heading tracking-tighter text-2xl md:text-4xl text-navy mb-6">Who We Are</h2>
+              <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson font-mono mb-3">
+                About Us
+              </span>
+              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">Who We Are</h2>
               <p className="text-body-lg text-on-surface-variant">
                 {siteConfig.aboutPage.whoWeAre}
               </p>
@@ -49,12 +52,17 @@ export default function AboutPage() {
         <Container className="py-16 md:py-28">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <Reveal direction="left">
-              <h2 className="font-heading tracking-tighter text-2xl md:text-4xl text-navy mb-6">Why Choose Us</h2>
+              <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson font-mono mb-3">
+                Why Us
+              </span>
+              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">Why Choose Us</h2>
               <p className="text-body-lg text-on-surface-variant mb-6">{siteConfig.aboutPage.whyChooseUs}</p>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {siteConfig.whyChooseUs.map((reason) => (
                   <li key={reason} className="flex items-start gap-3 text-body-md text-on-surface-variant">
-                    <Check className="w-5 h-5 text-crimson mt-0.5 flex-shrink-0" />
+                    <span className="w-5 h-5 flex items-center justify-center rounded-full bg-crimson/10 text-crimson flex-shrink-0 mt-0.5">
+                      <Check size={12} strokeWidth={3} />
+                    </span>
                     {reason}
                   </li>
                 ))}
@@ -73,12 +81,12 @@ export default function AboutPage() {
         <Container className="py-16 md:py-28">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <Reveal direction="left">
-              <h2 className="font-heading tracking-tighter text-2xl md:text-4xl text-navy mb-6">Message From Director</h2>
+              <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson font-mono mb-3">
+                Director
+              </span>
+              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">Message From Director</h2>
               <p className="text-body-lg text-on-surface-variant mb-6">
-                Welcome to Espot Pokhara Education and Visa Services! We are established with the motto of fulfilling our student&apos;s requirements and needs for a better future and an excellent journey. Our goal is to understand and fulfill your unique requirements. We strive to provide our students with ongoing service to make sure they are comfortable in a completely different country and new environment. Our motto is to establish strong relationships with every student, ensuring their academic excellence and bright future. We believe that by fostering these relationships, we can create a solid foundation for success and provide comprehensive assistance throughout your time abroad.
-              </p>
-              <p className="text-body-md text-on-surface-variant">
-                We make sure to provide you with essential support like choosing a university in accordance with your academic grades, career goals, and interests and other facilities like visa assistance and accommodation facilities in abroad countries. Our dedicated team is committed to providing personalized care, addressing your concerns, and ensuring a smooth transition into your new academic environment. At Espot Pokhara Education and Visa Services, we are eager to support you in your dreams and aspirations, and we are excited to be a part of your educational path. Join us and let&apos;s shape your future together! Thank You. Dinbandhu Pokharel Director Espot Pokhara Education and Visa Services
+                {siteConfig.aboutPage.messageFromDirector}
               </p>
             </Reveal>
             <Reveal direction="right">
@@ -94,7 +102,10 @@ export default function AboutPage() {
         <Container className="py-16 md:py-28">
           <Reveal>
             <div className="text-center mb-12">
-              <h2 className="font-heading tracking-tighter text-2xl md:text-4xl text-navy mb-4">Our Core Values</h2>
+              <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson font-mono mb-3">
+                Values
+              </span>
+              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-4">Our Core Values</h2>
             </div>
           </Reveal>
           <div className="grid sm:grid-cols-3 gap-6">
@@ -102,11 +113,9 @@ export default function AboutPage() {
               <Reveal key={value.title} direction="up" delay={i * 0.1}>
                 <div className="border border-outline-variant rounded-3xl bg-paper-white text-center p-8 h-full">
                   <div className="w-16 h-16 flex items-center justify-center bg-crimson text-paper-white rounded-2xl mx-auto mb-6">
-                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-                    </svg>
+                    {value.icon === "shield" ? <Shield className="w-8 h-8" /> : value.icon === "star" ? <Star className="w-8 h-8" /> : <Heart className="w-8 h-8" />}
                   </div>
-                  <h3 className="font-heading tracking-tighter text-xl text-on-surface mb-3">{value.title}</h3>
+                  <h3 className="font-heading tracking-tighter text-heading-lg text-on-surface mb-3">{value.title}</h3>
                   <p className="text-body-md text-on-surface-variant">{value.description}</p>
                 </div>
               </Reveal>
