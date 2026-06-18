@@ -51,9 +51,7 @@ export default function HeroSection() {
               }}
               className="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl"
             >
-              Expert guidance for studying abroad in USA, Japan, Australia, and
-              Canada. From university selection to visa approval, we are with
-              you every step of the way.
+              {siteConfig.shortName}: Your key to global success
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 16 }}

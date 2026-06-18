@@ -288,6 +288,19 @@ body.dark {
   margin: 1.5em 0;
 }
 
+.docs-content table thead {
+  border-bottom: none;
+}
+
+.docs-content table tbody {
+  border: none;
+}
+
+.docs-content table tr {
+  border: none;
+  background: transparent;
+}
+
 .docs-content th {
   font-family: var(--font-heading);
   font-size: 0.875rem;
@@ -298,13 +311,48 @@ body.dark {
   color: #ffffff;
   padding: 0.75rem 1rem;
   text-align: left;
+  border: none;
+}
+
+.docs-content th:first-child {
+  border-radius: 0.75rem 0 0 0;
+}
+
+.docs-content th:last-child {
+  border-radius: 0 0.75rem 0 0;
 }
 
 .docs-content td {
   padding: 0.75rem 1rem;
   font-size: 1rem;
   color: var(--color-on-surface-variant);
-  border-bottom: 1px solid var(--color-outline-variant);
+  border-bottom: 1px dashed var(--color-outline-variant);
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background: transparent;
+}
+
+.docs-content tr:last-child td {
+  border-bottom: none;
+}
+
+.docs-content details > summary {
+  list-style: none;
+}
+.docs-content details > summary::-webkit-details-marker {
+  display: none;
+}
+.docs-content details > summary::marker {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .docs-content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 .blog-content {

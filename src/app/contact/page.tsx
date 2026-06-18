@@ -32,9 +32,10 @@ export default function ContactPage() {
             <Reveal direction="left">
               <h2 className="font-heading tracking-tighter text-2xl md:text-4xl text-navy mb-4">Get In Touch</h2>
               <p className="text-body-lg text-on-surface-variant mb-8">
-                Have questions about studying abroad? We are here to provide you
-                with the guidance and support you need. Reach out to us through
-                any of the channels below.
+                Being the best consultancy in Pokhara, Espot Pokhara Education and Visa Services is dedicated to broadening the perspectives and unlocking the potential of students through international education. Grab an opportunity to explore different cultures and research programs in renowned universities around the world.
+              </p>
+              <p className="text-body-lg text-on-surface-variant mb-8">
+                Decide to go ahead and contact us to see how we may help you study abroad more quickly, easily, and affordably. Fill up the form below &amp; join us now to explore the wide range of facilities that we provide.
               </p>
 
               <div className="space-y-6 mb-10">
@@ -108,14 +109,14 @@ export default function ContactPage() {
 
       <section className="h-[300px] md:h-[400px] border-t border-outline-variant">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3515.449687168874!2d83.9787!3d28.2099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDEyJzM1LjYiTiA4M0KwNTgnNDMuMyJF!5e0!3m2!1sen!2snp!4v1"
+          src="https://maps.google.com/maps?q=Espot%20Pokhara%20Education%20and%20Visa%20Services%2C%20Pokhara%2C%20Nepal&t=m&z=15&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Espot Pokhara Education and Visa Services Location"
+          title="Espot Pokhara Education and Visa Services, Pokhara, Nepal"
         />
       </section>
     </>

@@ -1,7 +1,6 @@
 export const siteConfig = {
   name: "Espot Pokhara Education and Visa Services",
   shortName: "Espot Pokhara",
-  tagline: "Turn Your Educational Dreams Into Reality",
   description:
     "Espot Pokhara Education and Visa Services in Pokhara, Nepal provides expert study abroad services including university selection, visa guidance, IELTS/PTE/JLPT preparation, and scholarship assistance for USA, Japan, Australia, and Canada.",
   url: "https://espotpokhara.com.np",
@@ -11,7 +10,7 @@ export const siteConfig = {
   contact: {
     address: "Samsung Galli, Newroad, Pokhara-09, Nepal",
     phone: "061-591175",
-    email: "espotpokhara@gmail.com",
+    email: "info@espotpokhara.com",
     workingHours: "Sun - Fri: 10:00 AM - 6:00 PM",
     saturday: "Saturday: Closed",
   },
@@ -49,7 +48,14 @@ export const siteConfig = {
           { label: "JLPT Preparation", href: "/test-preparation#jlpt" },
         ],
       },
-      { label: "About Us", href: "/about" },
+      {
+        label: "About Us",
+        href: "/about",
+        children: [
+          { label: "About Us", href: "/about" },
+          { label: "Message From Director", href: "/about#Message-From-Director" },
+        ],
+      },
       { label: "Blogs", href: "/blogs" },
     ],
   },
@@ -57,9 +63,8 @@ export const siteConfig = {
   stats: [
     { label: "Successful Cases", value: 100, suffix: "+", icon: "check" },
     { label: "Specialised Consultants", value: 10, suffix: "+", icon: "users" },
-    { label: "Satisfied Customers", value: 100, suffix: "+", icon: "star" },
-    { label: "Universities", value: 10, suffix: "+", icon: "building" },
-    { label: "Countries", value: 11, suffix: "+", icon: "globe" },
+    { label: "Global Universities", value: 10, suffix: "+", icon: "building" },
+    { label: "Core Countries", value: 4, suffix: "+", icon: "globe" },
   ],
 
   services: [
@@ -1406,11 +1411,6 @@ export const siteConfig = {
     day: "10AM - 11AM",
     evening: "5PM - 6PM",
   },
-  workingHours: {
-    weekdays: "Sunday to Friday: 10:00AM - 6:00PM",
-    saturday: "Saturday: Closed",
-  },
-
   footerAbout:
     "Our mission is to offer top-notch visa guidance and counseling for those aspiring to study abroad. Let us be your guide to success!",
   footerPages: [

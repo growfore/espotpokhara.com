@@ -31,7 +31,7 @@ export default function HomePage() {
       <section className="relative mx-auto max-w-5xl py-12 md:border-x border-outline-variant">
         <div className="-translate-x-1/2 -top-px pointer-events-none absolute left-1/2 w-screen border-t border-outline-variant" />
 
-        <div className="grid grid-cols-3 sm:grid-cols-5 border-outline-variant">
+        <div className="grid grid-cols-2 sm:grid-cols-4 border-outline-variant">
           {siteConfig.stats.map((stat, i) => {
             const Icon = statIconMap[stat.icon] || CheckCircle;
 
@@ -39,8 +39,9 @@ export default function HomePage() {
               <div
                 key={stat.label}
                 className={cn(
-                  "relative flex flex-col items-center justify-center gap-2 py-8 md:py-10",
-                  i < 4 && "border-r border-outline-variant",
+                  "relative flex flex-col items-center justify-center gap-2 py-8 md:py-10 border-r border-outline-variant",
+                  i === 1 && "border-r-0 sm:border-r",
+                  i === 3 && "border-r-0",
                 )}
               >
                 <Icon className="w-6 h-6 md:w-7 md:h-7 text-crimson" strokeWidth={1.5} />
@@ -72,20 +73,16 @@ export default function HomePage() {
                 About Us
               </span>
               <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">
-                Expert Immigration Services
+                Expert Immigration &amp; Visa Services
               </h2>
               <p className="text-body-lg text-on-surface-variant mb-8">
-                Espot Pokhara Education and Visa Services is an emerging consultancy
-                based in Pokhara, Nepal. We are dedicated to helping students
-                achieve their dream of studying abroad with comprehensive
-                guidance and support.
+                At Espot Pokhara Education and Visa Services, we specialize in helping you with all your immigration needs. Our experienced team provides professional assistance and guides you through the entire process, making it easy and stress-free. We offer expert guidance on visa applications, documentation, and interview preparation.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Expert guidance for Japan, Australia, Canada, and USA",
-                  "Personalized counseling tailored to your academic profile",
-                  "High visa success rate with meticulous documentation",
-                  "Comprehensive support from application to arrival",
+                  "Transform dreams of studying abroad into reality",
+                  "Comprehensive visa support and travel arrangements",
+                  "Expert guidance on scholarship and financial aid",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-body-md text-on-surface-variant">
                     <span className="w-5 h-5 flex items-center justify-center rounded-full bg-crimson/10 text-crimson flex-shrink-0 mt-0.5">
@@ -161,6 +158,17 @@ export default function HomePage() {
                   <div>
                     <p className="font-heading text-label-bold text-on-surface mb-1">Email</p>
                     <p className="text-body-md text-on-surface-variant">{siteConfig.contact.email}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-5">
+                  <div className="w-12 h-12 flex items-center justify-center bg-crimson text-paper-white rounded-2xl flex-shrink-0">
+                    <Clock size={20} />
+                  </div>
+                  <div>
+                    <p className="font-heading text-label-bold text-on-surface mb-1">Language Classes</p>
+                    <p className="text-body-md text-on-surface-variant">Morning: {siteConfig.languageSchedule.morning}</p>
+                    <p className="text-body-md text-on-surface-variant">Day: {siteConfig.languageSchedule.day}</p>
+                    <p className="text-body-md text-on-surface-variant">Evening: {siteConfig.languageSchedule.evening}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-5">
