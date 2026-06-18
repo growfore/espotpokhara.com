@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { getPosts, getPostBySlug, getFeaturedImageUrl } from "@/lib/wordpress";
 
 interface Props {
@@ -38,8 +39,8 @@ export default async function BlogPost({ params }: Props) {
         </nav>
 
         {featuredImage && (
-          <div className="aspect-[16/9] overflow-hidden rounded-xl bg-linen-bg mb-10">
-            <img src={featuredImage} alt="" className="w-full h-full object-cover" />
+          <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-linen-bg mb-10">
+            <Image src={featuredImage} alt="" fill className="object-cover" sizes="(max-width: 768px) 100vw, 800px" />
           </div>
         )}
 

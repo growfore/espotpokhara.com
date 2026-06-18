@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { getPosts, getFeaturedImageUrl } from "@/lib/wordpress";
 
 export const metadata: Metadata = {
@@ -34,11 +35,13 @@ export default async function BlogsPage() {
               return (
                 <Link key={post.slug} href={`/blogs/${post.slug}`} className="group block">
                   {imageUrl && (
-                    <div className="aspect-[16/9] overflow-hidden rounded-xl bg-linen-bg mb-4">
-                      <img
+                    <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-linen-bg mb-4">
+                      <Image
                         src={imageUrl}
                         alt=""
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
                   )}

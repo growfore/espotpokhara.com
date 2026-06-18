@@ -7,7 +7,6 @@ interface InfiniteSliderProps {
   children: ReactNode[];
   gap?: number;
   speed?: number;
-  speedOnHover?: number;
   reverse?: boolean;
   className?: string;
 }
@@ -16,7 +15,6 @@ export function InfiniteSlider({
   children,
   gap = 42,
   speed = 80,
-  speedOnHover = 25,
   reverse = false,
   className,
 }: InfiniteSliderProps) {

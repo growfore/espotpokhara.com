@@ -5,15 +5,18 @@ import { siteConfig } from "@/lib/site-config";
 import Container from "@/components/global/Container";
 import { Button } from "@/components/ui/Button";
 import InfiniteGrid from "@/components/InfiniteGrid";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-paper-white">
       <InfiniteGrid />
-      <img
-        src="https://www.idp.com/_next/image/?url=https%3A%2F%2Fimages.ctfassets.net%2F8bbwomjfix8m%2F2KGayO7y8ZmUB3CUSvwg9U%2Fc2a6ff713890862c88c04f9a8fe1c2a9%2FEnquiry_form_banner_nepal.png%3Ffit%3Dfill%26w%3D500%26h%3D1024%26q%3D80%26fm%3Dwebp&w=640&q=75"
+      <Image
+        src={"/ep-hero-image.png"}
         alt=""
-        className="absolute right-24 top-0  w-auto object-contain pointer-events-none z-[5]"
+        width={400}
+        height={400}
+        className="absolute right-32 top-12  w-auto object-contain pointer-events-none z-[5] scale-150"
       />
       <div className="relative z-10 w-full py-8 md:py-12">
         <Container>

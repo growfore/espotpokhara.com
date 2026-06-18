@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import TableOfContents from "@/components/global/TableOfContents";
@@ -188,11 +189,9 @@ export default function DocsLayout({
               <h1 className="font-heading tracking-tighter text-heading-xl text-navy mb-2">{title}</h1>
               {subtitle && <p className="font-heading text-body-lg text-on-surface-variant mb-8">{subtitle}</p>}
               {headerImage && (
-                <img
-                  src={headerImage}
-                  alt=""
-                  className="w-full aspect-[3/1] object-cover rounded-xl mb-10"
-                />
+                <div className="relative w-full aspect-[3/1] mb-10">
+                  <Image src={headerImage} alt="" fill className="object-cover rounded-xl" />
+                </div>
               )}
               <div className="docs-content">{children}</div>
             </div>

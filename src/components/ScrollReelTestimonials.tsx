@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 
 export interface ScrollReelTestimonial {
   quote: string;
@@ -52,11 +53,12 @@ function Featured({ src, alt }: { src: string; alt?: string }) {
       className="relative shrink-0 overflow-hidden rounded-xl bg-linen-bg"
       style={{ width: CELL, height: CELL, boxShadow: FEATURED_SHADOW }}
     >
-      <img
+      <Image
         src={src}
         alt={alt ?? ""}
-        loading="lazy"
-        className="absolute inset-0 h-full w-full object-cover object-[center_30%]"
+        fill
+        className="object-cover object-[center_30%]"
+        sizes="122px"
       />
       <div
         aria-hidden="true"
@@ -132,12 +134,13 @@ export function ScrollReelTestimonials({
   const count = testimonials.length;
 
   React.useEffect(() => {
+    const t = timeouts.current;
     const raf = requestAnimationFrame(() =>
       requestAnimationFrame(() => setMounted(true))
     );
     return () => {
       cancelAnimationFrame(raf);
-      timeouts.current.forEach(clearTimeout);
+      t.forEach(clearTimeout);
     };
   }, []);
 

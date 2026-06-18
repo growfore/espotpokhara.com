@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 
 export default function Footer() {
@@ -8,9 +9,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-5 gap-12 py-16">
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <img
+              <Image
                 src="/espot_logo.webp"
                 alt={siteConfig.shortName}
+                width={160}
+                height={48}
                 className="h-12 w-auto brightness-0 invert"
               />
             </Link>

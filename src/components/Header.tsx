@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { Button } from "@/components/ui/Button";
@@ -158,9 +159,11 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full z-50 border-b border-outline-variant bg-paper-white">
       <div className="max-w-8xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20">
         <Link href="/" className="flex items-center group">
-          <img
+          <Image
             src="/espot_logo.webp"
             alt={siteConfig.shortName}
+            width={180}
+            height={64}
             className="h-14 md:h-16 w-auto"
           />
         </Link>

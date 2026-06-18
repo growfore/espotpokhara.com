@@ -25,6 +25,7 @@ export default function TableOfContents() {
       el.id = id;
       items.push({ id, text: el.textContent || "" });
     });
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setHeadings(items);
 
     if (items.length === 0) return;
