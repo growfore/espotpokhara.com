@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-navy text-paper-white">
       <div className="max-w-8xl mx-auto px-6 md:px-10">
-        <div className="grid md:grid-cols-5 gap-12 py-16">
+        <div className="grid md:grid-cols-5 gap-8 md:gap-12 py-12 md:py-16">
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-4">
               <Image

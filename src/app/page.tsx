@@ -31,7 +31,7 @@ export default function HomePage() {
       <section className="relative mx-auto max-w-5xl py-12 md:border-x border-outline-variant">
         <div className="-translate-x-1/2 -top-px pointer-events-none absolute left-1/2 w-screen border-t border-outline-variant" />
 
-        <div className="grid grid-cols-5 border-outline-variant">
+        <div className="grid grid-cols-3 sm:grid-cols-5 border-outline-variant">
           {siteConfig.stats.map((stat, i) => {
             const Icon = statIconMap[stat.icon] || CheckCircle;
 
@@ -177,7 +177,7 @@ export default function HomePage() {
             </Reveal>
 
             <Reveal direction="right">
-              <div className="border border-outline-variant rounded-3xl p-10 bg-paper-white">
+              <div className="border border-outline-variant rounded-3xl p-6 md:p-10 bg-paper-white">
                 <h3 className="font-heading tracking-tighter text-heading-lg text-on-surface mb-8">Send Us a Message</h3>
                 <form className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">

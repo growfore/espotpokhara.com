@@ -13,7 +13,7 @@ export default function PageHero({
   bgImage?: string;
 }) {
   return (
-    <section className="relative pt-28 pb-20 overflow-hidden bg-linen-bg">
+    <section className="relative pt-20 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-linen-bg">
       {bgImage && (
         <div
           className="absolute inset-0 bg-cover bg-center"

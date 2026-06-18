@@ -133,7 +133,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col antialiased pt-20 bg-paper-white paper-texture">
+      <body className="min-h-full flex flex-col antialiased pt-16 md:pt-20 bg-paper-white paper-texture">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

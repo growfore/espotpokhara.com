@@ -8,7 +8,7 @@ export default function CTASection() {
   return (
     <section className="px-4 xl:px-10">
       <Container className="py-12 md:py-20">
-        <div className="relative overflow-hidden rounded-[60px] bg-linen-bg px-8 py-16 md:py-20 lg:px-16 flex flex-col items-center text-center">
+        <div className="relative overflow-hidden rounded-[32px] md:rounded-[60px] bg-linen-bg px-6 md:px-8 py-12 md:py-20 lg:px-16 flex flex-col items-center text-center">
           <div className="relative z-10 max-w-2xl">
             <h2 className="font-heading tracking-tighter text-heading-hero text-navy mb-6">
               Ready to Start Your Educational Journey?

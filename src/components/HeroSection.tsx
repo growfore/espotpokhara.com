@@ -16,7 +16,7 @@ export default function HeroSection() {
         alt=""
         width={400}
         height={400}
-        className="absolute right-32 top-12  w-auto object-contain pointer-events-none z-[5] scale-150"
+        className="absolute right-32 top-12 w-auto object-contain pointer-events-none z-[5] scale-150 hidden xl:block"
       />
       <div className="relative z-10 w-full py-8 md:py-12">
         <Container>

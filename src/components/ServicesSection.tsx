@@ -41,7 +41,7 @@ export default function ServicesSection() {
             </p>
           </div>
 
-          <div className="relative mx-auto grid max-w-2xl lg:max-w-4xl divide-x divide-y border border-outline-variant *:p-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="relative mx-auto grid max-w-2xl lg:max-w-4xl divide-y sm:divide-x sm:divide-y-0 border border-outline-variant *:p-6 md:*:p-8 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => {
               const Icon = iconMap[service.icon] || Home;
               return (
