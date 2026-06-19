@@ -21,5 +21,8 @@ export async function sendForm(formType: string, data: FormFields) {
     text,
   });
 
-  if (error) throw new Error(error.message);
+  if (error) {
+    console.error("Resend error:", JSON.stringify(error));
+    throw new Error(error.message);
+  }
 }
