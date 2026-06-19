@@ -25,9 +25,9 @@ export function Callout({ type = "info", children }: { type?: "info" | "tip" | "
   );
 }
 
-export function Section({ title, children }: { title: string; children: React.ReactNode }) {
+export function Section({ title, id, children }: { title: string; id?: string; children: React.ReactNode }) {
   return (
-    <section className="mb-12">
+    <section id={id} className="mb-12">
       <h2 className="font-heading tracking-tighter text-heading-lg text-navy mb-6">{title}</h2>
       {children}
     </section>

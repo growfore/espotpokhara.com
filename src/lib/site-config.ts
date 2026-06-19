@@ -51,7 +51,7 @@ export const siteConfig = {
         children: [
           { label: "IELTS Preparation", href: "/test-preparation#ielts" },
           { label: "PTE Preparation", href: "/test-preparation#pte" },
-          { label: "JLPT Preparation", href: "/test-preparation#jlpt" },
+          { label: "Duolingo Preparation", href: "/test-preparation#duolingo" },
         ],
       },
       {
