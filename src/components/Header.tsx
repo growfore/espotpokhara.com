@@ -22,19 +22,27 @@ function NavLink({
   item,
   isMobile = false,
   onMobileClose,
+  index,
+  isActive,
+  onToggle,
 }: {
   item: NavItem;
   isMobile?: boolean;
   onMobileClose?: () => void;
+  index?: number;
+  isActive?: boolean;
+  onToggle?: (i: number | null) => void;
 }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLLIElement>(null);
+  const onToggleRef = useRef(onToggle);
+  onToggleRef.current = onToggle;
 
   useEffect(() => {
     if (isMobile) return;
     const close = (e: MouseEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node))
-        setOpen(false);
+        onToggleRef.current?.(null);
     };
     document.addEventListener("mousedown", close);
     return () => document.removeEventListener("mousedown", close);
@@ -103,25 +111,23 @@ function NavLink({
       ) : (
         <>
           <button
-            onMouseEnter={() => setOpen(true)}
-            onClick={() => setOpen(!open)}
+            onClick={() => onToggle?.(isActive ? null : index!)}
             className="flex items-center gap-1 text-on-surface-variant hover:text-navy font-body text-sm transition-colors duration-200"
           >
             {item.label}
             <ChevronDown
               size={14}
               aria-hidden="true"
-              className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+              className={`transition-transform duration-200 ${isActive ? "rotate-180" : ""}`}
             />
           </button>
           <AnimatePresence>
-            {open && (
+            {isActive && (
               <motion.div
                 initial={{ opacity: 0, y: -8, scale: 0.96 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -8, scale: 0.96 }}
                 transition={{ duration: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-                onMouseLeave={() => setOpen(false)}
                 className="absolute top-full left-0 mt-2 w-56 bg-paper-white border border-outline-variant z-50 rounded-3xl"
               >
                 <div className="p-2">
@@ -129,7 +135,7 @@ function NavLink({
                     <Link
                       key={child.href}
                       href={child.href}
-                      onClick={() => setOpen(false)}
+                      onClick={() => onToggle?.(null)}
                       className="block px-4 py-3 text-sm text-on-surface hover:bg-linen-bg hover:text-crimson transition-colors duration-200 rounded-2xl"
                     >
                       {child.label}
@@ -147,6 +153,7 @@ function NavLink({
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
@@ -172,8 +179,14 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center gap-5">
           <ul className="flex items-center gap-5">
-            {mainMenu.map((item) => (
-              <NavLink key={item.href + item.label} item={item} />
+            {mainMenu.map((item, i) => (
+              <NavLink
+                key={item.href + item.label}
+                item={item}
+                index={i}
+                isActive={activeDropdown === i}
+                onToggle={setActiveDropdown}
+              />
             ))}
           </ul>
           <Button href="/contact" variant="primary" size="sm">
