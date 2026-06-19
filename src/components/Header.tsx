@@ -36,9 +36,9 @@ function NavLink({
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLLIElement>(null);
   const onToggleRef = useRef(onToggle);
-  onToggleRef.current = onToggle;
 
   useEffect(() => {
+    onToggleRef.current = onToggle;
     if (isMobile) return;
     const close = (e: MouseEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node))

@@ -74,10 +74,17 @@ const navItems = [
   {
     label: "Study Destinations",
     items: [
-      { href: "/study-in-japan", label: "Japan" },
+      { href: "/study-in-usa", label: "USA" },
+      { href: "/study-in-uk", label: "UK" },
       { href: "/study-in-canada", label: "Canada" },
       { href: "/study-in-australia", label: "Australia" },
-      { href: "/study-in-usa", label: "USA" },
+      { href: "/study-in-new-zealand", label: "New Zealand" },
+      { href: "/study-in-dubai", label: "Dubai" },
+      { href: "/study-in-germany", label: "Germany" },
+      { href: "/study-in-malta", label: "Malta" },
+      { href: "/study-in-cyprus", label: "Cyprus" },
+      { href: "/study-in-france", label: "France" },
+      { href: "/study-in-japan", label: "Japan" },
     ],
   },
   {
