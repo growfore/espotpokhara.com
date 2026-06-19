@@ -90,7 +90,7 @@ function NavLink({
   if (isMobile) return <MobileAccordion item={item} onMobileClose={onMobileClose} />;
 
   return (
-    <li className="relative group pb-3">
+    <li className="relative group">
       <button className="flex items-center gap-1 text-on-surface-variant hover:text-navy font-body text-sm transition-colors duration-200 cursor-pointer">
         {item.label}
         <ChevronDown
@@ -99,19 +99,20 @@ function NavLink({
           className="transition-transform duration-200 group-hover:rotate-180"
         />
       </button>
-      <div className="invisible group-hover:visible group-focus-within:visible opacity-0 group-hover:opacity-100 transition-all duration-150 absolute top-full left-0 w-56 pt-3 -mt-3"><div className="bg-paper-white border border-outline-variant rounded-3xl shadow-lg">
-        <div className="p-2">
-          {item.children!.map((child) => (
-            <Link
-              key={child.href}
-              href={child.href}
-              className="block px-4 py-3 text-sm text-on-surface hover:bg-linen-bg hover:text-crimson transition-colors duration-200 rounded-2xl"
-            >
-              {child.label}
-            </Link>
-          ))}
+      <div className="invisible group-hover:visible group-focus-within:visible opacity-0 group-hover:opacity-100 transition-all duration-150 absolute top-full left-0 w-56 pt-2">
+        <div className="bg-paper-white border border-outline-variant rounded-3xl shadow-lg">
+          <div className="p-2">
+            {item.children!.map((child) => (
+              <Link
+                key={child.href}
+                href={child.href}
+                className="block px-4 py-3 text-sm text-on-surface hover:bg-linen-bg hover:text-crimson transition-colors duration-200 rounded-2xl"
+              >
+                {child.label}
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
       </div>
     </li>
   );
