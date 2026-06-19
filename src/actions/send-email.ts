@@ -14,7 +14,7 @@ export async function sendForm(formType: string, data: FormFields) {
     .join("\n");
 
   const { error } = await resend.emails.send({
-    from: "Espot Pokhara <onboarding@resend.dev>",
+    from: "Espot Pokhara <contact@espotpokhara.dev>",
     to: ["info@espotpokhara.com"],
     replyTo: typeof data.email === "string" ? data.email : undefined,
     subject,
