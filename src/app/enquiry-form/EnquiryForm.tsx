@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { siteConfig } from "@/lib/site-config";
 import DocsLayout from "@/components/global/DocsLayout";
+import { sendForm } from "@/actions/send-email";
 
 export default function EnquiryForm() {
   const [formData, setFormData] = useState({
@@ -43,25 +44,13 @@ export default function EnquiryForm() {
     setLoading(true);
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
-          ...formData,
-        }),
+      await sendForm("Enquiry", formData);
+      setSuccess(true);
+      setFormData({
+        name: "", dob: "", passport: "", qualification: "", college: "", gpa: "",
+        passedYear: "", maritalStatus: "", address: "", phone: "", email: "",
+        guardianPhone: "", reach: [], countryInterest: "", testRequired: "", message: "",
       });
-
-      if (response.ok) {
-        setSuccess(true);
-        setFormData({
-          name: "", dob: "", passport: "", qualification: "", college: "", gpa: "",
-          passedYear: "", maritalStatus: "", address: "", phone: "", email: "",
-          guardianPhone: "", reach: [], countryInterest: "", testRequired: "", message: "",
-        });
-      } else {
-        alert("There was an error submitting the form. Please try again.");
-      }
     } catch {
       alert("There was an error submitting the form. Please try again.");
     } finally {

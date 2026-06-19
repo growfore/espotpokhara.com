@@ -4,6 +4,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import Container from "@/components/global/Container";
 import PageHero from "@/components/PageHero";
+import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -89,40 +90,7 @@ export default function ContactPage() {
             <Reveal direction="right">
               <div className="border border-outline-variant rounded-3xl bg-paper-white p-6 md:p-8">
                 <h3 className="font-heading tracking-tighter text-xl text-on-surface mb-6">Send Us a Message</h3>
-                <form className="space-y-4">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="contact-name" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Name</label>
-                      <input id="contact-name" type="text" placeholder="e.g. John Doe" className="input-modern rounded-lg" required autoComplete="name" />
-                    </div>
-                    <div>
-                      <label htmlFor="contact-email" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Email</label>
-                      <input id="contact-email" type="email" placeholder="e.g. john@example.com" className="input-modern rounded-lg" required autoComplete="email" />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="contact-phone" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Phone Number</label>
-                    <input id="contact-phone" type="tel" placeholder="e.g. 98XXXXXXXX" className="input-modern rounded-lg" autoComplete="tel" />
-                  </div>
-                  <div>
-                    <label htmlFor="contact-country" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Interested Country</label>
-                    <select id="contact-country" className="input-modern rounded-lg" defaultValue="">
-                      <option value="" disabled>Select a country…</option>
-                      <option value="USA">USA</option>
-                      <option value="Japan">Japan</option>
-                      <option value="Australia">Australia</option>
-                      <option value="Canada">Canada</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="contact-message" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Message</label>
-                    <textarea id="contact-message" placeholder="How can we help you?…" rows={4} className="input-modern rounded-lg resize-none" required />
-                  </div>
-                  <button type="submit" className="w-full bg-crimson text-paper-white rounded-full px-8 py-3.5 font-heading text-label-bold hover:brightness-110 transition-all duration-200">
-                    Send Message
-                  </button>
-                </form>
+                <ContactForm />
               </div>
             </Reveal>
           </div>
