@@ -53,24 +53,24 @@ export default function RegisterPopup() {
 
               <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                 <div>
-                  <label className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Name</label>
-                  <input type="text" className="input-modern" required />
+                  <label htmlFor="register-name" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Name</label>
+                  <input id="register-name" type="text" className="input-modern" required autoComplete="name" />
                 </div>
                 <div>
-                  <label className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Email</label>
-                  <input type="email" className="input-modern" required />
+                  <label htmlFor="register-email" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Email</label>
+                  <input id="register-email" type="email" className="input-modern" required autoComplete="email" />
                 </div>
                 <div>
-                  <label className="font-body-md text-body-md font-medium text-on-surface block mb-1">Phone</label>
-                  <input type="tel" className="input-modern" required />
+                  <label htmlFor="register-phone" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Phone</label>
+                  <input id="register-phone" type="tel" className="input-modern" required autoComplete="tel" />
                 </div>
                 <div>
-                  <label className="font-body-md text-body-md font-medium text-on-surface block mb-1">Address</label>
-                  <input type="text" className="input-modern" required />
+                  <label htmlFor="register-address" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Address</label>
+                  <input id="register-address" type="text" className="input-modern" required autoComplete="street-address" />
                 </div>
                 <div>
-                  <label className="font-body-md text-body-md font-medium text-on-surface block mb-1">Purpose (optional)</label>
-                  <textarea rows={3} className="input-modern resize-none" />
+                  <label htmlFor="register-purpose" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Purpose (optional)</label>
+                  <textarea id="register-purpose" rows={3} className="input-modern resize-none" />
                 </div>
                 <Button variant="primary" width="fullWidth" type="submit">
                   Submit

@@ -80,6 +80,7 @@ export default function HeroSection() {
         <div className="flex items-center gap-3">
           <span
             className="material-symbols-outlined text-crimson"
+            aria-hidden="true"
             style={{ fontVariationSettings: "'FILL' 1" }}
           >
             stars

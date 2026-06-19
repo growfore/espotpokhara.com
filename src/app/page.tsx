@@ -44,7 +44,7 @@ export default function HomePage() {
                   i === 3 && "border-r-0",
                 )}
               >
-                <Icon className="w-6 h-6 md:w-7 md:h-7 text-crimson" strokeWidth={1.5} />
+                <Icon className="w-6 h-6 md:w-7 md:h-7 text-crimson" strokeWidth={1.5} aria-hidden="true" />
                 <StatsCounter value={stat.value} suffix={stat.suffix} label={stat.label} />
               </div>
             );
@@ -86,7 +86,7 @@ export default function HomePage() {
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-body-md text-on-surface-variant">
                     <span className="w-5 h-5 flex items-center justify-center rounded-full bg-crimson/10 text-crimson flex-shrink-0 mt-0.5">
-                      <Check size={12} strokeWidth={3} />
+                      <Check size={12} strokeWidth={3} aria-hidden="true" />
                     </span>
                     {item}
                   </li>
@@ -135,7 +135,7 @@ export default function HomePage() {
               <div className="space-y-8">
                 <div className="flex items-start gap-5">
                   <div className="w-12 h-12 flex items-center justify-center bg-crimson text-paper-white rounded-2xl flex-shrink-0">
-                    <MapPin size={20} />
+                    <MapPin size={20} aria-hidden="true" />
                   </div>
                   <div>
                     <p className="font-heading text-label-bold text-on-surface mb-1">Address</p>
@@ -144,7 +144,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-start gap-5">
                   <div className="w-12 h-12 flex items-center justify-center bg-crimson text-paper-white rounded-2xl flex-shrink-0">
-                    <Phone size={20} />
+                    <Phone size={20} aria-hidden="true" />
                   </div>
                   <div>
                     <p className="font-heading text-label-bold text-on-surface mb-1">Phone</p>
@@ -153,7 +153,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-start gap-5">
                   <div className="w-12 h-12 flex items-center justify-center bg-crimson text-paper-white rounded-2xl flex-shrink-0">
-                    <Mail size={20} />
+                    <Mail size={20} aria-hidden="true" />
                   </div>
                   <div>
                     <p className="font-heading text-label-bold text-on-surface mb-1">Email</p>
@@ -162,7 +162,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-start gap-5">
                   <div className="w-12 h-12 flex items-center justify-center bg-crimson text-paper-white rounded-2xl flex-shrink-0">
-                    <Clock size={20} />
+                    <Clock size={20} aria-hidden="true" />
                   </div>
                   <div>
                     <p className="font-heading text-label-bold text-on-surface mb-1">Language Classes</p>
@@ -173,7 +173,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-start gap-5">
                   <div className="w-12 h-12 flex items-center justify-center bg-crimson text-paper-white rounded-2xl flex-shrink-0">
-                    <Clock size={20} />
+                    <Clock size={20} aria-hidden="true" />
                   </div>
                   <div>
                     <p className="font-heading text-label-bold text-on-surface mb-1">Working Hours</p>
@@ -189,19 +189,34 @@ export default function HomePage() {
                 <h3 className="font-heading tracking-tighter text-heading-lg text-on-surface mb-8">Send Us a Message</h3>
                 <form className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
-                    <input type="text" placeholder="Your Name" className="input-modern rounded-lg" required />
-                    <input type="email" placeholder="Your Email" className="input-modern rounded-lg" required />
+                    <div>
+                      <label htmlFor="home-name" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Name</label>
+                      <input id="home-name" type="text" placeholder="e.g. John Doe" className="input-modern rounded-lg" required autoComplete="name" />
+                    </div>
+                    <div>
+                      <label htmlFor="home-email" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Email</label>
+                      <input id="home-email" type="email" placeholder="e.g. john@example.com" className="input-modern rounded-lg" required autoComplete="email" />
+                    </div>
                   </div>
-                  <input type="tel" placeholder="Phone Number" className="input-modern rounded-lg" />
-                  <select className="input-modern rounded-lg" defaultValue="">
-                    <option value="" disabled>Interested Country</option>
-                    <option value="USA">USA</option>
-                    <option value="Japan">Japan</option>
-                    <option value="Australia">Australia</option>
-                    <option value="Canada">Canada</option>
-                    <option value="Other">Other</option>
-                  </select>
-                  <textarea placeholder="Your Message" rows={4} className="input-modern rounded-lg resize-none" required />
+                  <div>
+                    <label htmlFor="home-phone" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Phone Number</label>
+                    <input id="home-phone" type="tel" placeholder="e.g. 98XXXXXXXX" className="input-modern rounded-lg" autoComplete="tel" />
+                  </div>
+                  <div>
+                    <label htmlFor="home-country" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Interested Country</label>
+                    <select id="home-country" className="input-modern rounded-lg" defaultValue="">
+                      <option value="" disabled>Select a country…</option>
+                      <option value="USA">USA</option>
+                      <option value="Japan">Japan</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Canada">Canada</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="home-message" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Message</label>
+                    <textarea id="home-message" placeholder="How can we help you?…" rows={4} className="input-modern rounded-lg resize-none" required />
+                  </div>
                   <motion.button
                     type="submit"
                     whileHover={{ scale: 1.02 }}

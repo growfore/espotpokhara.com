@@ -44,16 +44,18 @@ export default function Destinations() {
             <button
               onClick={() => carouselApi?.scrollPrev()}
               disabled={!canScrollPrev}
+              aria-label="Previous destination"
               className="flex items-center justify-center size-10 rounded-full border border-outline-variant text-on-surface hover:bg-crimson hover:text-paper-white hover:border-crimson transition-all disabled:opacity-30 disabled:pointer-events-auto"
             >
-              <ArrowLeft className="size-5" />
+              <ArrowLeft className="size-5" aria-hidden="true" />
             </button>
             <button
               onClick={() => carouselApi?.scrollNext()}
               disabled={!canScrollNext}
+              aria-label="Next destination"
               className="flex items-center justify-center size-10 rounded-full border border-outline-variant text-on-surface hover:bg-crimson hover:text-paper-white hover:border-crimson transition-all disabled:opacity-30 disabled:pointer-events-auto"
             >
-              <ArrowRight className="size-5" />
+              <ArrowRight className="size-5" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -91,7 +93,7 @@ export default function Destinations() {
                       </p>
                       <span className="flex items-center text-sm text-paper-white/90">
                         Read more{" "}
-                        <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                       </span>
                     </div>
                   </div>

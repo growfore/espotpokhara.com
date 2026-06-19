@@ -22,7 +22,7 @@ export default function CTASection() {
             </Button>
           </div>
           <div className="absolute top-0 right-0 p-8 opacity-[0.06] pointer-events-none">
-            <Globe size={300} className="text-navy" />
+            <Globe size={300} className="text-navy" aria-hidden="true" />
           </div>
         </div>
       </Container>

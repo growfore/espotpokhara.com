@@ -111,7 +111,7 @@ function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
           {navItems.map((group) => (
             <div key={group.label}>
               <p className="px-3 text-xs font-bold text-outline uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                <span className="material-symbols-outlined text-xs">{group.label === "Study Destinations" ? "public" : group.label === "Site" ? "language" : "description"}</span>
+                <span className="material-symbols-outlined text-xs" aria-hidden="true">{group.label === "Study Destinations" ? "public" : group.label === "Site" ? "language" : "description"}</span>
                 {group.label}
               </p>
               <ul className="space-y-1">
@@ -152,7 +152,7 @@ function Breadcrumbs({ onMenuToggle }: { onMenuToggle: () => void }) {
             className="lg:hidden w-8 h-8 flex items-center justify-center bg-paper-white border border-outline-variant rounded-lg flex-shrink-0"
             aria-label="Toggle sidebar"
           >
-            <span className="material-symbols-outlined text-base text-on-surface-variant">menu</span>
+            <span className="material-symbols-outlined text-base text-on-surface-variant" aria-hidden="true">menu</span>
           </button>
           <nav className="text-sm text-outline font-heading">
             {group.label} / <span className="text-on-surface font-medium">{item.label}</span>

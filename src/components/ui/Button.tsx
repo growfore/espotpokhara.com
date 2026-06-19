@@ -47,7 +47,7 @@ const Button = React.forwardRef<HTMLAnchorElement, ButtonProps>(
       <>
         {children}
         {!disableIcon && (
-          <span className="material-symbols-outlined text-base transition duration-300 group-hover:translate-x-0.5">
+          <span className="material-symbols-outlined text-base transition duration-300 group-hover:translate-x-0.5" aria-hidden="true">
             arrow_forward
           </span>
         )}

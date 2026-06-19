@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView, type Variants } from "framer-motion";
+import { motion, useInView, useReducedMotion, type Variants } from "framer-motion";
 import { useRef, type ReactNode } from "react";
 
 type Direction = "up" | "down" | "left" | "right" | "scale" | "none";
@@ -25,6 +25,7 @@ export default function Reveal({
   once = true,
 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
+  const prefersReduced = useReducedMotion();
   const isInView = useInView(ref, { once, margin: "-40px" });
 
   const variants: Variants = {
@@ -42,6 +43,10 @@ export default function Reveal({
       transition: { duration, delay, ease: [0.25, 0.1, 0.25, 1] as const },
     },
   };
+
+  if (prefersReduced) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <div ref={ref} className={className}>

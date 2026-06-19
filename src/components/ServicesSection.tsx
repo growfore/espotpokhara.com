@@ -41,18 +41,29 @@ export default function ServicesSection() {
             </p>
           </div>
 
-          <div className="relative mx-auto grid max-w-2xl lg:max-w-4xl divide-y sm:divide-x sm:divide-y-0 border border-outline-variant *:p-6 md:*:p-8 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => {
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, i) => {
               const Icon = iconMap[service.icon] || Home;
+              const span = [
+                "lg:col-span-2", // Visa Guidance
+                "lg:col-span-1", // Pre-Departure
+                "lg:col-span-1", // Accommodation
+                "lg:col-span-2", // University Matching
+                "lg:col-span-2", // Scholarships
+                "lg:col-span-1", // Language Classes
+              ][i];
               return (
-                <div key={service.title} className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    <Icon className="size-4 text-crimson" />
-                    <h3 className="font-heading text-sm font-semibold text-navy">
+                <div
+                  key={service.title}
+                  className={`${span} space-y-4 rounded-xl border border-outline-variant bg-white p-8 shadow-sm`}
+                >
+                  <div className="flex items-center gap-3">
+                    <Icon className="size-6 text-crimson" aria-hidden="true" />
+                    <h3 className="font-heading text-lg font-semibold text-navy">
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-sm text-on-surface-variant leading-relaxed">
+                  <p className="text-lg text-on-surface-variant leading-relaxed">
                     {service.description}
                   </p>
                 </div>

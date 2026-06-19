@@ -14,6 +14,13 @@ export const metadata: Metadata = {
     title: "Contact Us | Espot Pokhara Education and Visa Services",
     description: "Contact Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
     url: "/contact",
+    images: [{ url: "/images/counter-banner.webp", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us | Espot Pokhara Education and Visa Services",
+    description: "Contact Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
+    images: ["/images/counter-banner.webp"],
   },
 };
 
@@ -41,7 +48,7 @@ export default function ContactPage() {
               <div className="space-y-6 mb-10">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 flex items-center justify-center bg-crimson text-paper-white rounded-2xl flex-shrink-0">
-                    <MapPin size={20} />
+                    <MapPin size={20} aria-hidden="true" />
                   </div>
                   <div>
                     <p className="font-heading text-label-bold text-on-surface mb-1">Office Address</p>
@@ -50,7 +57,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 flex items-center justify-center bg-crimson text-paper-white rounded-2xl flex-shrink-0">
-                    <Phone size={20} />
+                    <Phone size={20} aria-hidden="true" />
                   </div>
                   <div>
                     <p className="font-heading text-label-bold text-on-surface mb-1">Phone</p>
@@ -59,7 +66,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 flex items-center justify-center bg-crimson text-paper-white rounded-2xl flex-shrink-0">
-                    <Mail size={20} />
+                    <Mail size={20} aria-hidden="true" />
                   </div>
                   <div>
                     <p className="font-heading text-label-bold text-on-surface mb-1">Email</p>
@@ -68,7 +75,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 flex items-center justify-center bg-crimson text-paper-white rounded-2xl flex-shrink-0">
-                    <Clock size={20} />
+                    <Clock size={20} aria-hidden="true" />
                   </div>
                   <div>
                     <p className="font-heading text-label-bold text-on-surface mb-1">Working Hours</p>
@@ -84,19 +91,34 @@ export default function ContactPage() {
                 <h3 className="font-heading tracking-tighter text-xl text-on-surface mb-6">Send Us a Message</h3>
                 <form className="space-y-4">
                   <div className="grid sm:grid-cols-2 gap-4">
-                    <input type="text" placeholder="Your Name" className="input-modern rounded-lg" required />
-                    <input type="email" placeholder="Your Email" className="input-modern rounded-lg" required />
+                    <div>
+                      <label htmlFor="contact-name" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Name</label>
+                      <input id="contact-name" type="text" placeholder="e.g. John Doe" className="input-modern rounded-lg" required autoComplete="name" />
+                    </div>
+                    <div>
+                      <label htmlFor="contact-email" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Email</label>
+                      <input id="contact-email" type="email" placeholder="e.g. john@example.com" className="input-modern rounded-lg" required autoComplete="email" />
+                    </div>
                   </div>
-                  <input type="tel" placeholder="Phone Number" className="input-modern rounded-lg" />
-                  <select className="input-modern rounded-lg" defaultValue="">
-                    <option value="" disabled>Interested Country</option>
-                    <option value="USA">USA</option>
-                    <option value="Japan">Japan</option>
-                    <option value="Australia">Australia</option>
-                    <option value="Canada">Canada</option>
-                    <option value="Other">Other</option>
-                  </select>
-                  <textarea placeholder="Your Message" rows={4} className="input-modern rounded-lg resize-none" required />
+                  <div>
+                    <label htmlFor="contact-phone" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Phone Number</label>
+                    <input id="contact-phone" type="tel" placeholder="e.g. 98XXXXXXXX" className="input-modern rounded-lg" autoComplete="tel" />
+                  </div>
+                  <div>
+                    <label htmlFor="contact-country" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Interested Country</label>
+                    <select id="contact-country" className="input-modern rounded-lg" defaultValue="">
+                      <option value="" disabled>Select a country…</option>
+                      <option value="USA">USA</option>
+                      <option value="Japan">Japan</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Canada">Canada</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="contact-message" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Message</label>
+                    <textarea id="contact-message" placeholder="How can we help you?…" rows={4} className="input-modern rounded-lg resize-none" required />
+                  </div>
                   <button type="submit" className="w-full bg-crimson text-paper-white rounded-full px-8 py-3.5 font-heading text-label-bold hover:brightness-110 transition-all duration-200">
                     Send Message
                   </button>

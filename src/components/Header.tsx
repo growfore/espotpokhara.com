@@ -71,6 +71,7 @@ function NavLink({
             {item.label}
             <ChevronDown
               size={16}
+              aria-hidden="true"
               className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
             />
           </button>
@@ -109,6 +110,7 @@ function NavLink({
             {item.label}
             <ChevronDown
               size={14}
+              aria-hidden="true"
               className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
             />
           </button>
@@ -186,9 +188,9 @@ export default function Header() {
             aria-label="Toggle menu"
           >
             {mobileOpen ? (
-              <X size={18} className="text-on-surface" />
+              <X size={18} className="text-on-surface" aria-hidden="true" />
             ) : (
-              <Menu size={18} className="text-on-surface" />
+              <Menu size={18} className="text-on-surface" aria-hidden="true" />
             )}
           </button>
         </div>
@@ -219,7 +221,7 @@ export default function Header() {
                   className="flex items-center justify-center gap-2 rounded-full text-xs md:text-sm font-medium transition-all bg-crimson text-white hover:bg-crimson-light h-9 md:h-10 px-4 md:px-4 w-full"
                 >
                   Book Consulting
-                  <ArrowRight size={16} />
+                  <ArrowRight size={16} aria-hidden="true" />
                 </Link>
               </div>
             </nav>

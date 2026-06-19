@@ -8,13 +8,16 @@ export default function Footer() {
       <div className="max-w-8xl mx-auto px-6 md:px-10">
         <div className="grid md:grid-cols-5 gap-8 md:gap-12 py-12 md:py-16">
           <div className="md:col-span-1">
-            <Link href="/" className="inline-block mb-4">
+            <Link
+              href="/"
+              className="inline-block mb-4 bg-white rounded-md p-2"
+            >
               <Image
                 src="/espot_logo.webp"
                 alt={siteConfig.shortName}
                 width={160}
                 height={48}
-                className="h-12 w-auto brightness-0 invert"
+                className="h-16 w-auto"
               />
             </Link>
             <p className="text-base text-paper-white/80 leading-relaxed mb-6 max-w-xs">
@@ -25,40 +28,51 @@ export default function Footer() {
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full border border-paper-white/20 flex items-center justify-center hover:bg-crimson transition-colors"
                 aria-label="Facebook"
+                className="underline"
               >
-                <span className="material-symbols-outlined text-xs">face_nod</span>
+                Facebook
               </a>
               <a
                 href={siteConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full border border-paper-white/20 flex items-center justify-center hover:bg-crimson transition-colors"
+                className="underline"
                 aria-label="Instagram"
               >
-                <span className="material-symbols-outlined text-xs">photo_camera</span>
+                Instagram
               </a>
             </div>
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-paper-white/60 uppercase tracking-wider mb-4">Pages</p>
+            <p className="text-sm font-semibold text-paper-white/60 uppercase tracking-wider mb-4">
+              Pages
+            </p>
             <ul className="space-y-2.5">
               {siteConfig.footerPages.map((p) => (
                 <li key={p.label}>
-                  <Link href={p.href} className="text-base text-paper-white/85 hover:text-paper-white transition-colors">
+                  <Link
+                    href={p.href}
+                    className="text-base text-paper-white/85 hover:text-paper-white transition-colors"
+                  >
                     {p.label}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/blogs" className="text-base text-paper-white/85 hover:text-paper-white transition-colors">
+                <Link
+                  href="/blogs"
+                  className="text-base text-paper-white/85 hover:text-paper-white transition-colors"
+                >
                   Blogs
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-base text-paper-white/85 hover:text-paper-white transition-colors">
+                <Link
+                  href="/contact"
+                  className="text-base text-paper-white/85 hover:text-paper-white transition-colors"
+                >
                   Contact
                 </Link>
               </li>
@@ -66,11 +80,16 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-paper-white/60 uppercase tracking-wider mb-4">Countries</p>
+            <p className="text-sm font-semibold text-paper-white/60 uppercase tracking-wider mb-4">
+              Countries
+            </p>
             <ul className="space-y-2.5">
               {siteConfig.footerCountries.map((c) => (
                 <li key={c.label}>
-                  <Link href={c.href} className="text-base text-paper-white/85 hover:text-paper-white transition-colors">
+                  <Link
+                    href={c.href}
+                    className="text-base text-paper-white/85 hover:text-paper-white transition-colors"
+                  >
                     {c.label}
                   </Link>
                 </li>
@@ -79,10 +98,14 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-paper-white/60 uppercase tracking-wider mb-4">Schedule</p>
+            <p className="text-sm font-semibold text-paper-white/60 uppercase tracking-wider mb-4">
+              Schedule
+            </p>
             <div className="space-y-4">
               <div>
-                <p className="text-sm font-semibold text-paper-white/70 mb-2">Language Classes</p>
+                <p className="text-sm font-semibold text-paper-white/70 mb-2">
+                  Language Classes
+                </p>
                 <div className="space-y-1.5">
                   <div className="flex justify-between gap-4 text-sm text-paper-white/75">
                     <span>Morning</span>
@@ -99,7 +122,9 @@ export default function Footer() {
                 </div>
               </div>
               <div>
-                <p className="text-sm font-semibold text-paper-white/70 mb-2">Working Hours</p>
+                <p className="text-sm font-semibold text-paper-white/70 mb-2">
+                  Working Hours
+                </p>
                 <div className="space-y-1.5">
                   <div className="flex justify-between gap-4 text-sm text-paper-white/75">
                     <span>Sun - Fri</span>
@@ -115,25 +140,37 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-paper-white/60 uppercase tracking-wider mb-4">Support</p>
+            <p className="text-sm font-semibold text-paper-white/60 uppercase tracking-wider mb-4">
+              Support
+            </p>
             <ul className="space-y-2.5">
               {siteConfig.footerSupport.map((s) => (
                 <li key={s.label}>
-                  <Link href={s.href} className="text-base text-paper-white/85 hover:text-paper-white transition-colors">
+                  <Link
+                    href={s.href}
+                    className="text-base text-paper-white/85 hover:text-paper-white transition-colors"
+                  >
                     {s.label}
                   </Link>
                 </li>
               ))}
             </ul>
             <div className="mt-6 space-y-2">
-              <p className="text-sm text-paper-white/75">{siteConfig.contact.phone}</p>
-              <p className="text-sm text-paper-white/75">{siteConfig.contact.email}</p>
+              <p className="text-sm text-paper-white/75">
+                {siteConfig.contact.phone}
+              </p>
+              <p className="text-sm text-paper-white/75">
+                {siteConfig.contact.email}
+              </p>
             </div>
           </div>
         </div>
 
         <div className="py-6 border-t border-paper-white/20 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-paper-white/60">
-          <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>

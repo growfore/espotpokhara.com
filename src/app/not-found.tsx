@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+
+export const metadata: Metadata = {
+  title: "404: Page Not Found",
+  description: "The page you are looking for does not exist or has been moved. Let Espot Pokhara help you find your way.",
+  robots: { index: false },
+};
 
 export default function NotFoundPage() {
   return (

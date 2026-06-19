@@ -15,6 +15,13 @@ export const metadata: Metadata = {
     title: "About Us | Espot Pokhara Education and Visa Services",
     description: "Learn about Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
     url: "/about",
+    images: [{ url: "/images/counter-banner.webp", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | Espot Pokhara Education and Visa Services",
+    description: "Learn about Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
+    images: ["/images/counter-banner.webp"],
   },
 };
 
@@ -61,7 +68,7 @@ export default function AboutPage() {
                 {siteConfig.whyChooseUs.map((reason) => (
                   <li key={reason} className="flex items-start gap-3 text-body-md text-on-surface-variant">
                     <span className="w-5 h-5 flex items-center justify-center rounded-full bg-crimson/10 text-crimson flex-shrink-0 mt-0.5">
-                      <Check size={12} strokeWidth={3} />
+                      <Check size={12} strokeWidth={3} aria-hidden="true" />
                     </span>
                     {reason}
                   </li>

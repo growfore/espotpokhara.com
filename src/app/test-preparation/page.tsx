@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   title: "Test Preparation",
   description:
     "Comprehensive test preparation services for IELTS, PTE, and Japanese Language (JLPT) at Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
+  alternates: { canonical: "/test-preparation" },
+  openGraph: {
+    title: "Test Preparation | Espot Pokhara",
+    description: "Comprehensive test preparation services for IELTS, PTE, and JLPT at Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
+    url: "/test-preparation",
+  },
+  twitter: {
+    title: "Test Preparation | Espot Pokhara",
+    description: "Comprehensive test preparation services for IELTS, PTE, and JLPT at Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
+  },
 };
 
 export default function TestPreparationPage() {
