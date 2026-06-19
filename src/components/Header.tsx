@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -18,36 +18,58 @@ interface NavItem {
   }[];
 }
 
+function MobileAccordion({ item, onMobileClose }: { item: NavItem; onMobileClose?: () => void }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="w-full">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between text-on-surface font-heading text-headline-sm py-4 border-b border-outline-variant"
+      >
+        {item.label}
+        <ChevronDown
+          size={16}
+          aria-hidden="true"
+          className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            <div className="pl-4 space-y-1 pb-2">
+              {item.children!.map((child) => (
+                <Link
+                  key={child.href}
+                  href={child.href}
+                  onClick={onMobileClose}
+                  className="block text-on-surface-variant hover:text-crimson text-sm py-3 border-b border-outline-variant/50"
+                >
+                  {child.label}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
 function NavLink({
   item,
   isMobile = false,
   onMobileClose,
-  index,
-  isActive,
-  onToggle,
 }: {
   item: NavItem;
   isMobile?: boolean;
   onMobileClose?: () => void;
-  index?: number;
-  isActive?: boolean;
-  onToggle?: (i: number | null) => void;
 }) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLLIElement>(null);
-  const onToggleRef = useRef(onToggle);
-
-  useEffect(() => {
-    onToggleRef.current = onToggle;
-    if (isMobile) return;
-    const close = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node))
-        onToggleRef.current?.(null);
-    };
-    document.addEventListener("mousedown", close);
-    return () => document.removeEventListener("mousedown", close);
-  }, [isMobile]);
-
   if (!("children" in item) || !item.children) {
     return (
       <Link
@@ -60,100 +82,42 @@ function NavLink({
         }`}
       >
         {item.label}
-        <AnimatedUnderline />
+        {!isMobile && <AnimatedUnderline />}
       </Link>
     );
   }
 
+  if (isMobile) return <MobileAccordion item={item} onMobileClose={onMobileClose} />;
+
   return (
-    <li
-      ref={!isMobile ? ref : undefined}
-      className={isMobile ? "w-full" : "relative"}
-    >
-      {isMobile ? (
-        <>
-          <button
-            onClick={() => setOpen(!open)}
-            className="w-full flex items-center justify-between text-on-surface font-heading text-headline-sm py-4 border-b border-outline-variant"
-          >
-            {item.label}
-            <ChevronDown
-              size={16}
-              aria-hidden="true"
-              className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
-            />
-          </button>
-          <AnimatePresence>
-            {open && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className="overflow-hidden"
-              >
-                <div className="pl-4 space-y-1 pb-2">
-                  {item.children.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      onClick={onMobileClose}
-                      className="block text-on-surface-variant hover:text-crimson text-sm py-3 border-b border-outline-variant/50"
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </>
-      ) : (
-        <>
-          <button
-            onClick={() => onToggle?.(isActive ? null : index!)}
-            className="flex items-center gap-1 text-on-surface-variant hover:text-navy font-body text-sm transition-colors duration-200"
-          >
-            {item.label}
-            <ChevronDown
-              size={14}
-              aria-hidden="true"
-              className={`transition-transform duration-200 ${isActive ? "rotate-180" : ""}`}
-            />
-          </button>
-          <AnimatePresence>
-            {isActive && (
-              <motion.div
-                initial={{ opacity: 0, y: -8, scale: 0.96 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -8, scale: 0.96 }}
-                transition={{ duration: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-                className="absolute top-full left-0 mt-2 w-56 bg-paper-white border border-outline-variant z-50 rounded-3xl"
-              >
-                <div className="p-2">
-                  {item.children.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      onClick={() => onToggle?.(null)}
-                      className="block px-4 py-3 text-sm text-on-surface hover:bg-linen-bg hover:text-crimson transition-colors duration-200 rounded-2xl"
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </>
-      )}
+    <li className="relative group">
+      <button className="flex items-center gap-1 text-on-surface-variant hover:text-navy font-body text-sm transition-colors duration-200 cursor-pointer">
+        {item.label}
+        <ChevronDown
+          size={14}
+          aria-hidden="true"
+          className="transition-transform duration-200 group-hover:rotate-180"
+        />
+      </button>
+      <div className="invisible group-hover:visible group-focus-within:visible opacity-0 group-hover:opacity-100 transition-all duration-150 absolute top-full left-0 mt-2 w-56 bg-paper-white border border-outline-variant z-50 rounded-3xl shadow-lg">
+        <div className="p-2">
+          {item.children!.map((child) => (
+            <Link
+              key={child.href}
+              href={child.href}
+              className="block px-4 py-3 text-sm text-on-surface hover:bg-linen-bg hover:text-crimson transition-colors duration-200 rounded-2xl"
+            >
+              {child.label}
+            </Link>
+          ))}
+        </div>
+      </div>
     </li>
   );
 }
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
@@ -179,14 +143,8 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center gap-5">
           <ul className="flex items-center gap-5">
-            {mainMenu.map((item, i) => (
-              <NavLink
-                key={item.href + item.label}
-                item={item}
-                index={i}
-                isActive={activeDropdown === i}
-                onToggle={setActiveDropdown}
-              />
+            {mainMenu.map((item) => (
+              <NavLink key={item.href + item.label} item={item} />
             ))}
           </ul>
           <Button href="/contact" variant="primary" size="sm">
