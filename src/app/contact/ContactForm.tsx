@@ -13,6 +13,7 @@ export default function ContactForm() {
   });
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -21,11 +22,12 @@ export default function ContactForm() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setError("");
     try {
       await sendForm("Contact", data);
       setDone(true);
     } catch {
-      alert("There was an error. Please try again.");
+      setError("There was an error. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -102,6 +104,7 @@ export default function ContactForm() {
       >
         {loading ? "Sending…" : "Send Message"}
       </button>
+      {error && <p className="text-sm text-red-600 text-center">{error}</p>}
     </form>
   );
 }

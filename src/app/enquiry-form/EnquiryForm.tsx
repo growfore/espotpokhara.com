@@ -26,6 +26,7 @@ export default function EnquiryForm() {
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -43,6 +44,7 @@ export default function EnquiryForm() {
     e.preventDefault();
     setLoading(true);
 
+    setError("");
     try {
       await sendForm("Enquiry", formData);
       setSuccess(true);
@@ -52,7 +54,7 @@ export default function EnquiryForm() {
         guardianPhone: "", reach: [], countryInterest: "", testRequired: "", message: "",
       });
     } catch {
-      alert("There was an error submitting the form. Please try again.");
+      setError("There was an error submitting the form. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -212,6 +214,7 @@ export default function EnquiryForm() {
         >
           {loading ? "Submitting..." : "Send Request"}
         </button>
+        {error && <p className="text-sm text-red-600 text-center">{error}</p>}
       </form>
     </DocsLayout>
   );
