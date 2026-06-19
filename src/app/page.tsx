@@ -206,10 +206,16 @@ export default function HomePage() {
                     <label htmlFor="home-country" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Interested Country</label>
                     <select id="home-country" className="input-modern rounded-lg" defaultValue="">
                       <option value="" disabled>Select a country…</option>
-                      <option value="USA">USA</option>
-                      <option value="Japan">Japan</option>
                       <option value="Australia">Australia</option>
                       <option value="Canada">Canada</option>
+                      <option value="Cyprus">Cyprus</option>
+                      <option value="Dubai">Dubai</option>
+                      <option value="France">France</option>
+                      <option value="Germany">Germany</option>
+                      <option value="Malta">Malta</option>
+                      <option value="New Zealand">New Zealand</option>
+                      <option value="UK">UK</option>
+                      <option value="USA">USA</option>
                       <option value="Other">Other</option>
                     </select>
                   </div>

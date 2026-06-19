@@ -74,25 +74,6 @@ export default function HeroSection() {
           </div>
         </Container>
       </div>
-      <div className="absolute -top-10 right-[20%] w-40 h-40 bg-crimson/20 rounded-full blur-3xl z-[4]" />
-      <div className="absolute -bottom-10 right-[10%] w-60 h-60 bg-navy/10 rounded-full blur-3xl z-[4]" />
-      <div className="absolute top-1/2 -translate-y-1/2 right-4 p-4 bg-paper-white/80 backdrop-blur rounded-2xl border border-outline-variant hidden md:block z-[6]">
-        <div className="flex items-center gap-3">
-          <span
-            className="material-symbols-outlined text-crimson"
-            aria-hidden="true"
-            style={{ fontVariationSettings: "'FILL' 1" }}
-          >
-            stars
-          </span>
-          <div>
-            <p className="font-headline-lg text-[14px]">100% Success Rate</p>
-            <p className="font-label-sm text-[10px] text-on-surface-variant">
-              Japan Student Visas
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }
