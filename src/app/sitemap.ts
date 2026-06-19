@@ -20,7 +20,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/study-in-malta", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/study-in-cyprus", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/study-in-france", priority: 0.9, changeFrequency: "monthly" as const },
-    { path: "/study-in-japan", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/test-preparation", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/blogs", priority: 0.7, changeFrequency: "weekly" as const },
     { path: "/enquiry-form", priority: 0.6, changeFrequency: "yearly" as const },

@@ -84,7 +84,6 @@ const navItems = [
       { href: "/study-in-malta", label: "Malta" },
       { href: "/study-in-cyprus", label: "Cyprus" },
       { href: "/study-in-france", label: "France" },
-      { href: "/study-in-japan", label: "Japan" },
     ],
   },
   {
