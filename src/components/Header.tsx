@@ -146,7 +146,7 @@ export default function Header() {
             alt={siteConfig.shortName}
             width={1280}
             height={100}
-            className="h-14 md:h-auto w-80 p-4"
+            className="h-auto w-60 md:h-auto md:w-80 md:p-4"
           />
         </Link>
 
