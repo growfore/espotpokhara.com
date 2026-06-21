@@ -18,7 +18,13 @@ interface NavItem {
   }[];
 }
 
-function MobileAccordion({ item, onMobileClose }: { item: NavItem; onMobileClose?: () => void }) {
+function MobileAccordion({
+  item,
+  onMobileClose,
+}: {
+  item: NavItem;
+  onMobileClose?: () => void;
+}) {
   const [open, setOpen] = useState(false);
   return (
     <div className="w-full">
@@ -87,7 +93,8 @@ function NavLink({
     );
   }
 
-  if (isMobile) return <MobileAccordion item={item} onMobileClose={onMobileClose} />;
+  if (isMobile)
+    return <MobileAccordion item={item} onMobileClose={onMobileClose} />;
 
   return (
     <li className="relative group">
@@ -135,11 +142,11 @@ export default function Header() {
       <div className="max-w-8xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20">
         <Link href="/" className="flex items-center group">
           <Image
-            src="/espot_logo.webp"
+            src="/logo.png"
             alt={siteConfig.shortName}
-            width={180}
-            height={64}
-            className="h-14 md:h-16 w-auto"
+            width={1280}
+            height={100}
+            className="h-14 md:h-auto w-80 p-4"
           />
         </Link>
 
