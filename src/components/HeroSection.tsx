@@ -17,11 +17,11 @@ export default function HeroSection() {
         src="/hero-image.png"
         alt=""
         fill
-        className="hidden md:block object-cover"
+        className="hidden md:block object-cover justify-center-safe"
         sizes="100vw"
         priority
       />
-      <div className="hidden md:block absolute inset-0  from-paper-white via-paper-white/5 to-transparent" />
+      <div className="hidden md:block absolute inset-0 bg-gradient-to-r  from-paper-white via-paper-white/10 to-transparent" />
       <div className="relative z-10 w-full py-8 md:py-12">
         <Container>
           <div className="max-w-2xl">

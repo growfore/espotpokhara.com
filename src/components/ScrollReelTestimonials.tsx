@@ -16,7 +16,7 @@ export interface ScrollReelTestimonialsProps {
   className?: string;
 }
 
-const EXIT_MS = 240;
+const EXIT_MS = 80;
 const SLIDE_MS = 800;
 
 const QUOTE_CLASSES =
@@ -28,9 +28,18 @@ function cn(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(" ");
 }
 
+<style>{`
+  @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+  @keyframes charIn { 0% { opacity: 0; transform: translateY(4px); } 100% { opacity: 1; transform: translateY(0); } }
+  @keyframes slideUpOut { 0% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-10px); } }
+  .scroll-reel-char { display: inline-block; animation: charIn 60ms ease-out both; }
+  .scroll-reel-exit { animation: slideUpOut 240ms ease-in both; }
+  .image-fade-in { animation: fadeIn 400ms ease-out; }
+`}</style>
+
 function Featured({ src, alt }: { src: string; alt?: string }) {
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-xl bg-linen-bg">
+    <div className="relative h-full w-full overflow-hidden rounded-xl bg-linen-bg image-fade-in">
       <Image
         src={src}
         alt={alt ?? ""}
@@ -101,8 +110,7 @@ export function ScrollReelTestimonials({
   const paginate = React.useCallback(
     (dir: 1 | -1) => {
       if (animating.current) return;
-      const next = index + dir;
-      if (next < 0 || next >= count) return;
+      const next = (index + dir + count) % count;
       animating.current = true;
 
       setIndex(next);
@@ -199,16 +207,15 @@ export function ScrollReelTestimonials({
           </div>
         </div>
 
-        <div className="mt-6 flex items-center gap-1.5 md:mt-0">
+        <div className="mt-10 flex items-center gap-1.5">
           <button
             type="button"
             onClick={() => paginate(-1)}
-            disabled={index === 0}
             aria-label="Previous testimonial"
-            className="grid h-6 w-6 cursor-pointer place-items-center rounded-full border border-on-surface/15 bg-transparent p-0 text-on-surface transition-[opacity,transform] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] hover:enabled:scale-[1.08] active:enabled:scale-[0.94] disabled:cursor-default disabled:opacity-40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crimson"
+            className="grid h-10 w-10 cursor-pointer place-items-center rounded-full border border-on-surface/15 bg-transparent p-0 text-on-surface transition-[opacity,transform] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] hover:enabled:scale-[1.08] active:enabled:scale-[0.94] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crimson"
           >
             <svg
-              className="h-3 w-3 opacity-70"
+              className="h-5 w-5 opacity-70"
               viewBox="0 0 12 12"
               fill="none"
               stroke="currentColor"
@@ -222,12 +229,11 @@ export function ScrollReelTestimonials({
           <button
             type="button"
             onClick={() => paginate(1)}
-            disabled={index === count - 1}
             aria-label="Next testimonial"
-            className="grid h-6 w-6 cursor-pointer place-items-center rounded-full border border-on-surface/15 bg-transparent p-0 text-on-surface transition-[opacity,transform] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] hover:enabled:scale-[1.08] active:enabled:scale-[0.94] disabled:cursor-default disabled:opacity-40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crimson"
+            className="grid h-10 w-10 cursor-pointer place-items-center rounded-full border border-on-surface/15 bg-transparent p-0 text-on-surface transition-[opacity,transform] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] hover:enabled:scale-[1.08] active:enabled:scale-[0.94] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crimson"
           >
             <svg
-              className="h-3 w-3 opacity-70"
+              className="h-5 w-5 opacity-70"
               viewBox="0 0 12 12"
               fill="none"
               stroke="currentColor"
