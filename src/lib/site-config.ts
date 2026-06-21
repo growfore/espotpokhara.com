@@ -200,25 +200,116 @@ export const siteConfig = {
 
   testimonials: [
     {
-      name: "Harshit Thapa",
-      role: "Successful Applicant",
+      name: "Vishal Thapa",
+      role: "Successful Applicant — UK",
       quote:
-        "Their professional expertise and tailored advice turned my dream of reaching the desired destination into a reality. I wholeheartedly endorse their excellent services!",
-      image: "/images/testimonials/review-img.webp",
+        "The team guided me through every step of the UK visa process. From selecting the right university to preparing for the interview, their support was invaluable. I couldn't have done it without them.",
+      image: "/images/testimonial/vishal-thapa-uk.png",
     },
     {
-      name: "Simran Pokhrel",
-      role: "Successful Applicant",
+      name: "Salina Rana Magar",
+      role: "Successful Applicant — UK",
       quote:
-        "Outstanding assistance provided. The commitment and assistance from their team transformed my visa application into a triumph. Reliable and strongly recommended!",
-      image: "/images/testimonials/review-img.webp",
+        "My dream of studying in the UK felt overwhelming at first, but the counselors made it so simple. They helped with my application, visa documents, and even pre-departure orientation. Truly grateful!",
+      image: "/images/testimonial/salina-rana-magar-uk.jpg",
     },
     {
-      name: "Sujal Baniya",
-      role: "Successful Applicant",
+      name: "Sekhar Jang Malla",
+      role: "Successful Applicant — UK",
       quote:
-        "The unwavering dedication and assistance from their team played a crucial role in the success of my visa application. Highly trustworthy and definitely recommended!",
-      image: "/images/testimonials/review-img.webp",
+        "Applying to UK universities was a complex process, but this team made it seamless. Their attention to detail on my application and visa paperwork was exceptional. Highly recommend!",
+      image: "/images/testimonial/sekhar-jang-malla-uk.jpg",
+    },
+    {
+      name: "Sital Thapa Magar",
+      role: "Successful Applicant — UK",
+      quote:
+        "I was nervous about the UK student visa process, but they held my hand through it all. From university selection to visa submission, everything was handled professionally.",
+      image: "/images/testimonial/sital-thapa-magar-uk.jpg",
+    },
+    {
+      name: "Sijan Gurung",
+      role: "Successful Applicant — UK",
+      quote:
+        "I made the first move, and now my brother has followed me to the UK. The team handled both our applications with equal care and precision. I'm grateful for their unwavering support!",
+      image: "/images/testimonial/sijan-gurung-uk.jpg",
+    },
+    {
+      name: "Mansuva Gurung",
+      role: "Successful Applicant — UK",
+      quote:
+        "I followed my brother's footsteps to study in the UK, and this team made the entire process just as smooth for me. Their coordinated support for both our applications was incredible!",
+      image: "/images/testimonial/mansuva-gurung-uk.jpg",
+    },
+    {
+      name: "Sudip Pariyar",
+      role: "Successful Applicant — UK",
+      quote:
+        "The counseling I received was personalized and honest. They didn't just push for any university — they found the best fit for my profile in the UK. The visa approval was the cherry on top!",
+      image: "/images/testimonial/sudip-pariyar-uk.jpg",
+    },
+    {
+      name: "Divash Thapa",
+      role: "Successful Applicant — UK",
+      quote:
+        "From the initial consultation to the visa stamp, every step was clear and well-explained. The team was always available to answer my questions, even late evenings. Amazing service!",
+      image: "/images/testimonial/divash-thapa-uk.jpg",
+    },
+    {
+      name: "Soichhya Gurung",
+      role: "Successful Applicant — UK",
+      quote:
+        "I was unsure about studying abroad, but their orientation sessions gave me the clarity I needed. They helped me shortlist the right UK universities and handled the visa process with great care.",
+      image: "/images/testimonial/soichhya-gurung-uk.jpg",
+    },
+    {
+      name: "Laxmi Shrestha",
+      role: "Successful Applicant — UK",
+      quote:
+        "Settling into a new life in the UK felt daunting, but the pre-departure support made all the difference. They guided me on accommodation, banking, and what to expect. Truly comprehensive!",
+      image: "/images/testimonial/laxmi-shrestha-uk.jpg",
+    },
+    {
+      name: "Supriya Gurung",
+      role: "Successful Applicant — USA",
+      quote:
+        "Navigating the US visa process is notoriously tough, but their expertise made it manageable. From the DS-160 to the visa interview prep, they were with me every step. I got my visa on the first attempt!",
+      image: "/images/testimonial/supriya-gurung-usa.jpg",
+    },
+    {
+      name: "Sadikshya Acharya",
+      role: "Successful Applicant — Dubai",
+      quote:
+        "Moving to Dubai for studies was a big decision, and I'm so glad I had this team's support. The UAE visa process was straightforward with their expert guidance. Highly professional!",
+      image: "/images/testimonial/sadikshya-acharya-dubai.jpg",
+    },
+    {
+      name: "Dibishka Thapa",
+      role: "Successful Applicant — Dubai",
+      quote:
+        "The team's knowledge about studying in Dubai was impressive. They helped me choose the right program and ensured my visa application was flawless. Thank you for making it happen!",
+      image: "/images/testimonial/dibishka-thapa-dubai.jpg",
+    },
+    {
+      name: "Pratiksha Gurung",
+      role: "Successful Applicant — Dubai",
+      quote:
+        "I was worried about the mountain of documentation for Dubai, but they made it so easy. Every form was double-checked, every deadline was met. I'm now happily studying in Dubai!",
+      image: "/images/testimonial/pratiksha-gurung-dubai.jpg",
+    },
+    {
+      name: "Prena Pun",
+      role: "Successful Applicant — Malta",
+      quote:
+        "Malta may be a smaller destination, but the guidance I received was anything but small. Their expertise in European education systems helped me secure both admission and visa without a hitch.",
+      image: "/images/testimonial/prena-pun-malta.jpg",
+    },
+    {
+      name: "Aamin Khan",
+      role: "Successful Applicant — Malta",
+      quote:
+        "I chose Malta for its unique programs, and this team made the entire process effortless. From application to visa approval, their support was exceptional every step of the way.",
+      image: "/images/testimonial/aamin-khan-malta.jpg",
     },
   ],
 

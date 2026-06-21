@@ -16,61 +16,27 @@ export interface ScrollReelTestimonialsProps {
   className?: string;
 }
 
-const CELL = 121.33;
-const GAP = 8;
-const STEP = 3 * (CELL + GAP);
-
 const EXIT_MS = 240;
 const SLIDE_MS = 800;
-
-const EASE_INOUT = "cubic-bezier(0.65,0,0.35,1)";
 
 const QUOTE_CLASSES =
   "m-0 text-lg font-medium leading-[1.3] tracking-[-0.02em] text-on-surface sm:text-[22px]";
 const AUTHOR_CLASSES =
   "m-0 text-sm font-medium leading-[1.3] text-on-surface-variant";
 
-const FEATURED_SHADOW =
-  "0 1.008px 0.705px -0.563px rgba(0,0,0,0.18), 0 2.389px 1.672px -1.125px rgba(0,0,0,0.17), 0 4.357px 3.05px -1.688px rgba(0,0,0,0.17), 0 7.244px 5.07px -2.25px rgba(0,0,0,0.16), 0 11.698px 8.188px -2.813px rgba(0,0,0,0.15), 0 19.148px 13.404px -3.375px rgba(0,0,0,0.13), 0 32.972px 23.08px -3.938px rgba(0,0,0,0.09), 0 60px 42px -4.5px rgba(0,0,0,0.02), inset 0 1px 0 rgba(255,255,255,0.7), inset 0 -1px 0 rgba(0,0,0,0.6)";
-
 function cn(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(" ");
 }
 
-function Cell() {
-  return (
-    <div
-      aria-hidden="true"
-      className="shrink-0 rounded-xl border border-outline-variant bg-gradient-to-b from-linen-bg to-paper-white blur-[1px]"
-      style={{ width: CELL, height: CELL }}
-    />
-  );
-}
-
 function Featured({ src, alt }: { src: string; alt?: string }) {
   return (
-    <div
-      className="relative shrink-0 overflow-hidden rounded-xl bg-linen-bg"
-      style={{ width: CELL, height: CELL, boxShadow: FEATURED_SHADOW }}
-    >
+    <div className="relative h-full w-full overflow-hidden rounded-xl bg-linen-bg">
       <Image
         src={src}
         alt={alt ?? ""}
         fill
-        className="object-cover object-[center_30%]"
-        sizes="122px"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-[2] bg-white mix-blend-saturation"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-[3] blur-[6px] mix-blend-overlay"
-        style={{
-          background:
-            "linear-gradient(220.99deg, rgba(165,28,48,0) 32%, rgb(165,28,48) 41%, rgb(200,100,110) 47%, rgba(165,28,48,0.57) 54%, rgba(165,28,48,0) 65%)",
-        }}
+        className="object-cover"
+        sizes="380px"
       />
     </div>
   );
@@ -127,22 +93,10 @@ export function ScrollReelTestimonials({
   const [index, setIndex] = React.useState(0);
   const [displayIndex, setDisplayIndex] = React.useState(0);
   const [exiting, setExiting] = React.useState(false);
-  const [mounted, setMounted] = React.useState(false);
   const animating = React.useRef(false);
   const timeouts = React.useRef<ReturnType<typeof setTimeout>[]>([]);
 
   const count = testimonials.length;
-
-  React.useEffect(() => {
-    const t = timeouts.current;
-    const raf = requestAnimationFrame(() =>
-      requestAnimationFrame(() => setMounted(true))
-    );
-    return () => {
-      cancelAnimationFrame(raf);
-      t.forEach(clearTimeout);
-    };
-  }, []);
 
   const paginate = React.useCallback(
     (dir: 1 | -1) => {
@@ -158,15 +112,15 @@ export function ScrollReelTestimonials({
         setTimeout(() => {
           setDisplayIndex(next);
           setExiting(false);
-        }, EXIT_MS)
+        }, EXIT_MS),
       );
       timeouts.current.push(
         setTimeout(() => {
           animating.current = false;
-        }, SLIDE_MS)
+        }, SLIDE_MS),
       );
     },
-    [index, count]
+    [index, count],
   );
 
   const onKeyDown = (e: React.KeyboardEvent) => {
@@ -180,29 +134,6 @@ export function ScrollReelTestimonials({
     }
   };
 
-  const middleItems = React.useMemo(() => {
-    const items: Array<{ type: "cell" } | { type: "featured"; i: number }> = [];
-    for (let i = 0; i < 3; i++) items.push({ type: "cell" });
-    testimonials.forEach((_, i) => {
-      items.push({ type: "featured", i });
-      if (i < count - 1) {
-        items.push({ type: "cell" }, { type: "cell" });
-      }
-    });
-    for (let i = 0; i < 3; i++) items.push({ type: "cell" });
-    return items;
-  }, [testimonials, count]);
-
-  const sideCellCount = 4 + 2 * count;
-  const centerIdx = (count - 1) / 2;
-  const middleY = (centerIdx - index) * STEP;
-  const sideY = -middleY;
-
-  const colStyle = (y: number): React.CSSProperties => ({
-    transform: `translateY(${y}px)`,
-    transition: mounted ? `transform ${SLIDE_MS}ms ${EASE_INOUT}` : "none",
-  });
-
   const current = testimonials[displayIndex];
 
   return (
@@ -213,58 +144,12 @@ export function ScrollReelTestimonials({
       tabIndex={0}
       onKeyDown={onKeyDown}
       className={cn(
-        "relative flex w-full max-w-[1060px] flex-col items-stretch gap-2.5 overflow-hidden rounded-xl border border-outline-variant bg-linen-bg outline-none focus-visible:ring-2 focus-visible:ring-crimson md:min-h-[320px] md:flex-row",
-        className
+        "relative flex w-full max-w-[1060px] flex-col items-stretch gap-2.5 overflow-hidden rounded-xl  bg-linen-bg outline-none focus-visible:ring-2 focus-visible:ring-crimson md:min-h-[320px] md:flex-row",
+        className,
       )}
     >
-      <div
-        aria-hidden="true"
-        className="relative h-56 w-full shrink-0 self-stretch overflow-hidden md:h-auto md:w-[380px]"
-        style={{
-          WebkitMaskImage:
-            "linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)",
-          maskImage:
-            "linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)",
-          WebkitMaskComposite: "source-in",
-          maskComposite: "intersect",
-        }}
-      >
-        <div className="absolute inset-0 flex items-center justify-center gap-2">
-          <div
-            className="flex shrink-0 flex-col gap-2 will-change-transform motion-reduce:[transition:none!important]"
-            style={colStyle(sideY)}
-          >
-            {Array.from({ length: sideCellCount }).map((_, i) => (
-              <Cell key={i} />
-            ))}
-          </div>
-
-          <div
-            className="flex shrink-0 flex-col gap-2 will-change-transform motion-reduce:[transition:none!important]"
-            style={colStyle(middleY)}
-          >
-            {middleItems.map((item, i) =>
-              item.type === "featured" ? (
-                <Featured
-                  key={i}
-                  src={testimonials[item.i].image}
-                  alt={testimonials[item.i].alt}
-                />
-              ) : (
-                <Cell key={i} />
-              )
-            )}
-          </div>
-
-          <div
-            className="flex shrink-0 flex-col gap-2 will-change-transform motion-reduce:[transition:none!important]"
-            style={colStyle(sideY)}
-          >
-            {Array.from({ length: sideCellCount }).map((_, i) => (
-              <Cell key={i} />
-            ))}
-          </div>
-        </div>
+      <div className="relative h-56 w-full shrink-0 self-stretch overflow-hidden md:h-auto md:w-[380px]">
+        <Featured key={displayIndex} src={current.image} alt={current.alt} />
       </div>
 
       <div className="flex min-w-0 flex-1 flex-col justify-between self-stretch px-5 py-7 md:py-10">
@@ -293,7 +178,7 @@ export function ScrollReelTestimonials({
               key={displayIndex}
               className={cn(
                 "absolute inset-x-0 top-0 flex flex-col gap-[19px] will-change-[transform,opacity]",
-                exiting && "scroll-reel-exit"
+                exiting && "scroll-reel-exit",
               )}
             >
               <p className={QUOTE_CLASSES}>
