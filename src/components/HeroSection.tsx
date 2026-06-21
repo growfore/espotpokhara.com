@@ -17,7 +17,7 @@ export default function HeroSection() {
         src="/hero-image.png"
         alt=""
         fill
-        className="hidden md:block object-cover justify-center-safe"
+        className="hidden md:block object-cover object-[center_35%]"
         sizes="100vw"
         priority
       />
