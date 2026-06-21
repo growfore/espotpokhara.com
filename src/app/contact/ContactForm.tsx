@@ -78,8 +78,8 @@ export default function ContactForm() {
           value={data.country} onChange={handleChange}
         >
           <option value="" disabled>Select a country…</option>
-          {siteConfig.countries.map((c) => (
-            <option key={c.name} value={c.name}>{c.name}</option>
+          {siteConfig.destinations.map((d) => (
+            <option key={d.country} value={d.country}>{d.country}</option>
           ))}
           <option value="Other">Other</option>
         </select>

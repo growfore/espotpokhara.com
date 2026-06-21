@@ -165,8 +165,8 @@ export default function EnquiryForm() {
             <label htmlFor="countryInterest" className={labelClass}>Country of Interest <span className="text-crimson">*</span></label>
             <select id="countryInterest" name="countryInterest" required value={formData.countryInterest} onChange={handleChange} className={inputClass}>
               <option value="">Select Country</option>
-              {siteConfig.countries.map((c) => (
-                <option key={c.name} value={c.name}>{c.name}</option>
+              {siteConfig.destinations.map((d) => (
+                <option key={d.country} value={d.country}>{d.country}</option>
               ))}
             </select>
           </div>
