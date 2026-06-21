@@ -80,7 +80,7 @@ const jsonLd = {
     contactType: "customer service",
     availableLanguage: ["English", "Nepali"],
   },
-  areaServed: ["USA", "Japan", "Australia", "Canada"],
+  areaServed: ["USA", "Australia", "Canada", "UK"],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Study Abroad Services",

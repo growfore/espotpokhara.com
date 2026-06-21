@@ -78,7 +78,7 @@ function NavLink({
         className={`relative group ${
           isMobile
             ? "block text-on-surface font-heading text-headline-sm py-4 border-b border-outline-variant"
-            : "text-on-surface-variant hover:text-navy font-body text-sm font-semibold transition-colors duration-200"
+            : "text-on-surface-variant hover:text-navy font-body text-base font-semibold transition-colors duration-200"
         }`}
       >
         {item.label}
@@ -91,7 +91,7 @@ function NavLink({
 
   return (
     <li className="relative group">
-      <button className="flex items-center gap-1 text-on-surface-variant hover:text-navy font-body text-sm transition-colors duration-200 cursor-pointer">
+      <button className="flex items-center gap-1 text-on-surface-variant hover:text-navy font-body text-base transition-colors duration-200 cursor-pointer">
         {item.label}
         <ChevronDown
           size={14}
@@ -106,7 +106,7 @@ function NavLink({
               <Link
                 key={child.href}
                 href={child.href}
-                className="block px-4 py-3 text-sm text-on-surface hover:bg-linen-bg hover:text-crimson transition-colors duration-200 rounded-2xl"
+                className="block px-4 py-3 text-base text-on-surface hover:bg-linen-bg hover:text-crimson transition-colors duration-200 rounded-2xl"
               >
                 {child.label}
               </Link>

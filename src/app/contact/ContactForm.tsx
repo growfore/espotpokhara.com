@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { siteConfig } from "@/lib/site-config";
 import { sendForm } from "@/actions/send-email";
 
 export default function ContactForm() {
@@ -77,16 +78,9 @@ export default function ContactForm() {
           value={data.country} onChange={handleChange}
         >
           <option value="" disabled>Select a country…</option>
-          <option value="Australia">Australia</option>
-          <option value="Canada">Canada</option>
-          <option value="Cyprus">Cyprus</option>
-          <option value="Dubai">Dubai</option>
-          <option value="France">France</option>
-          <option value="Germany">Germany</option>
-          <option value="Malta">Malta</option>
-          <option value="New Zealand">New Zealand</option>
-          <option value="UK">UK</option>
-          <option value="USA">USA</option>
+          {siteConfig.countries.map((c) => (
+            <option key={c.name} value={c.name}>{c.name}</option>
+          ))}
           <option value="Other">Other</option>
         </select>
       </div>

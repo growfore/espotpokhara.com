@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Espot Pokhara Education and Visa Services",
   shortName: "Espot Pokhara",
   description:
-    "Espot Pokhara Education and Visa Services in Pokhara, Nepal provides expert study abroad services including university selection, visa guidance, IELTS/PTE/JLPT preparation, and scholarship assistance for USA, Japan, Australia, and Canada.",
+    "Espot Pokhara Education and Visa Services in Pokhara, Nepal provides expert study abroad services including university selection, visa guidance, IELTS/PTE/Duolingo preparation, and scholarship assistance for USA, Australia, Canada, UK, and more.",
   url: "https://espotpokhara.com.np",
   ogImage: "/images/hero-bg.webp",
   themeColor: "#001F5B",
@@ -107,7 +107,7 @@ export const siteConfig = {
     {
       title: "Language Classes",
       description:
-        "Test preparation for IELTS, PTE, and JLPT from beginners to advanced levels with a focus on cultural integration.",
+         "Test preparation for IELTS, PTE, and Duolingo from beginners to advanced levels with a focus on cultural integration.",
       icon: "book",
     },
   ],
@@ -220,7 +220,7 @@ export const siteConfig = {
   ],
 
   whyChooseUs: [
-    "Expert guidance for Japan, Australia, Canada & USA",
+    "Expert guidance for Australia, Canada, USA & UK",
     "Personalized counselling based on your academic profile",
     "Extensive network and partnerships with global universities",
   ],
@@ -925,28 +925,24 @@ export const siteConfig = {
         image: "/images/uploads/2023/12/pte.webp",
       },
       {
-        id: "jlpt",
-        title: "JLPT",
+        id: "duolingo",
+        title: "Duolingo English Test",
         icon: "",
         description:
-          "JLPT (Japanese-Language Proficiency Test) is the standardized test for non-native speakers to certify their Japanese language proficiency. It is widely recognized by educational institutions and employers in Japan.",
+          "Duolingo English Test (DET) is a modern, computer-adaptive English proficiency exam taken entirely online from home. It is accepted by thousands of universities worldwide and provides fast, affordable results.",
         details: [
-          "The JLPT is held twice a year, in July and December.",
-          "It consists of five levels: N1 (most advanced) to N5 (basic).",
-          "Tests cover language knowledge (vocabulary/grammar), reading, and listening.",
-          "JLPT certification is often required for university admission and work visas in Japan.",
+          "Fully online format — no test center visit required, take it from home anytime.",
+          "Computer-adaptive — question difficulty adjusts to your performance in real time.",
+          "Total test duration: approximately 1 hour.",
+          "Results available within 48 hours.",
         ],
         formats: [
           {
-            type: "JLPT N1-N2",
-            desc: "Advanced levels - for professional and academic settings.",
-          },
-          {
-            type: "JLPT N3-N5",
-            desc: "Beginner to intermediate levels for daily conversation.",
+            type: "Duolingo English Test",
+            desc: "For university admissions and study abroad applications.",
           },
         ],
-        image: "/images/uploads/2023/12/jlpt.webp",
+        image: "",
       },
     ],
     ieltsBandScoreTable: {
@@ -1082,34 +1078,34 @@ export const siteConfig = {
           a: "Yes, PTE preparation classes usually provide study materials to their students. These materials may include textbooks, workbooks, sample questions, practice tests, and online resources.",
         },
       ],
-      jlpt: [
+      duolingo: [
         {
-          q: "What is JLPT?",
-          a: "JLPT stands for Japanese Language Proficiency Test. It is a standardized exam that assesses the Japanese language proficiency of non-native speakers. The test measures skills in reading, listening, writing, and speaking.",
+          q: "What is the Duolingo English Test?",
+          a: "The Duolingo English Test (DET) is a modern, computer-adaptive English proficiency exam taken entirely online from home. It assesses reading, writing, listening, and speaking skills and is accepted by thousands of universities worldwide.",
         },
         {
-          q: "What are JLPT preparation classes?",
-          a: "JLPT preparation classes are designed to help candidates improve their Japanese language skills specifically for the JLPT exam. These classes focus on the exam format, vocabulary, grammar, reading comprehension, listening comprehension, and speaking practice.",
+          q: "How is the Duolingo English Test different from IELTS or PTE?",
+          a: "The DET is fully online, takes only about 1 hour, costs around USD 65, and delivers results within 48 hours. Unlike IELTS and PTE, there is no need to visit a test center.",
         },
         {
-          q: "What do JLPT preparation classes in Nepal offer?",
-          a: "JLPT preparation classes in Nepal typically offer comprehensive courses covering all levels of the JLPT exam (N5 to N1). They provide study materials, practice tests, vocabulary and grammar exercises, listening comprehension practice, and speaking practice with guidance from experienced instructors.",
+          q: "How long does it take to prepare for the Duolingo English Test?",
+          a: "Preparation time varies depending on your current English level and target score. Most students benefit from 4-8 weeks of focused preparation with practice tests and guided coaching.",
         },
         {
-          q: "How long does it take to prepare for the JLPT exam?",
-          a: "The duration of JLPT preparation varies depending on your existing Japanese language proficiency, learning ability, and the desired JLPT level. It is recommended to dedicate several months to a year for thorough preparation, especially for higher levels.",
+          q: "What score do I need for university admission?",
+          a: "Score requirements vary by institution. Most universities require a score between 105-130 out of 160. We help you identify the target score for your chosen universities and prepare accordingly.",
         },
         {
-          q: "How much do JLPT preparation classes in Nepal cost?",
-          a: "The cost of JLPT preparation classes in Nepal can vary depending on the institution, course duration, and the services provided.",
+          q: "How much do Duolingo preparation classes in Nepal cost?",
+          a: "The cost of Duolingo preparation classes varies depending on the institution, course duration, and services provided. Contact us for current pricing and packages.",
         },
         {
-          q: "What are the different levels of the JLPT?",
-          a: "The JLPT is divided into five levels: N5 (beginner), N4 (elementary), N3 (intermediate), N2 (upper-intermediate), and N1 (advanced). Each level assesses different aspects of the Japanese language, with N5 being the easiest and N1 being the most difficult.",
+          q: "Can I take the Duolingo English Test from home?",
+          a: "Yes, the DET is designed to be taken entirely online from your home. You need a computer with a working webcam, microphone, and a stable internet connection.",
         },
         {
-          q: "Do JLPT preparation classes provide speaking practice?",
-          a: "Yes, JLPT preparation classes typically include speaking practice as it is an important component of the JLPT exam. These classes often incorporate conversation exercises, role-plays, and speaking drills to help you improve your spoken Japanese skills.",
+          q: "How soon do I get my Duolingo test results?",
+          a: "Results are typically available within 48 hours of completing the test. You can share your scores with an unlimited number of universities for free.",
         },
       ],
     },
@@ -1156,9 +1152,9 @@ export const siteConfig = {
 
   aboutPage: {
     whoWeAre:
-      "Espot Pokhara Education and Visa Services is one of the emerging educational consultancies in Pokhara and is committed to providing information and counseling to students who aspire to pursue further education abroad. With a focus on countries like Japan, Australia, Canada, and the US. We take on the challenge to offer qualitative and quantitative information and help you select the best option for your further educational journey. Join us now to discover the benefits of studying abroad and get our guidance throughout your exciting journey.",
+      "Espot Pokhara Education and Visa Services is one of the emerging educational consultancies in Pokhara and is committed to providing information and counseling to students who aspire to pursue further education abroad. With a focus on countries like Australia, Canada, the UK, and the US. We take on the challenge to offer qualitative and quantitative information and help you select the best option for your further educational journey. Join us now to discover the benefits of studying abroad and get our guidance throughout your exciting journey.",
     whyChooseUs:
-      "We are one of the best consultancy in Pokhara for Japan, Australia, Canada, and the USA. Our extensive knowledge and personal experience of the international student journey enable us to truly understand your aspiration and concerns when considering studying abroad. With the available vast network and partnership, we offer a diverse range of options and opportunities that align with your educational goals.",
+      "We are one of the best consultancy in Pokhara for Australia, Canada, the UK, and the USA. Our extensive knowledge and personal experience of the international student journey enable us to truly understand your aspiration and concerns when considering studying abroad. With the available vast network and partnership, we offer a diverse range of options and opportunities that align with your educational goals.",
     messageFromDirector:
       "Welcome to Espot Pokhara Education and Visa Services! We are established with the motto of fulfilling our student's requirements and needs for a better future and an excellent journey. Our goal is to understand and fulfill your unique requirements. We strive to provide our students with ongoing service to make sure they are comfortable in a completely different country and new environment. Our motto is to establish strong relationships with every student, ensuring their academic excellence and bright future. We believe that by fostering these relationships, we can create a solid foundation for success and provide comprehensive assistance throughout your time abroad. We make sure to provide you with essential support like choosing a university in accordance with your academic grades, career goals, and interests and other facilities like visa assistance and accommodation facilities in abroad countries. Our dedicated team is committed to providing personalized care, addressing your concerns, and ensuring a smooth transition into your new academic environment. At Espot Pokhara Education and Visa Services, we are eager to support you in your dreams and aspirations, and we are excited to be a part of your educational path. Join us and let's shape your future together! Thank You. Dinbandhu Pokharel Director Espot Pokhara Education and Visa Services",
   },

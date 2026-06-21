@@ -92,7 +92,6 @@ const navItems = [
       { href: "/services", label: "Services" },
       { href: "/test-preparation", label: "Test Preparation" },
       { href: "/enquiry-form", label: "Enquiry Form" },
-      { href: "/cookie-policy", label: "Cookie Policy" },
     ],
   },
   {

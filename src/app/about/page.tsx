@@ -9,7 +9,7 @@ import CTASection from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Espot Pokhara Education and Visa Services in Pokhara, Nepal. We help students achieve their study abroad dreams with expert guidance for USA, Japan, Australia, and Canada.",
+    "Learn about Espot Pokhara Education and Visa Services in Pokhara, Nepal. We help students achieve their study abroad dreams with expert guidance for USA, Australia, Canada, and the UK.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Us | Espot Pokhara Education and Visa Services",

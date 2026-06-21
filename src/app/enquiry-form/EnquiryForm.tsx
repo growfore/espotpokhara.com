@@ -179,7 +179,7 @@ export default function EnquiryForm() {
               <option value="TOEFL">TOEFL</option>
               <option value="SAT">SAT</option>
               <option value="GRE">GRE</option>
-              <option value="Japanese Language">Japanese Language</option>
+              <option value="Duolingo">Duolingo</option>
               <option value="Not Required">Not Required</option>
             </select>
           </div>
