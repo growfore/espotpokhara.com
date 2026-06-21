@@ -195,7 +195,7 @@ export default function DocsLayout({
               {subtitle && <p className="font-heading text-body-lg text-on-surface-variant mb-8">{subtitle}</p>}
               {headerImage && (
                 <div className="relative w-full h-48 sm:h-64 lg:h-72 mb-10">
-                  <Image src={headerImage} alt="" fill className="object-cover rounded-xl" />
+                  <Image src={headerImage} alt="" fill sizes="(max-width: 768px) 100vw, 768px" className="object-cover rounded-xl" />
                 </div>
               )}
               <div className="docs-content">{children}</div>
