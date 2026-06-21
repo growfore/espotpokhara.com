@@ -12,15 +12,17 @@ export const metadata: Metadata = {
     "Learn about Espot Pokhara Education and Visa Services in Pokhara, Nepal. We help students achieve their study abroad dreams with expert guidance for USA, Australia, Canada, and the UK.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Us | Espot Pokhara Education and Visa Services",
-    description: "Learn about Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
+    title: "About Us - Espot Pokhara Education and Visa Services",
+    description:
+      "Learn about Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
     url: "/about",
     images: [{ url: "/images/counter-banner.webp", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Us | Espot Pokhara Education and Visa Services",
-    description: "Learn about Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
+    title: "About Us - Espot Pokhara Education and Visa Services",
+    description:
+      "Learn about Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
     images: ["/images/counter-banner.webp"],
   },
 };
@@ -39,14 +41,19 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <Reveal direction="left">
               <div className=" border border-outline-variant rounded-3xl overflow-hidden">
-                <div className="h-[400px] bg-cover bg-center grayscale-hover"                     style={{ backgroundImage: "url('/images/who-we-are.webp')" }} />
+                <div
+                  className="h-[400px] bg-cover bg-center grayscale-hover"
+                  style={{ backgroundImage: "url('/images/who-we-are.webp')" }}
+                />
               </div>
             </Reveal>
             <Reveal direction="right">
               <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson font-mono mb-3">
                 About Us
               </span>
-              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">Who We Are</h2>
+              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">
+                Who We Are
+              </h2>
               <p className="text-body-lg text-on-surface-variant">
                 {siteConfig.aboutPage.whoWeAre}
               </p>
@@ -62,11 +69,18 @@ export default function AboutPage() {
               <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson font-mono mb-3">
                 Why Us
               </span>
-              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">Why Choose Us</h2>
-              <p className="text-body-lg text-on-surface-variant mb-6">{siteConfig.aboutPage.whyChooseUs}</p>
+              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">
+                Why Choose Us
+              </h2>
+              <p className="text-body-lg text-on-surface-variant mb-6">
+                {siteConfig.aboutPage.whyChooseUs}
+              </p>
               <ul className="space-y-3">
                 {siteConfig.whyChooseUs.map((reason) => (
-                  <li key={reason} className="flex items-start gap-3 text-body-md text-on-surface-variant">
+                  <li
+                    key={reason}
+                    className="flex items-start gap-3 text-body-md text-on-surface-variant"
+                  >
                     <span className="w-5 h-5 flex items-center justify-center rounded-full bg-crimson/10 text-crimson flex-shrink-0 mt-0.5">
                       <Check size={12} strokeWidth={3} aria-hidden="true" />
                     </span>
@@ -77,7 +91,13 @@ export default function AboutPage() {
             </Reveal>
             <Reveal direction="right">
               <div className=" border border-outline-variant rounded-3xl overflow-hidden">
-                <div className="h-[400px] bg-cover bg-center grayscale-hover"                     style={{ backgroundImage: "url('/images/why-choose-us-about-page.webp')" }} />
+                <div
+                  className="h-[400px] bg-cover bg-center grayscale-hover"
+                  style={{
+                    backgroundImage:
+                      "url('/images/why-choose-us-about-page.webp')",
+                  }}
+                />
               </div>
             </Reveal>
           </div>
@@ -91,14 +111,22 @@ export default function AboutPage() {
               <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson font-mono mb-3">
                 Director
               </span>
-              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">Message From Director</h2>
+              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">
+                Message From Director
+              </h2>
               <p className="text-body-lg text-on-surface-variant mb-6">
                 {siteConfig.aboutPage.messageFromDirector}
               </p>
             </Reveal>
             <Reveal direction="right">
               <div className=" border border-outline-variant rounded-3xl overflow-hidden">
-                <div className="h-[400px] bg-cover bg-center grayscale-hover" style={{ backgroundImage: "url('/images/uploads/2023/06/Banner_img.jpeg')" }} />
+                <div
+                  className="h-[400px] bg-cover bg-center grayscale-hover"
+                  style={{
+                    backgroundImage:
+                      "url('/images/uploads/2023/06/Banner_img.jpeg')",
+                  }}
+                />
               </div>
             </Reveal>
           </div>
@@ -112,7 +140,9 @@ export default function AboutPage() {
               <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson font-mono mb-3">
                 Values
               </span>
-              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-4">Our Core Values</h2>
+              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-4">
+                Our Core Values
+              </h2>
             </div>
           </Reveal>
           <div className="grid sm:grid-cols-3 gap-6">
@@ -120,10 +150,20 @@ export default function AboutPage() {
               <Reveal key={value.title} direction="up" delay={i * 0.1}>
                 <div className="border border-outline-variant rounded-3xl bg-paper-white text-center p-8 h-full">
                   <div className="w-16 h-16 flex items-center justify-center bg-crimson text-paper-white rounded-2xl mx-auto mb-6">
-                    {value.icon === "shield" ? <Shield className="w-8 h-8" /> : value.icon === "star" ? <Star className="w-8 h-8" /> : <Heart className="w-8 h-8" />}
+                    {value.icon === "shield" ? (
+                      <Shield className="w-8 h-8" />
+                    ) : value.icon === "star" ? (
+                      <Star className="w-8 h-8" />
+                    ) : (
+                      <Heart className="w-8 h-8" />
+                    )}
                   </div>
-                  <h3 className="font-heading tracking-tighter text-heading-lg text-on-surface mb-3">{value.title}</h3>
-                  <p className="text-body-md text-on-surface-variant">{value.description}</p>
+                  <h3 className="font-heading tracking-tighter text-heading-lg text-on-surface mb-3">
+                    {value.title}
+                  </h3>
+                  <p className="text-body-md text-on-surface-variant">
+                    {value.description}
+                  </p>
                 </div>
               </Reveal>
             ))}

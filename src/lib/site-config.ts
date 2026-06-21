@@ -2,14 +2,14 @@ export const siteConfig = {
   name: "Espot Pokhara Education and Visa Services",
   shortName: "Espot Pokhara",
   description:
-    "Espot Pokhara Education and Visa Services in Pokhara, Nepal provides expert study abroad services including university selection, visa guidance, IELTS/PTE/Duolingo preparation, and scholarship assistance for USA, Australia, Canada, UK, and more.",
+    "Espot Pokhara offers study abroad services, visa guidance, admissions, IELTS/PTE preparation, and scholarships for Australia, Canada, the UK, USA and more...",
   url: "https://espotpokhara.com",
   ogImage: "/images/hero-bg.webp",
   themeColor: "#001F5B",
 
   contact: {
     address: "Samsung Galli, Newroad, Pokhara-09, Nepal",
-    phone: "061-591175",
+    phone: "9802859346",
     email: "info@espotpokhara.com",
     workingHours: "Sun - Fri: 10:00 AM - 6:00 PM",
     saturday: "Saturday: Closed",
@@ -18,7 +18,7 @@ export const siteConfig = {
   topBar: {
     left: "10AM - 6PM",
     center: "espotpokhara@gmail.com",
-    right: "061-591175",
+    right: "9802859346 | 9802859342",
   },
 
   social: {

@@ -7,20 +7,22 @@ import PageHero from "@/components/PageHero";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Us - Espot Pokhara Education and Visa Services",
   description:
-    "Get in touch with Espot Pokhara Education and Visa Services in Pokhara, Nepal. Call us at 061-591175 or visit us at Samsung Galli, Newroad, Pokhara-09.",
+    "Get in touch with Espot Pokhara Education and Visa Services in Pokhara, Nepal. Call us at 9802859346 | 9802859342 or visit us at Samsung Galli, Newroad, Pokhara-09.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact Us | Espot Pokhara Education and Visa Services",
-    description: "Contact Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
+    title: "Contact Us - Espot Pokhara Education and Visa Services",
+    description:
+      "Contact Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
     url: "/contact",
     images: [{ url: "/images/counter-banner.webp", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us | Espot Pokhara Education and Visa Services",
-    description: "Contact Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
+    title: "Contact Us - Espot Pokhara Education and Visa Services",
+    description:
+      "Contact Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
     images: ["/images/counter-banner.webp"],
   },
 };
@@ -38,12 +40,21 @@ export default function ContactPage() {
         <Container className="py-16 md:py-28">
           <div className="grid md:grid-cols-2 gap-12">
             <Reveal direction="left">
-              <h2 className="font-heading tracking-tighter text-2xl md:text-4xl text-navy mb-4">Get In Touch</h2>
+              <h2 className="font-heading tracking-tighter text-2xl md:text-4xl text-navy mb-4">
+                Get In Touch
+              </h2>
               <p className="text-body-lg text-on-surface-variant mb-8">
-                Being the best consultancy in Pokhara, Espot Pokhara Education and Visa Services is dedicated to broadening the perspectives and unlocking the potential of students through international education. Grab an opportunity to explore different cultures and research programs in renowned universities around the world.
+                Being the best consultancy in Pokhara, Espot Pokhara Education
+                and Visa Services is dedicated to broadening the perspectives
+                and unlocking the potential of students through international
+                education. Grab an opportunity to explore different cultures and
+                research programs in renowned universities around the world.
               </p>
               <p className="text-body-lg text-on-surface-variant mb-8">
-                Decide to go ahead and contact us to see how we may help you study abroad more quickly, easily, and affordably. Fill up the form below &amp; join us now to explore the wide range of facilities that we provide.
+                Decide to go ahead and contact us to see how we may help you
+                study abroad more quickly, easily, and affordably. Fill up the
+                form below &amp; join us now to explore the wide range of
+                facilities that we provide.
               </p>
 
               <div className="space-y-6 mb-10">
@@ -52,8 +63,12 @@ export default function ContactPage() {
                     <MapPin size={20} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-heading text-label-bold text-on-surface mb-1">Office Address</p>
-                    <p className="text-body-md text-on-surface-variant">{siteConfig.contact.address}</p>
+                    <p className="font-heading text-label-bold text-on-surface mb-1">
+                      Office Address
+                    </p>
+                    <p className="text-body-md text-on-surface-variant">
+                      {siteConfig.contact.address}
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -61,8 +76,12 @@ export default function ContactPage() {
                     <Phone size={20} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-heading text-label-bold text-on-surface mb-1">Phone</p>
-                    <p className="text-body-md text-on-surface-variant">{siteConfig.contact.phone}</p>
+                    <p className="font-heading text-label-bold text-on-surface mb-1">
+                      Phone
+                    </p>
+                    <p className="text-body-md text-on-surface-variant">
+                      {siteConfig.contact.phone}
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -70,8 +89,12 @@ export default function ContactPage() {
                     <Mail size={20} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-heading text-label-bold text-on-surface mb-1">Email</p>
-                    <p className="text-body-md text-on-surface-variant">{siteConfig.contact.email}</p>
+                    <p className="font-heading text-label-bold text-on-surface mb-1">
+                      Email
+                    </p>
+                    <p className="text-body-md text-on-surface-variant">
+                      {siteConfig.contact.email}
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -79,9 +102,15 @@ export default function ContactPage() {
                     <Clock size={20} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-heading text-label-bold text-on-surface mb-1">Working Hours</p>
-                    <p className="text-body-md text-on-surface-variant">{siteConfig.contact.workingHours}</p>
-                    <p className="text-body-md text-crimson">{siteConfig.contact.saturday}</p>
+                    <p className="font-heading text-label-bold text-on-surface mb-1">
+                      Working Hours
+                    </p>
+                    <p className="text-body-md text-on-surface-variant">
+                      {siteConfig.contact.workingHours}
+                    </p>
+                    <p className="text-body-md text-crimson">
+                      {siteConfig.contact.saturday}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -89,7 +118,9 @@ export default function ContactPage() {
 
             <Reveal direction="right">
               <div className="border border-outline-variant rounded-3xl bg-paper-white p-6 md:p-8">
-                <h3 className="font-heading tracking-tighter text-xl text-on-surface mb-6">Send Us a Message</h3>
+                <h3 className="font-heading tracking-tighter text-xl text-on-surface mb-6">
+                  Send Us a Message
+                </h3>
                 <ContactForm />
               </div>
             </Reveal>

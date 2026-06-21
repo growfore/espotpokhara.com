@@ -10,8 +10,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} | Study Abroad Consultancy in Pokhara, Nepal`,
-    template: `%s | ${siteConfig.shortName}`,
+    default: `${siteConfig.name} - Study Abroad & Visa Consultancy Nepal`,
+    template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
   metadataBase: new URL(siteConfig.url),
@@ -99,13 +99,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className="h-full scroll-smooth"
-      suppressHydrationWarning
-    >
+    <html lang="en" className="h-full scroll-smooth" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://api.fontshare.com"
+          crossOrigin="anonymous"
+        />
         <link
           rel="stylesheet"
           href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700&display=swap"
@@ -134,11 +134,16 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col antialiased pt-16 md:pt-20 bg-paper-white paper-texture">
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-crimson focus:text-paper-white focus:rounded-lg focus:text-sm focus:font-medium">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-crimson focus:text-paper-white focus:rounded-lg focus:text-sm focus:font-medium"
+        >
           Skip to main content
         </a>
         <Header />
-        <main id="main-content" className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">
+          {children}
+        </main>
         <Footer />
         <BackToTop />
         <WhatsAppButton />
