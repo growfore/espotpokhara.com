@@ -114,14 +114,6 @@ export const siteConfig = {
 
   destinations: [
     {
-      country: "USA",
-      image: "/images/destinations/usa.webp",
-      description:
-        "USA offers top-notch education and career opportunities in every field imaginable.",
-      tags: ["Student Visa", "Easy Approval"],
-      href: "/study-in-usa",
-    },
-    {
       country: "Australia",
       image: "/images/destinations/australia.jpg",
       description:
@@ -138,44 +130,20 @@ export const siteConfig = {
       href: "/study-in-canada",
     },
     {
+      country: "USA",
+      image: "/images/destinations/usa.webp",
+      description:
+        "USA offers top-notch education and career opportunities in every field imaginable.",
+      tags: ["Student Visa", "Easy Approval"],
+      href: "/study-in-usa",
+    },
+    {
       country: "UK",
       image: "/images/destinations/uk.jpeg",
       description:
         "The UK is home to some of the world's oldest and most prestigious universities with rich academic traditions.",
       tags: ["Top Universities", "Shorter Courses"],
       href: "/study-in-uk",
-    },
-    {
-      country: "New Zealand",
-      image: "/images/destinations/new-zeland.webp",
-      description:
-        "New Zealand offers a safe, welcoming environment with high-quality education and stunning natural beauty.",
-      tags: ["Safe Environment", "Work Rights"],
-      href: "/study-in-new-zealand",
-    },
-    {
-      country: "Malta",
-      image: "/images/destinations/malta.jpeg",
-      description:
-        "Malta combines quality European education with a unique Mediterranean lifestyle and English-speaking environment.",
-      tags: ["English Taught", "EU Campus"],
-      href: "/study-in-malta",
-    },
-    {
-      country: "Cyprus",
-      image: "/images/destinations/cyprus.jpeg",
-      description:
-        "Cyprus provides affordable European education with a warm climate and growing international student community.",
-      tags: ["Affordable", "EU Member"],
-      href: "/study-in-cyprus",
-    },
-    {
-      country: "Dubai",
-      image: "/images/destinations/dubai.jpeg",
-      description:
-        "Dubai is a global hub offering world-class university campuses and unparalleled career opportunities.",
-      tags: ["Global Hub", "Tax Free"],
-      href: "/study-in-dubai",
     },
     {
       country: "Germany",
@@ -192,6 +160,38 @@ export const siteConfig = {
         "France combines prestigious Grandes Écoles with rich cultural heritage and affordable public university education.",
       tags: ["Art & Culture", "Research"],
       href: "/study-in-france",
+    },
+    {
+      country: "New Zealand",
+      image: "/images/destinations/new-zeland.webp",
+      description:
+        "New Zealand offers a safe, welcoming environment with high-quality education and stunning natural beauty.",
+      tags: ["Safe Environment", "Work Rights"],
+      href: "/study-in-new-zealand",
+    },
+    {
+      country: "Dubai",
+      image: "/images/destinations/dubai.jpeg",
+      description:
+        "Dubai is a global hub offering world-class university campuses and unparalleled career opportunities.",
+      tags: ["Global Hub", "Tax Free"],
+      href: "/study-in-dubai",
+    },
+    {
+      country: "Cyprus",
+      image: "/images/destinations/cyprus.jpeg",
+      description:
+        "Cyprus provides affordable European education with a warm climate and growing international student community.",
+      tags: ["Affordable", "EU Member"],
+      href: "/study-in-cyprus",
+    },
+    {
+      country: "Malta",
+      image: "/images/destinations/malta.jpeg",
+      description:
+        "Malta combines quality European education with a unique Mediterranean lifestyle and English-speaking environment.",
+      tags: ["English Taught", "EU Campus"],
+      href: "/study-in-malta",
     },
   ],
 
