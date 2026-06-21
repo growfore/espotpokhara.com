@@ -9,7 +9,7 @@ export const siteConfig = {
 
   contact: {
     address: "Samsung Galli, Newroad, Pokhara-09, Nepal",
-    phone: "9802859346",
+    phone: "9802859346, 9802859342",
     email: "info@espotpokhara.com",
     workingHours: "Sun - Fri: 10:00 AM - 6:00 PM",
     saturday: "Saturday: Closed",
