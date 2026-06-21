@@ -191,12 +191,22 @@ export default function DocsLayout({
           <Breadcrumbs onMenuToggle={() => setMenuOpen(!menuOpen)} />
           <div className="flex gap-12">
             <div className="max-w-3xl flex-1 min-w-0">
-              <h1 className="font-heading tracking-tighter text-heading-xl text-navy mb-2">{title}</h1>
-              {subtitle && <p className="font-heading text-body-lg text-on-surface-variant mb-8">{subtitle}</p>}
-              {headerImage && (
-                <div className="relative w-full h-48 sm:h-64 lg:h-72 mb-10">
-                  <Image src={headerImage} alt="" fill sizes="(max-width: 768px) 100vw, 768px" className="object-cover rounded-xl" />
+              {headerImage ? (
+                <div className="relative -mx-6 lg:-ml-12 mb-10 overflow-hidden rounded-xl">
+                  <div className="relative h-48 sm:h-64 lg:h-72">
+                    <Image src={headerImage} alt="" fill className="object-cover" sizes="100vw" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-paper-white via-paper-white/80 to-transparent" />
+                    <div className="relative z-10 h-full flex flex-col justify-center px-6 lg:px-12 max-w-lg">
+                      <h1 className="font-heading tracking-tighter text-heading-xl text-navy mb-2">{title}</h1>
+                      {subtitle && <p className="font-heading text-body-lg text-on-surface-variant">{subtitle}</p>}
+                    </div>
+                  </div>
                 </div>
+              ) : (
+                <>
+                  <h1 className="font-heading tracking-tighter text-heading-xl text-navy mb-2">{title}</h1>
+                  {subtitle && <p className="font-heading text-body-lg text-on-surface-variant mb-8">{subtitle}</p>}
+                </>
               )}
               <div className="docs-content">{children}</div>
             </div>

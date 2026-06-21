@@ -12,11 +12,11 @@ export default function HeroSection() {
     <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-paper-white">
       <InfiniteGrid />
       <Image
-        src={"/ep-hero-image.png"}
+        src={"/hero-image-with-bg.jpg"}
         alt=""
         width={400}
         height={400}
-        className="absolute right-32 top-12 w-auto object-contain pointer-events-none z-[5] scale-150 hidden xl:block"
+        className="absolute right-0 top-32 w-auto object-contain pointer-events-none z-[5] scale-150 hidden xl:block rounded-md"
       />
       <div className="relative z-10 w-full py-8 md:py-12">
         <Container>
