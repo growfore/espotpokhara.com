@@ -13,7 +13,7 @@ export default function Footer() {
               className="inline-block mb-4 bg-white rounded-md p-2"
             >
               <Image
-                src="/espot_logo.webp"
+                src="/logo.png"
                 alt={siteConfig.shortName}
                 width={160}
                 height={48}

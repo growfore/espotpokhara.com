@@ -3,7 +3,7 @@ export const siteConfig = {
   shortName: "Espot Pokhara",
   description:
     "Espot Pokhara Education and Visa Services in Pokhara, Nepal provides expert study abroad services including university selection, visa guidance, IELTS/PTE/Duolingo preparation, and scholarship assistance for USA, Australia, Canada, UK, and more.",
-  url: "https://espotpokhara.com.np",
+  url: "https://espotpokhara.com",
   ogImage: "/images/hero-bg.webp",
   themeColor: "#001F5B",
 
@@ -59,7 +59,10 @@ export const siteConfig = {
         href: "/about",
         children: [
           { label: "About Us", href: "/about" },
-          { label: "Message From Director", href: "/about#Message-From-Director" },
+          {
+            label: "Message From Director",
+            href: "/about#Message-From-Director",
+          },
         ],
       },
       { label: "Blogs", href: "/blogs" },
@@ -107,7 +110,7 @@ export const siteConfig = {
     {
       title: "Language Classes",
       description:
-         "Test preparation for IELTS, PTE, and Duolingo from beginners to advanced levels with a focus on cultural integration.",
+        "Test preparation for IELTS, PTE, and Duolingo from beginners to advanced levels with a focus on cultural integration.",
       icon: "book",
     },
   ],
