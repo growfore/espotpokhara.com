@@ -4,20 +4,24 @@ import { motion } from "framer-motion";
 import { siteConfig } from "@/lib/site-config";
 import Container from "@/components/global/Container";
 import { Button } from "@/components/ui/Button";
+import InfiniteGrid from "@/components/InfiniteGrid";
 import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[80vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-paper-white">
+      <div className="block md:hidden absolute inset-0">
+        <InfiniteGrid />
+      </div>
       <Image
         src="/hero-image.png"
         alt=""
         fill
-        className="object-cover"
+        className="hidden md:block object-cover"
         sizes="100vw"
         priority
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-paper-white via-paper-white/40 to-transparent" />
+      <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-paper-white via-paper-white/40 to-transparent" />
       <div className="relative z-10 w-full py-8 md:py-12">
         <Container>
           <div className="max-w-2xl">
