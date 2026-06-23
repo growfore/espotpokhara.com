@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { getPosts, getFeaturedImageUrl } from "@/lib/wordpress";
+import { getPosts, getFeaturedImageUrl, rewriteContentLinks } from "@/lib/wordpress";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -54,7 +54,7 @@ export default async function BlogsPage() {
                     </h2>
                     <p
                       className="text-sm text-on-surface-variant line-clamp-2"
-                      dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+                      dangerouslySetInnerHTML={{ __html: rewriteContentLinks(post.excerpt.rendered) }}
                     />
                   </div>
                 </Link>

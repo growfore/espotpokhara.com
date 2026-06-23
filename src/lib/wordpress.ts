@@ -6,6 +6,14 @@ export interface WPPost {
   excerpt: { rendered: string };
   content: { rendered: string };
   featured_media: number;
+  rank_math_head?: {
+    title: string;
+    description: string;
+    og_title: string;
+    og_description: string;
+    twitter_title: string;
+    twitter_description: string;
+  };
   _embedded?: {
     "wp:featuredmedia"?: Array<{
       source_url: string;
@@ -49,4 +57,22 @@ export function getFeaturedImageUrl(post: WPPost): string | null {
 
 export function getFeaturedImageAlt(post: WPPost): string {
   return post._embedded?.["wp:featuredmedia"]?.[0]?.alt_text ?? "";
+}
+
+export function getRankMathMeta(post: WPPost) {
+  const rm = post.rank_math_head;
+  return {
+    title: rm?.title ?? post.title.rendered,
+    description: rm?.description ?? "",
+    og_title: rm?.og_title ?? post.title.rendered,
+    og_description: rm?.og_description ?? "",
+    twitter_title: rm?.twitter_title ?? post.title.rendered,
+    twitter_description: rm?.twitter_description ?? "",
+  };
+}
+
+export function rewriteContentLinks(html: string): string {
+  return html
+    .replace(/href="https?:\/\/wp\.espotpokhara\.com/gi, 'href="https://espotpokhara.com')
+    .replace(/href='https?:\/\/wp\.espotpokhara\.com/gi, "href='https://espotpokhara.com");
 }

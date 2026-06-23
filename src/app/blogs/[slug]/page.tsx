@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { getPosts, getPostBySlug, getFeaturedImageUrl } from "@/lib/wordpress";
+import { getPosts, getPostBySlug, getFeaturedImageUrl, getRankMathMeta, rewriteContentLinks } from "@/lib/wordpress";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -18,13 +18,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getPostBySlug(slug);
   if (!post) return {};
   const featuredImage = getFeaturedImageUrl(post);
+  const meta = getRankMathMeta(post);
   return {
-    title: post.title.rendered,
-    description: `Read about ${post.title.rendered} - Espot Pokhara Education and Visa Services`,
+    title: meta.title,
+    description: meta.description,
     alternates: { canonical: `/blogs/${slug}` },
     openGraph: {
-      title: post.title.rendered,
-      description: `Read about ${post.title.rendered} - Espot Pokhara Education and Visa Services`,
+      title: meta.og_title,
+      description: meta.og_description,
       url: `/blogs/${slug}`,
       images: featuredImage ? [{ url: featuredImage, width: 1200, height: 630 }] : undefined,
       type: "article",
@@ -32,8 +33,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title.rendered,
-      description: `Read about ${post.title.rendered} - Espot Pokhara Education and Visa Services`,
+      title: meta.twitter_title,
+      description: meta.twitter_description,
       images: featuredImage ? [featuredImage] : undefined,
     },
   };
@@ -67,7 +68,7 @@ export default async function BlogPost({ params }: Props) {
           {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
         </time>
 
-        <article className="blog-content" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+        <article className="blog-content" dangerouslySetInnerHTML={{ __html: rewriteContentLinks(post.content.rendered) }} />
       </div>
     </div>
   );
