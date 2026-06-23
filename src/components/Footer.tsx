@@ -84,8 +84,8 @@ export default function Footer() {
               Countries
             </p>
             <ul className="space-y-2.5">
-              {siteConfig.footerCountries.map((c) => (
-                <li key={c.label}>
+              {siteConfig.nav.mainMenu[1].children!.map((c) => (
+                <li key={c.href}>
                   <Link
                     href={c.href}
                     className="text-base text-paper-white/85 hover:text-paper-white transition-colors"

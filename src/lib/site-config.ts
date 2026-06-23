@@ -1266,18 +1266,7 @@ export const siteConfig = {
     { label: "Test Preparation", href: "/test-preparation" },
     { label: "Enquiry Form", href: "/enquiry-form" },
   ],
-  footerCountries: [
-    { label: "Australia", href: "/study-in-australia" },
-    { label: "Canada", href: "/study-in-canada" },
-    { label: "Cyprus", href: "/study-in-cyprus" },
-    { label: "Dubai", href: "/study-in-dubai" },
-    { label: "France", href: "/study-in-france" },
-    { label: "Germany", href: "/study-in-germany" },
-    { label: "Malta", href: "/study-in-malta" },
-    { label: "New Zealand", href: "/study-in-new-zealand" },
-    { label: "UK", href: "/study-in-uk" },
-    { label: "United States", href: "/study-in-usa" },
-  ],
+
   footerSupport: [
     { label: "Privacy Policy", href: "/" },
     { label: "Cookie Policy", href: "/cookie-policy" },
