@@ -25,7 +25,7 @@ export default function BackToTop() {
         scale: visible ? 1 : 0.8,
       }}
       transition={{ duration: 0.2 }}
-      className="fixed bottom-24 right-6 z-40 w-12 h-12 flex items-center justify-center bg-crimson text-paper-white hover:brightness-110 transition-all duration-200"
+      className="fixed bottom-6 right-6 z-40 w-12 h-12 flex items-center justify-center bg-crimson text-paper-white hover:brightness-110 transition-all duration-200"
       aria-label="Back to top"
     >
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
