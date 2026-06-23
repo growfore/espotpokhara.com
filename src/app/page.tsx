@@ -10,8 +10,22 @@ import ScrollReelTestimonials from "@/components/ScrollReelTestimonials";
 import Container from "@/components/global/Container";
 import StatsCounter from "@/components/StatsCounter";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, CheckCircle, Users, Star, Building2, Globe, Check, type LucideIcon } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  CheckCircle,
+  Users,
+  Star,
+  Building2,
+  Globe,
+  Check,
+  type LucideIcon,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Link from "next/link";
 
 const statIconMap: Record<string, LucideIcon> = {
   check: CheckCircle,
@@ -44,8 +58,16 @@ export default function HomePage() {
                   i === 3 && "border-r-0",
                 )}
               >
-                <Icon className="w-6 h-6 md:w-7 md:h-7 text-crimson" strokeWidth={1.5} aria-hidden="true" />
-                <StatsCounter value={stat.value} suffix={stat.suffix} label={stat.label} />
+                <Icon
+                  className="w-6 h-6 md:w-7 md:h-7 text-crimson"
+                  strokeWidth={1.5}
+                  aria-hidden="true"
+                />
+                <StatsCounter
+                  value={stat.value}
+                  suffix={stat.suffix}
+                  label={stat.label}
+                />
               </div>
             );
           })}
@@ -63,7 +85,9 @@ export default function HomePage() {
                 <div className="relative z-10 border border-outline-variant rounded-3xl overflow-hidden">
                   <div
                     className="h-[420px] bg-cover bg-center grayscale-hover"
-                    style={{ backgroundImage: "url('/images/who-we-are.webp')" }}
+                    style={{
+                      backgroundImage: "url('/images/who-we-are.webp')",
+                    }}
                   />
                 </div>
               </div>
@@ -76,7 +100,12 @@ export default function HomePage() {
                 Expert Immigration &amp; Visa Services
               </h2>
               <p className="text-body-lg text-on-surface-variant mb-8">
-                At Espot Pokhara Education and Visa Services, we specialize in helping you with all your immigration needs. Our experienced team provides professional assistance and guides you through the entire process, making it easy and stress-free. We offer expert guidance on visa applications, documentation, and interview preparation.
+                At Espot Pokhara Education and Visa Services, we specialize in
+                helping you with all your immigration needs. Our experienced
+                team provides professional assistance and guides you through the
+                entire process, making it easy and stress-free. We offer expert
+                guidance on visa applications, documentation, and interview
+                preparation.
               </p>
               <ul className="space-y-4">
                 {[
@@ -84,7 +113,10 @@ export default function HomePage() {
                   "Comprehensive visa support and travel arrangements",
                   "Expert guidance on scholarship and financial aid",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-body-md text-on-surface-variant">
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-body-md text-on-surface-variant"
+                  >
                     <span className="w-5 h-5 flex items-center justify-center rounded-full bg-crimson/10 text-crimson flex-shrink-0 mt-0.5">
                       <Check size={12} strokeWidth={3} aria-hidden="true" />
                     </span>
@@ -119,6 +151,21 @@ export default function HomePage() {
             }))}
             className="mx-auto"
           />
+          <div className="flex justify-end w-full ">
+            <Link
+              href={"https://www.facebook.com/espotpokhara/reviews"}
+              target="_blank"
+              className="flex gap-1 items-center bg-[#0064E0]/90 hover:bg-[#0064E0]  w-fit rounded-md p-4 text-white justify-center mt-4"
+            >
+              <Image
+                src="/facebook-logo.png"
+                alt="facebook logo"
+                width={20}
+                height={20}
+              />
+              <span className="font-bold">Read More Reviews in Facebook</span>
+            </Link>
+          </div>
         </Container>
       </section>
 
@@ -138,8 +185,12 @@ export default function HomePage() {
                     <MapPin size={20} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-heading text-label-bold text-on-surface mb-1">Address</p>
-                    <p className="text-body-md text-on-surface-variant">{siteConfig.contact.address}</p>
+                    <p className="font-heading text-label-bold text-on-surface mb-1">
+                      Address
+                    </p>
+                    <p className="text-body-md text-on-surface-variant">
+                      {siteConfig.contact.address}
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-5">
@@ -147,8 +198,12 @@ export default function HomePage() {
                     <Phone size={20} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-heading text-label-bold text-on-surface mb-1">Phone</p>
-                    <p className="text-body-md text-on-surface-variant">{siteConfig.contact.phone}</p>
+                    <p className="font-heading text-label-bold text-on-surface mb-1">
+                      Phone
+                    </p>
+                    <p className="text-body-md text-on-surface-variant">
+                      {siteConfig.contact.phone}
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-5">
@@ -156,8 +211,12 @@ export default function HomePage() {
                     <Mail size={20} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-heading text-label-bold text-on-surface mb-1">Email</p>
-                    <p className="text-body-md text-on-surface-variant">{siteConfig.contact.email}</p>
+                    <p className="font-heading text-label-bold text-on-surface mb-1">
+                      Email
+                    </p>
+                    <p className="text-body-md text-on-surface-variant">
+                      {siteConfig.contact.email}
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-5">
@@ -165,10 +224,18 @@ export default function HomePage() {
                     <Clock size={20} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-heading text-label-bold text-on-surface mb-1">Language Classes</p>
-                    <p className="text-body-md text-on-surface-variant">Morning: {siteConfig.languageSchedule.morning}</p>
-                    <p className="text-body-md text-on-surface-variant">Day: {siteConfig.languageSchedule.day}</p>
-                    <p className="text-body-md text-on-surface-variant">Evening: {siteConfig.languageSchedule.evening}</p>
+                    <p className="font-heading text-label-bold text-on-surface mb-1">
+                      Language Classes
+                    </p>
+                    <p className="text-body-md text-on-surface-variant">
+                      Morning: {siteConfig.languageSchedule.morning}
+                    </p>
+                    <p className="text-body-md text-on-surface-variant">
+                      Day: {siteConfig.languageSchedule.day}
+                    </p>
+                    <p className="text-body-md text-on-surface-variant">
+                      Evening: {siteConfig.languageSchedule.evening}
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-5">
@@ -176,9 +243,15 @@ export default function HomePage() {
                     <Clock size={20} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-heading text-label-bold text-on-surface mb-1">Working Hours</p>
-                    <p className="text-body-md text-on-surface-variant">{siteConfig.contact.workingHours}</p>
-                    <p className="text-body-md text-crimson mt-1">{siteConfig.contact.saturday}</p>
+                    <p className="font-heading text-label-bold text-on-surface mb-1">
+                      Working Hours
+                    </p>
+                    <p className="text-body-md text-on-surface-variant">
+                      {siteConfig.contact.workingHours}
+                    </p>
+                    <p className="text-body-md text-crimson mt-1">
+                      {siteConfig.contact.saturday}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -186,26 +259,74 @@ export default function HomePage() {
 
             <Reveal direction="right">
               <div className="border border-outline-variant rounded-3xl p-6 md:p-10 bg-paper-white">
-                <h3 className="font-heading tracking-tighter text-heading-lg text-on-surface mb-8">Send Us a Message</h3>
+                <h3 className="font-heading tracking-tighter text-heading-lg text-on-surface mb-8">
+                  Send Us a Message
+                </h3>
                 <form className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="home-name" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Name</label>
-                      <input id="home-name" type="text" placeholder="e.g. John Doe" className="input-modern rounded-lg" required autoComplete="name" />
+                      <label
+                        htmlFor="home-name"
+                        className="font-body-md text-body-md font-medium text-on-surface block mb-1"
+                      >
+                        Your Name
+                      </label>
+                      <input
+                        id="home-name"
+                        type="text"
+                        placeholder="e.g. John Doe"
+                        className="input-modern rounded-lg"
+                        required
+                        autoComplete="name"
+                      />
                     </div>
                     <div>
-                      <label htmlFor="home-email" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Email</label>
-                      <input id="home-email" type="email" placeholder="e.g. john@example.com" className="input-modern rounded-lg" required autoComplete="email" />
+                      <label
+                        htmlFor="home-email"
+                        className="font-body-md text-body-md font-medium text-on-surface block mb-1"
+                      >
+                        Your Email
+                      </label>
+                      <input
+                        id="home-email"
+                        type="email"
+                        placeholder="e.g. john@example.com"
+                        className="input-modern rounded-lg"
+                        required
+                        autoComplete="email"
+                      />
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="home-phone" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Phone Number</label>
-                    <input id="home-phone" type="tel" placeholder="e.g. 98XXXXXXXX" className="input-modern rounded-lg" autoComplete="tel" />
+                    <label
+                      htmlFor="home-phone"
+                      className="font-body-md text-body-md font-medium text-on-surface block mb-1"
+                    >
+                      Phone Number
+                    </label>
+                    <input
+                      id="home-phone"
+                      type="tel"
+                      placeholder="e.g. 98XXXXXXXX"
+                      className="input-modern rounded-lg"
+                      autoComplete="tel"
+                    />
                   </div>
                   <div>
-                    <label htmlFor="home-country" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Interested Country</label>
-                    <select id="home-country" className="input-modern rounded-lg" defaultValue="">
-                      <option value="" disabled>Select a country…</option>
+                    <label
+                      htmlFor="home-country"
+                      className="font-body-md text-body-md font-medium text-on-surface block mb-1"
+                    >
+                      Interested Country
+                    </label>
+                    <select
+                      id="home-country"
+                      className="input-modern rounded-lg"
+                      defaultValue=""
+                    >
+                      <option value="" disabled>
+                        Select a country…
+                      </option>
                       <option value="Australia">Australia</option>
                       <option value="Canada">Canada</option>
                       <option value="Cyprus">Cyprus</option>
@@ -220,8 +341,19 @@ export default function HomePage() {
                     </select>
                   </div>
                   <div>
-                    <label htmlFor="home-message" className="font-body-md text-body-md font-medium text-on-surface block mb-1">Your Message</label>
-                    <textarea id="home-message" placeholder="How can we help you?…" rows={4} className="input-modern rounded-lg resize-none" required />
+                    <label
+                      htmlFor="home-message"
+                      className="font-body-md text-body-md font-medium text-on-surface block mb-1"
+                    >
+                      Your Message
+                    </label>
+                    <textarea
+                      id="home-message"
+                      placeholder="How can we help you?…"
+                      rows={4}
+                      className="input-modern rounded-lg resize-none"
+                      required
+                    />
                   </div>
                   <motion.button
                     type="submit"
