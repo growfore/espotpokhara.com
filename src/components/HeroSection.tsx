@@ -63,11 +63,11 @@ export default function HeroSection() {
               transition={{ duration: 0.4, delay: 0.35 }}
               className="flex flex-wrap gap-4"
             >
-              <Button href="/contact" variant="primary" size="lg">
+              <Button href="/contact-us" variant="primary" size="lg">
                 Book Consulting
               </Button>
               <Button
-                href="/about"
+                href="/about-us"
                 variant="outline"
                 size="lg"
                 className="text-navy border-navy hover:bg-navy hover:text-paper-white"

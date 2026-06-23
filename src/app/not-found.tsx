@@ -37,7 +37,7 @@ export default function NotFoundPage() {
               Back to Home
             </Link>
             <Link
-              href="/contact"
+              href="/contact-us"
               className="border-2 border-navy text-navy px-8 py-3.5 font-body-lg text-body-lg font-medium hover:bg-navy hover:text-paper-white transition-all duration-200 rounded-full"
             >
               Contact Us

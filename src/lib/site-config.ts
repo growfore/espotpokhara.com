@@ -56,12 +56,12 @@ export const siteConfig = {
       },
       {
         label: "About Us",
-        href: "/about",
+        href: "/about-us",
         children: [
-          { label: "About Us", href: "/about" },
+          { label: "About Us", href: "/about-us" },
           {
             label: "Message From Director",
-            href: "/about#Message-From-Director",
+            href: "/about-us#Message-From-Director",
           },
         ],
       },
@@ -1262,7 +1262,7 @@ export const siteConfig = {
     "Our mission is to offer top-notch visa guidance and counseling for those aspiring to study abroad. Let us be your guide to success!",
   footerPages: [
     { label: "Home", href: "/" },
-    { label: "About Us", href: "/about" },
+    { label: "About Us", href: "/about-us" },
     { label: "Test Preparation", href: "/test-preparation" },
     { label: "Enquiry Form", href: "/enquiry-form" },
   ],
@@ -1282,7 +1282,7 @@ export const siteConfig = {
     { label: "Privacy Policy", href: "/" },
     { label: "Cookie Policy", href: "/cookie-policy" },
     { label: "Terms of Service", href: "/" },
-    { label: "Contact Support", href: "/contact" },
+    { label: "Contact Support", href: "/contact-us" },
   ],
 } as const;
 

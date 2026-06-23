@@ -97,8 +97,8 @@ const navItems = [
   {
     label: "Site",
     items: [
-      { href: "/about", label: "About Us" },
-      { href: "/contact", label: "Contact Us" },
+      { href: "/about-us", label: "About Us" },
+      { href: "/contact-us", label: "Contact Us" },
       { href: "/blogs", label: "Blogs" },
     ],
   },

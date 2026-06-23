@@ -17,7 +17,7 @@ export default function CTASection() {
               Take the first step towards your study abroad dream. Schedule a free
               consultation with our expert counselors today.
             </p>
-            <Button href="/contact" variant="primary" size="lg">
+            <Button href="/contact-us" variant="primary" size="lg">
               Get Free Consultation
             </Button>
           </div>

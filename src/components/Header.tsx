@@ -156,7 +156,7 @@ export default function Header() {
               <NavLink key={item.href + item.label} item={item} />
             ))}
           </ul>
-          <Button href="/contact" variant="primary" size="sm">
+          <Button href="/contact-us" variant="primary" size="sm">
             Book Consulting
           </Button>
         </nav>
@@ -196,7 +196,7 @@ export default function Header() {
               ))}
               <div className="mt-6 w-full max-w-sm">
                 <Link
-                  href="/contact"
+                  href="/contact-us"
                   onClick={() => setMobileOpen(false)}
                   className="flex items-center justify-center gap-2 rounded-full text-xs md:text-sm font-medium transition-all bg-crimson text-white hover:bg-crimson-light h-9 md:h-10 px-4 md:px-4 w-full"
                 >

@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Contact Us - Espot Pokhara Education and Visa Services",
   description:
     "Get in touch with Espot Pokhara Education and Visa Services in Pokhara, Nepal. Call us at 9802859346 | 9802859342 or visit us at Samsung Galli, Newroad, Pokhara-09.",
-  alternates: { canonical: "/contact" },
+  alternates: { canonical: "/contact-us" },
   openGraph: {
     title: "Contact Us - Espot Pokhara Education and Visa Services",
     description:
       "Contact Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
-    url: "/contact",
+    url: "/contact-us",
     images: [{ url: "/images/counter-banner.webp", width: 1200, height: 630 }],
   },
   twitter: {

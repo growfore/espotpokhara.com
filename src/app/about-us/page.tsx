@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Learn about Espot Pokhara Education and Visa Services in Pokhara, Nepal. We help students achieve their study abroad dreams with expert guidance for USA, Australia, Canada, the UK, Germany, France, New Zealand, Cyprus, Dubai and Malta.",
-  alternates: { canonical: "/about" },
+  alternates: { canonical: "/about-us" },
   openGraph: {
     title: "About Us - Espot Pokhara Education and Visa Services",
     description:
       "Learn about Espot Pokhara Education and Visa Services in Pokhara, Nepal.",
-    url: "/about",
+    url: "/about-us",
     images: [{ url: "/images/counter-banner.webp", width: 1200, height: 630 }],
   },
   twitter: {
