@@ -314,7 +314,7 @@ export const siteConfig = {
   ],
 
   whyChooseUs: [
-    "Expert guidance for Australia, Canada, USA & UK",
+    "Expert guidance for Australia, Canada, USA, UK, Germany, New Zeland, France, Dubai, Malta, Cyprus.",
     "Personalized counselling based on your academic profile",
     "Extensive network and partnerships with global universities",
   ],
