@@ -106,29 +106,16 @@ export default function AboutPage() {
 
       <section id="Message-From-Director" className="px-4 xl:px-10">
         <Container className="py-16 md:py-28">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <Reveal direction="left">
-              <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson font-mono mb-3">
-                Director
-              </span>
-              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">
-                Message From Director
-              </h2>
-              <p className="text-body-lg text-on-surface-variant mb-6">
-                {siteConfig.aboutPage.messageFromDirector}
-              </p>
-            </Reveal>
-            <Reveal direction="right">
-              <div className=" border border-outline-variant rounded-3xl overflow-hidden">
-                <div
-                  className="h-[400px] bg-cover bg-center grayscale-hover"
-                  style={{
-                    backgroundImage:
-                      "url('/images/uploads/2023/06/Banner_img.jpeg')",
-                  }}
-                />
-              </div>
-            </Reveal>
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson font-mono mb-3">
+              Director
+            </span>
+            <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">
+              Message From Director
+            </h2>
+            <p className="text-body-lg text-on-surface-variant mb-6">
+              {siteConfig.aboutPage.messageFromDirector}
+            </p>
           </div>
         </Container>
       </section>
