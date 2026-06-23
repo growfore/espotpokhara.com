@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/site-config";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
-import RegisterPopup from "@/components/RegisterPopup";
+
 import CookieConsent from "@/components/CookieConsent";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
@@ -147,7 +147,7 @@ export default function RootLayout({
         <Footer />
         <BackToTop />
         <WhatsAppButton />
-        <RegisterPopup />
+
         <CookieConsent />
       </body>
     </html>
