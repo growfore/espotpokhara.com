@@ -13,57 +13,75 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      { source: "/contact", destination: "/contact-us", permanent: true },
-      { source: "/about", destination: "/about-us", permanent: true },
+      {
+        source: "/contact",
+        destination: "/contact-us",
+        statusCode: 301,
+      },
+      {
+        source: "/about",
+        destination: "/about-us",
+        statusCode: 301,
+      },
       {
         source: "/the-cost-of-studying-in-the-usa",
         destination: "/blogs/the-cost-of-studying-in-the-usa",
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: "/5-reasons-to-study-in-australia",
         destination: "/blogs/5-reasons-to-study-in-australia",
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: "/how-to-prepare-for-the-ielts-exam",
         destination: "/blogs/how-to-prepare-for-the-ielts-exam",
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: "/affordable-universities-in-canada",
         destination: "/blogs/affordable-universities-in-canada",
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: "/best-fashion-designing-courses-in-abroad",
         destination: "/blogs/best-fashion-designing-courses-in-abroad",
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: "/what-to-expect-when-studying-in-japan",
         destination: "/blogs/what-to-expect-when-studying-in-japan",
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: "/top-5-best-japanese-language-institutes-in-pokhara",
         destination:
           "/blogs/top-5-best-japanese-language-institutes-in-pokhara",
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: "/study-in-japan-as-a-nepalese-student",
         destination: "/blogs/study-in-japan-as-a-nepalese-student",
-        permanent: true,
+        statusCode: 301,
       },
-      { source: "/study-in-japan", destination: "/", permanent: true },
-      { source: "/blog/page/2", destination: "/blogs", permanent: true },
+      {
+        source: "/study-in-japan",
+        destination: "/",
+        statusCode: 301,
+      },
+      {
+        source: "/blog/page/2",
+        destination: "/blogs",
+        statusCode: 301,
+      },
     ];
   },
 };
 
-export default withMDX({
+const mdxWrapper = withMDX({
   options: {
     remarkPlugins: ["remark-gfm"],
   },
-})(nextConfig);
+});
+
+export default mdxWrapper(nextConfig);
