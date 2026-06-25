@@ -157,7 +157,12 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <Button href="/contact-us" variant="primary" size="sm">
+        <Button
+          href="/contact-us"
+          variant="primary"
+          size="sm"
+          className="hidden md:flex"
+        >
           Book Consulting
         </Button>
 
