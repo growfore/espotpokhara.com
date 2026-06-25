@@ -35,17 +35,17 @@ function cn(...classes: Array<string | false | null | undefined>) {
   .scroll-reel-char { display: inline-block; animation: charIn 60ms ease-out both; }
   .scroll-reel-exit { animation: slideUpOut 240ms ease-in both; }
   .image-fade-in { animation: fadeIn 400ms ease-out; }
-`}</style>
+`}</style>;
 
 function Featured({ src, alt }: { src: string; alt?: string }) {
   return (
     <div className="relative h-full w-full overflow-hidden rounded-xl bg-linen-bg image-fade-in">
       <Image
+        width={250}
+        height={100}
         src={src}
         alt={alt ?? ""}
-        fill
-        className="object-cover"
-        sizes="380px"
+        className="object-cover size-100"
       />
     </div>
   );

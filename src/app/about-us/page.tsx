@@ -55,7 +55,17 @@ export default function AboutPage() {
                 Who We Are
               </h2>
               <p className="text-body-lg text-on-surface-variant">
-                {siteConfig.aboutPage.whoWeAre}
+                Espot Pokhara Education and Visa Services is one of the emerging
+                educational consultancies in Pokhara and is committed to
+                providing information and counseling to students who aspire to
+                pursue further education abroad. With a focus on countries like
+                USA, Australia, Canada, the UK, Germany, France, New Zealand,
+                Cyprus, Dubai and Malta.
+                <br /> We take on the challenge to offer qualitative and
+                quantitative information and help you select the best option for
+                your further educational journey. Join us now to discover the
+                benefits of studying abroad and get our guidance throughout your
+                exciting journey.
               </p>
             </Reveal>
           </div>
@@ -114,7 +124,30 @@ export default function AboutPage() {
               Message From Director
             </h2>
             <p className="text-body-lg text-on-surface-variant mb-6">
-              {siteConfig.aboutPage.messageFromDirector}
+              Welcome to Espot Pokhara Education and Visa Services! <br /> We
+              are established with the motto of fulfilling our student&apos;s
+              requirements and needs for a better future and an excellent
+              journey. Our goal is to understand and fulfill your unique
+              requirements. We strive to provide our students with ongoing
+              service to make sure they are comfortable in a completely
+              different country and new environment. Our motto is to establish
+              strong relationships with every student, ensuring their academic
+              excellence and bright future. We believe that by fostering these
+              relationships, we can create a solid foundation for success and
+              provide comprehensive assistance throughout your time abroad. We
+              make sure to provide you with essential support like choosing a
+              university in accordance with your academic grades, career goals,
+              and interests and other facilities like visa assistance and
+              accommodation facilities in abroad countries. Our dedicated team
+              is committed to providing personalized care, addressing your
+              concerns, and ensuring a smooth transition into your new academic
+              environment. At Espot Pokhara Education and Visa Services, we are
+              eager to support you in your dreams and aspirations, and we are
+              excited to be a part of your educational path. Join us and
+              let&apos;s shape your future together! <br />
+              <br /> Thank You!
+              <br /> Dinbandhu Pokharel <br /> Director Espot Pokhara Education
+              and Visa Services.
             </p>
           </div>
         </Container>
