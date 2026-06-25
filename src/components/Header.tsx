@@ -138,7 +138,7 @@ export default function Header() {
   const mainMenu = siteConfig.nav.mainMenu;
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-paper-white border-b border-outline-variant">
+    <header className="fixed top-0 left-0 w-full z-50 bg-paper-white">
       <div className="max-w-8xl mx-auto px-6 md:px-10 h-full flex items-center justify-between">
         <Link href="/" className="flex items-center shrink-0">
           <Image
