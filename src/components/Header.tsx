@@ -139,18 +139,18 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 border-b border-outline-variant bg-paper-white">
-      <div className="max-w-8xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20">
+      <div className="max-w-8xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 lg:h-20">
         <Link href="/" className="flex items-center group">
           <Image
             src="/logo.png"
             alt={siteConfig.shortName}
             width={1280}
             height={100}
-            className="h-auto w-60 md:h-auto md:w-80 md:p-4"
+            className="h-auto w-60 lg:h-auto lg:w-80 lg:p-4"
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-5">
+        <nav className="hidden lg:flex items-center gap-5">
           <ul className="flex items-center gap-5">
             {mainMenu.map((item) => (
               <NavLink key={item.href + item.label} item={item} />
@@ -161,12 +161,12 @@ export default function Header() {
           href="/contact-us"
           variant="primary"
           size="sm"
-          className="hidden md:flex"
+          className="hidden lg:flex"
         >
           Book Consulting
         </Button>
 
-        <div className="md:hidden flex items-center gap-3">
+        <div className="lg:hidden flex items-center gap-3">
           <button
             className="p-2.5 border border-outline-variant rounded-full hover:bg-linen-bg transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -188,7 +188,7 @@ export default function Header() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-x-0 top-16 bottom-0 bg-paper-white z-40 md:hidden"
+            className="fixed inset-x-0 top-16 bottom-0 bg-paper-white z-40 lg:hidden"
           >
             <nav className="flex flex-col items-start justify-start h-full pt-4 px-6 overflow-y-auto">
               {mainMenu.map((item) => (

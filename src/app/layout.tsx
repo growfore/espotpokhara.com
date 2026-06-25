@@ -160,7 +160,7 @@ export default function RootLayout({
         <Header />
         <main
           id="main-content"
-          className="flex-1 pt-16 md:pt-[calc(5rem+1px)]"
+          className="flex-1 pt-16 lg:pt-20"
         >
           {children}
         </main>

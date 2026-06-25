@@ -28,7 +28,6 @@ export const siteConfig = {
 
   nav: {
     mainMenu: [
-      { label: "Home", href: "/" },
       {
         label: "Study Abroad",
         href: "#",

@@ -84,7 +84,7 @@ export default function Footer() {
               Countries
             </p>
             <ul className="space-y-2.5">
-              {siteConfig.nav.mainMenu[1].children!.map((c) => (
+              {siteConfig.nav.mainMenu[0].children!.map((c) => (
                 <li key={c.href}>
                   <Link
                     href={c.href}
