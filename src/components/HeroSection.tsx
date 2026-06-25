@@ -10,14 +10,14 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-paper-white">
-      {/*<div className="block md:hidden absolute inset-0">
+      <div className="block md:hidden absolute inset-0">
         <InfiniteGrid />
-      </div>*/}
+      </div>
       <Image
         src="/hero-image.png"
-        alt=""
+        alt="hero image"
         fill
-        className="hidden md:block object-cover object-[center_35%]"
+        className="hidden md:block object-cover object-center"
         sizes="100vw"
         priority
       />
