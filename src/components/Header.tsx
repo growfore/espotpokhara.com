@@ -156,10 +156,10 @@ export default function Header() {
               <NavLink key={item.href + item.label} item={item} />
             ))}
           </ul>
-          <Button href="/contact-us" variant="primary" size="sm">
-            Book Consulting
-          </Button>
         </nav>
+        <Button href="/contact-us" variant="primary" size="sm">
+          Book Consulting
+        </Button>
 
         <div className="md:hidden flex items-center gap-3">
           <button
