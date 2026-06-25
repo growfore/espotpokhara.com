@@ -158,7 +158,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <Header />
-        <main id="main-content" className="flex-1 pt-20 lg:pt-28">
+        <main id="main-content" className="flex-1 pt-18 lg:pt-24">
           {children}
         </main>
         <Footer />

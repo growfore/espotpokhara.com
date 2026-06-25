@@ -138,7 +138,7 @@ function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
       <aside
         className={`fixed top-0 left-0 z-30 h-full w-64 bg-paper-white border-r border-outline-variant pt-16 lg:pt-4 pb-8 overflow-y-auto transition-transform duration-200 ${open ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 lg:sticky lg:top-20 lg:h-[calc(100vh-5rem)]`}
       >
-        <nav className="px-4 space-y-8">
+        <nav className="px-4 pt-4 space-y-8">
           {navItems.map((group) => (
             <div key={group.label}>
               <p className="px-3 text-xs font-bold text-outline uppercase tracking-wider mb-2 flex items-center gap-1.5">

@@ -18,10 +18,13 @@ export default function TableOfContents() {
     const els = container.querySelectorAll("h2");
     const items: Heading[] = [];
     els.forEach((el) => {
-      const id = el.id || (el.textContent
-        ?.toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-|-$)/g, "") ?? "");
+      const id =
+        el.id ||
+        (el.textContent
+          ?.toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, "") ??
+          "");
       el.id = id;
       items.push({ id, text: el.textContent || "" });
     });
@@ -37,7 +40,7 @@ export default function TableOfContents() {
           setActiveId(visible[0].target.id);
         }
       },
-      { rootMargin: "-80px 0px -60% 0px" }
+      { rootMargin: "-80px 0px -60% 0px" },
     );
 
     items.forEach((h) => {
@@ -60,7 +63,7 @@ export default function TableOfContents() {
 
   return (
     <nav className="hidden xl:block w-56 flex-shrink-0">
-      <div className="sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)]">
+      <div className="sticky top-32 overflow-y-auto max-h-[calc(100vh-6rem)]">
         <p className="text-xs font-bold text-outline uppercase tracking-wider mb-4 flex items-center gap-1.5">
           <span className="material-symbols-outlined text-xs">toc</span>
           On this page
