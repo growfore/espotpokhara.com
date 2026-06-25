@@ -138,14 +138,14 @@ export default function Header() {
   const mainMenu = siteConfig.nav.mainMenu;
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-paper-white border-b border-outline-variant h-16 lg:h-20">
+    <header className="fixed top-0 left-0 w-full z-50 bg-paper-white border-b border-outline-variant">
       <div className="max-w-8xl mx-auto px-6 md:px-10 h-full flex items-center justify-between">
         <Link href="/" className="flex items-center shrink-0">
           <Image
             src="/logo.png"
             alt={siteConfig.shortName}
             width={1280}
-            height={100}
+            height={720}
             className="h-auto w-60 lg:w-80"
           />
         </Link>
