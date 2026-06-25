@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { siteConfig } from "@/lib/site-config";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -113,6 +114,22 @@ export default function RootLayout({
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-B8B43YQHJ3"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-B8B43YQHJ3');
+            `,
+          }}
         />
         <script
           type="application/ld+json"
