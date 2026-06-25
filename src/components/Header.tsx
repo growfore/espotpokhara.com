@@ -138,15 +138,15 @@ export default function Header() {
   const mainMenu = siteConfig.nav.mainMenu;
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 border-b border-outline-variant bg-paper-white">
-      <div className="max-w-8xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 lg:h-20">
-        <Link href="/" className="flex items-center group">
+    <header className="fixed top-0 left-0 w-full z-50 bg-paper-white border-b border-outline-variant h-16 lg:h-20">
+      <div className="max-w-8xl mx-auto px-6 md:px-10 h-full flex items-center justify-between">
+        <Link href="/" className="flex items-center shrink-0">
           <Image
             src="/logo.png"
             alt={siteConfig.shortName}
             width={1280}
             height={100}
-            className="h-auto w-60 lg:h-auto lg:w-80 lg:p-4"
+            className="h-auto w-60 lg:w-80"
           />
         </Link>
 
@@ -161,12 +161,12 @@ export default function Header() {
           href="/contact-us"
           variant="primary"
           size="sm"
-          className="hidden lg:flex"
+          className="hidden lg:flex shrink-0"
         >
           Book Consulting
         </Button>
 
-        <div className="lg:hidden flex items-center gap-3">
+        <div className="lg:hidden flex items-center">
           <button
             className="p-2.5 border border-outline-variant rounded-full hover:bg-linen-bg transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
