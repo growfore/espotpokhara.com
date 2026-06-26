@@ -45,6 +45,8 @@ function Featured({ src, alt }: { src: string; alt?: string }) {
         height={100}
         src={src}
         alt={alt ?? ""}
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg=="
         className="object-cover size-100"
       />
     </div>
