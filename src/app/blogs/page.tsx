@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { getPosts, getFeaturedImageUrl, rewriteContentLinks } from "@/lib/wordpress";
+import {
+  getPosts,
+  getFeaturedImageUrl,
+  rewriteContentLinks,
+} from "@/lib/wordpress";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Read blogs from Espot Pokhara Education and Visa Services about studying abroad, university selection, visa guidance, and test preparation tips.",
+  description:
+    "Read blogs from Espot Pokhara Education and Visa Services about studying abroad, university selection, visa guidance, and test preparation tips.",
   alternates: { canonical: "/blogs" },
-  openGraph: { title: "Blog | Espot Pokhara", description: "Study abroad tips and guides.", url: "/blogs" },
+  openGraph: {
+    title: "Blog | Espot Pokhara",
+    description: "Study abroad tips and guides.",
+    url: "/blogs",
+  },
 };
 
 export default async function BlogsPage() {
@@ -16,11 +25,11 @@ export default async function BlogsPage() {
   return (
     <div className="min-h-screen bg-paper-white">
       <div className="max-w-6xl mx-auto px-6 pt-4 pb-20 md:pb-28">
-        <nav className="text-sm text-outline mb-8 font-heading">
-          Blog
-        </nav>
+        <nav className="text-sm text-outline mb-8 font-heading">Blog</nav>
         <div className="mb-16">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold text-navy mb-3">Blog</h1>
+          <h1 className="font-heading text-4xl md:text-5xl font-bold text-navy mb-3">
+            Blog
+          </h1>
           <p className="text-body-lg text-on-surface-variant">
             Insights and guides to help you navigate your study abroad journey
           </p>
@@ -33,7 +42,11 @@ export default async function BlogsPage() {
             {posts.map((post) => {
               const imageUrl = getFeaturedImageUrl(post);
               return (
-                <Link key={post.slug} href={`/blogs/${post.slug}`} className="group block">
+                <Link
+                  key={post.slug}
+                  href={`/blogs/${post.slug}`}
+                  className="group block"
+                >
                   {imageUrl && (
                     <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-linen-bg mb-4">
                       <Image
@@ -47,14 +60,20 @@ export default async function BlogsPage() {
                   )}
                   <div className="space-y-2">
                     <time className="text-sm text-on-surface-variant">
-                      {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+                      {new Date(post.date).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
                     </time>
                     <h2 className="font-heading text-lg font-bold text-navy group-hover:text-crimson transition-colors leading-snug">
                       {post.title.rendered}
                     </h2>
                     <p
                       className="text-sm text-on-surface-variant line-clamp-2"
-                      dangerouslySetInnerHTML={{ __html: rewriteContentLinks(post.excerpt.rendered) }}
+                      dangerouslySetInnerHTML={{
+                        __html: rewriteContentLinks(post.excerpt.rendered),
+                      }}
                     />
                   </div>
                 </Link>

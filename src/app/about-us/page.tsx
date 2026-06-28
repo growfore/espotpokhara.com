@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { Check, Shield, Star, Heart } from "lucide-react";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import Container from "@/components/global/Container";
 import PageHero from "@/components/PageHero";
@@ -116,39 +117,50 @@ export default function AboutPage() {
 
       <section id="Message-From-Director" className="px-4 xl:px-10">
         <Container className="py-16 md:py-28">
-          <div className="max-w-3xl">
-            <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson font-mono mb-3">
-              Director
-            </span>
-            <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">
-              Message From Director
-            </h2>
-            <p className="text-body-lg text-on-surface-variant mb-6">
-              Welcome to Espot Pokhara Education and Visa Services! <br /> We
-              are established with the motto of fulfilling our student&apos;s
-              requirements and needs for a better future and an excellent
-              journey. Our goal is to understand and fulfill your unique
-              requirements. We strive to provide our students with ongoing
-              service to make sure they are comfortable in a completely
-              different country and new environment. Our motto is to establish
-              strong relationships with every student, ensuring their academic
-              excellence and bright future. We believe that by fostering these
-              relationships, we can create a solid foundation for success and
-              provide comprehensive assistance throughout your time abroad. We
-              make sure to provide you with essential support like choosing a
-              university in accordance with your academic grades, career goals,
-              and interests and other facilities like visa assistance and
-              accommodation facilities in abroad countries. Our dedicated team
-              is committed to providing personalized care, addressing your
-              concerns, and ensuring a smooth transition into your new academic
-              environment. At Espot Pokhara Education and Visa Services, we are
-              eager to support you in your dreams and aspirations, and we are
-              excited to be a part of your educational path. Join us and
-              let&apos;s shape your future together! <br />
-              <br /> Thank You!
-              <br /> Dinbandhu Pokharel <br /> Director Espot Pokhara Education
-              and Visa Services.
-            </p>
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
+            <div className="order-2 md:order-1">
+              <span className="inline-flex items-center rounded-full border border-crimson/15 bg-crimson/5 px-3.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-crimson font-mono mb-3">
+                Director
+              </span>
+              <h2 className="font-heading tracking-tighter text-heading-xl text-navy mb-6">
+                Message From Director
+              </h2>
+              <p className="text-body-lg text-on-surface-variant mb-6">
+                Welcome to Espot Pokhara Education and Visa Services! <br /> We
+                are established with the motto of fulfilling our student&apos;s
+                requirements and needs for a better future and an excellent
+                journey. Our goal is to understand and fulfill your unique
+                requirements. We strive to provide our students with ongoing
+                service to make sure they are comfortable in a completely
+                different country and new environment. Our motto is to establish
+                strong relationships with every student, ensuring their academic
+                excellence and bright future. We believe that by fostering these
+                relationships, we can create a solid foundation for success and
+                provide comprehensive assistance throughout your time abroad. We
+                make sure to provide you with essential support like choosing a
+                university in accordance with your academic grades, career goals,
+                and interests and other facilities like visa assistance and
+                accommodation facilities in abroad countries. Our dedicated team
+                is committed to providing personalized care, addressing your
+                concerns, and ensuring a smooth transition into your new academic
+                environment. At Espot Pokhara Education and Visa Services, we are
+                eager to support you in your dreams and aspirations, and we are
+                excited to be a part of your educational path. Join us and
+                let&apos;s shape your future together! <br />
+                <br /> Thank You!
+                <br /> Dinbandhu Pokharel <br /> Director Espot Pokhara Education
+                and Visa Services.
+              </p>
+            </div>
+            <div className="order-1 md:order-2 flex justify-center md:justify-end md:sticky md:top-24">
+              <Image
+                src="/dinbandhu-pokhrel.jpeg"
+                alt="Dinbandhu Pokhrel - Director"
+                width={500}
+                height={600}
+                className="rounded-3xl object-cover shadow-lg w-full max-w-md h-auto"
+              />
+            </div>
           </div>
         </Container>
       </section>
