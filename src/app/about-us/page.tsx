@@ -138,17 +138,17 @@ export default function AboutPage() {
                 relationships, we can create a solid foundation for success and
                 provide comprehensive assistance throughout your time abroad. We
                 make sure to provide you with essential support like choosing a
-                university in accordance with your academic grades, career goals,
-                and interests and other facilities like visa assistance and
-                accommodation facilities in abroad countries. Our dedicated team
-                is committed to providing personalized care, addressing your
-                concerns, and ensuring a smooth transition into your new academic
-                environment. At Espot Pokhara Education and Visa Services, we are
-                eager to support you in your dreams and aspirations, and we are
-                excited to be a part of your educational path. Join us and
-                let&apos;s shape your future together! <br />
+                university in accordance with your academic grades, career
+                goals, and interests and other facilities like visa assistance
+                and accommodation facilities in abroad countries. Our dedicated
+                team is committed to providing personalized care, addressing
+                your concerns, and ensuring a smooth transition into your new
+                academic environment. At Espot Pokhara Education and Visa
+                Services, we are eager to support you in your dreams and
+                aspirations, and we are excited to be a part of your educational
+                path. Join us and let&apos;s shape your future together! <br />
                 <br /> Thank You!
-                <br /> Dinbandhu Pokharel <br /> Director Espot Pokhara Education
+                <br /> Dinbandhu Pokhrel <br /> Director Espot Pokhara Education
                 and Visa Services.
               </p>
             </div>
