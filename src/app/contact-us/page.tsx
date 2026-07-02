@@ -130,13 +130,13 @@ export default function ContactPage() {
 
       <section className="h-[300px] md:h-[400px] border-t border-outline-variant">
         <iframe
-          src="https://maps.google.com/maps?q=Espot%20Pokhara%20Education%20and%20Visa%20Services%2C%20Pokhara%2C%20Nepal&t=m&z=15&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1757.768439045327!2d83.98712747030804!3d28.221379982121224!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995958bb6c8960b%3A0x512edd007af0eafc!2sEspot%20Pokhara%20Education%20and%20Visa%20Services!5e0!3m2!1sen!2snp!4v1782969202871!5m2!1sen!2snp"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
+          referrerPolicy="strict-origin-when-cross-origin"
           title="Espot Pokhara Education and Visa Services, Pokhara, Nepal"
         />
       </section>
